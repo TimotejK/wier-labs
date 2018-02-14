@@ -13,7 +13,7 @@ description: "Accompanying script to the Web Information Extraction and Retrieva
 
 # Introduction {-}
 
-```{r figure-oil-rig, echo=FALSE, fig.align="center", out.width="100%"}
+```{r figure-oil-rig, echo=FALSE, fig.align="center"}
 knitr::include_graphics("img/book/oil-rig.png")
 ```
 
