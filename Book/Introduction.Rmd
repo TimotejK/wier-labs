@@ -1,0 +1,9 @@
+# Introduction {#Introduction}
+
+<img src="img/book/spider-01.png" />
+
+## Infrastrukturni in arhitekturni pogled na svetovni splet
+
+Trenutno je na svetu približno **3,7 milijarde internetnih uporabnikov**, kar predstavlja skoraj **50% vseh prebivalcev na Zemlji** [@InternetWorldStats]. Če upoštevamo vse naprave, ki so povezljive v internet, potem se ta številka po nekaterih ocenah giblje okrog 30 milijard naprav [@deitel2011].
+
+[^WWW]: angl. World Wide Web (WWW)

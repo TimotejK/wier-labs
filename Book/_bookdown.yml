@@ -1,0 +1,16 @@
+book_filename: "WIER_Book"
+output_dir: "_target"
+language:
+  label:
+    fig: "Figure "
+    tab: "Table "
+    eq: "Equation "
+  ui:
+    chapter_name: "Chapter "
+rmd_files: [
+  "index.Rmd",
+  "Glossary.Rmd",
+  "Introduction.Rmd",
+  "Literature.Rmd"
+]
+new_session: yes

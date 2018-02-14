@@ -1,0 +1,7 @@
+# Glossary {-}
+
+Kratica | Opis | Acronym | Description
+:---:|:---:|:---:|:---:
+&nbsp; | svetovni splet | **WWW** / **W3** | [World Wide Web](https://en.wikipedia.org/wiki/World_Wide_Web)
+&nbsp; | označevalni jezik za oblikovanje večpredstavnostnih dokumentov | **HTML** | [HyperText Markup Language](https://en.wikipedia.org/wiki/HTML)
+&nbsp; | prekrivni slogi | **CSS** | [Cascading Style Sheets](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)

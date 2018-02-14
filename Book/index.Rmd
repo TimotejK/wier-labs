@@ -1,0 +1,44 @@
+--- 
+title: "Web Information Extraction and Retrieval"
+author: "dr. Slavko Žitnik"
+date: "`r format(Sys.Date(), '%A, %d. %B, %Y', tz='Europe/Ljubljana')`"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+bibliography: [literature.bib]
+biblio-style: apalike
+link-citations: yes
+description: "Accompanying script to the Web Information Extraction and Retrieval course"
+---
+
+# Introduction {-}
+
+```{r figure-oil-rig, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("img/book/oil-rig.png")
+```
+
+This book represents an accompanying material to the **Web Information Extraction and Retrieval** course at the [Faculty for computer and information science](http://www.fri.uni-lj.si/), [University of Ljubljana](http://www.uni-lj.si/).
+
+## Course time plan {-}
+
+TODO: Execution plan: time and place for lectures/lab; chapters; timing; moodle link
+
+## "Game rules" {-}
+
+### Lectures {-}
+
+TODO: Lectures description
+
+### Lab {-}
+
+TODO: Lab work description
+
+### Marking {-}
+
+### Written exams {-}
+
+Exam | Date
+:---|:---
+1. written exam | TBD
+2. written exam | TBD
+3. written exam | TBD

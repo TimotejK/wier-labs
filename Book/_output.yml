@@ -1,0 +1,22 @@
+bookdown::gitbook:
+  css: style.css
+  split_by: chapter
+  config:
+    toc:
+      collapse: section
+      scroll_highlight: yes
+      before: |
+        <li><a href="./index.html">Web Information Extraction and Retrieval</a></li>
+      after: |
+        <li><a href="https://ucilnica.fri.uni-lj.si">Moodle classroom</a></li>
+    toolbar:
+      position: fixed
+    search: yes
+    fontsettings:
+      theme: white
+      family: sans
+      size: 1
+    sharing:
+      facebook: no
+      twitter: no
+      all: []
