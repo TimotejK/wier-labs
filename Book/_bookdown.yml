@@ -9,8 +9,14 @@ language:
     chapter_name: "Chapter "
 rmd_files: [
   "index.Rmd",
-  "Glossary.Rmd",
   "Introduction.Rmd",
+  "LAB_ToolsSetup.Rmd",
+  "Crawling.Rmd",
+  "Extraction.Rmd",
+  "Indexing.Rmd",
+  "Querying.Rmd",
+  "Glossary.Rmd",
+  "Tools.Rmd",
   "Literature.Rmd"
 ]
 new_session: yes

@@ -1,0 +1,7 @@
+# Querying {#Querying}
+
+<img src="img/book/spider-01.png" />
+
+## TODO
+
+TODO: book chapter 10, 12

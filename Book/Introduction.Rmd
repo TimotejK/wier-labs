@@ -2,8 +2,10 @@
 
 <img src="img/book/spider-01.png" />
 
-## Infrastrukturni in arhitekturni pogled na svetovni splet
+## Architecture and infrastructure of the World Wide Web
 
-Trenutno je na svetu približno **3,7 milijarde internetnih uporabnikov**, kar predstavlja skoraj **50% vseh prebivalcev na Zemlji** [@InternetWorldStats]. Če upoštevamo vse naprave, ki so povezljive v internet, potem se ta številka po nekaterih ocenah giblje okrog 30 milijard naprav [@deitel2011].
+Nowadays there exist roughly about **3.7 billion Internet users**, which is nearly around **50% of the whole World population** [@InternetWorldStats]. Taking into account all the existing Internet-enabled devices, we may believe approximatelly 30 billion devices are connected into the network [@deitel2011].
+
+TODO: introduction from a book
 
 [^WWW]: angl. World Wide Web (WWW)

@@ -1,0 +1,62 @@
+# Tools {-}
+
+<img src="img/book/spider-01.png" />
+
+## Apache Nutch {-}
+
+<img src="img/tools/nutch.png" />
+[http://nutch.apache.org/](http://nutch.apache.org/)
+
+## Apache Lucene {-}
+
+<img src="img/tools/lucene.png" />
+[https://lucene.apache.org/](https://lucene.apache.org/)
+
+## Apache Nifi {-}
+
+<img src="img/tools/nifi.svg" width="300px" />
+[https://nifi.apache.org/](https://nifi.apache.org/)
+
+## Apache Solr {-}
+
+<img src="img/tools/solr.png" width="300px" />
+[http://lucene.apache.org/solr/](http://lucene.apache.org/solr/)
+
+## Scrapy {-}
+
+<img src="img/tools/scrapy.png" />
+[https://scrapy.org/](https://scrapy.org/)
+
+## Apache Hadoop {-}
+
+<img src="img/tools/hadoop.jpg" />
+[http://hadoop.apache.org/](http://hadoop.apache.org/)
+
+## Apache HBase {-}
+
+<img src="img/tools/hbase.png" />
+[https://hbase.apache.org/](https://hbase.apache.org/)
+
+## Apache Tika {-}
+
+<img src="img/tools/tika.png" />
+[https://tika.apache.org/](https://tika.apache.org/)
+
+## Apache Poi {-}
+
+<img src="img/tools/poi.png" />
+[https://poi.apache.org/](https://poi.apache.org/)
+
+## Apache PDFBox {-}
+
+[https://pdfbox.apache.org/](https://pdfbox.apache.org/)
+
+## Apache OpenNLP {-}
+
+<img src="img/tools/opennlp.png" width="300px" />
+[https://opennlp.apache.org/](https://opennlp.apache.org/)
+
+## Elastic {-}
+
+<img src="img/tools/elastic.svg" width="300px" />
+[https://www.elastic.co/](https://www.elastic.co/)
