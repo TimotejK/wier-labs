@@ -2,8 +2,52 @@
 
 <img src="img/book/spider-01.png" />
 
-## TODO
+TODO: proposed time: 2 lectures
 
-TODO: book chapter 9
+## Structured data extraction
 
-danes dodano tole
+Refer to Sikonja's course for more NLP-based document parsing methods: text pre-processing, information extraction (entity extraction, relationship extraction, coreference resolution), sentiment analysis, text categorization, ...
+
+### Web information extraction
+
+Paper: A Survey of Unsupervised Techniques for Web Data Extraction
+
+Paper: On learning web information extraction rules with TANGO
+
+### Document parsing
+
+CS371R - Information extraction.ppt
+
+Introduction of XML, JSON formats. Parsing of tables, links, emails, ... Show examples of web pages... Small part of this should already be shown at the crawling step.
+
+CS371R - Text properties.ppt
+
+### Association rules and sequential patterns
+
+chapter 2
+
+### Wrapper generation
+
+Chapter 9
+
+### Ontology-based information extraction
+
+## Information integration
+
+Entity resolution, data deduplication techniques, ...
+
+## Text summarization
+
+Book Mining Text Data, chapter 3
+
+https://www.researchgate.net/publication/264876513_Query-Based_Summarization_A_survey
+
+http://ieeexplore.ieee.org/document/7377323/
+
+## Mining text streams
+
+Book Mining Text Data, chapter 9
+
+## Text mining in multimedia
+
+Book Mining Text Data, chapter 11
