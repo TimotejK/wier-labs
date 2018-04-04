@@ -6,7 +6,9 @@ TODO: proposed time: 2 lectures
 
 ## Structured data extraction
 
-Refer to Sikonja's course for more NLP-based document parsing methods: text pre-processing, information extraction (entity extraction, relationship extraction, coreference resolution), sentiment analysis, text categorization, ...
+A large part of Web information extraction requires the knowledge of natural language processing techniques such as text pre-processing, information extraction (entity extraction, relationship extraction, coreference resolution), sentiment analysis, text categorization/classification (irbook 13), language models (irbook 12) and others. These techniques are covered by the selective Natural language processing course taught by prof. dr. Marko Robnik Šikonja. Therefore we introduce these techniques on a shallow level and rather focus on web-related extraction only. For introduction to natural language techniques please see the proposed literature [@liu2011] (Chapter 11), [@manning2008] (Chapters 12, 13, 15-17, 20), [@aggarwal2012] (Chapters 1-8, 12-14).
+
+
 
 ### Web information extraction
 
@@ -51,3 +53,23 @@ Book Mining Text Data, chapter 9
 ## Text mining in multimedia
 
 Book Mining Text Data, chapter 11
+
+## Literatura
+
+Članek: 
+
+* [Web data extraction, applications and techniques: A survey](https://www.sciencedirect.com/science/article/pii/S0950705114002640) [@ferrara2014]
+
+Knjiga:
+
+* [Web Scraping with Python (2015), Ryan Mitchell](https://www.amazon.de/Web-Scraping-Python-Ryan-Mitchell/dp/1491910291)
+
+Zaključna dela:
+
+* [Tehnike spletnega luščenja podatkov (2013), Peter Grlica](https://plus.si.cobiss.net/opac7/bib/fkkri/9990484)
+* [Delno samodejna izdelava ovojnic za spletne vire (2012), Rok Burgar](https://plus.si.cobiss.net/opac7/bib/fkkri/9454420)
+* [Zajem in obdelava podatkov s spleta (2015), Marko Balažic](https://plus.si.cobiss.net/opac7/bib/fkkri/1536570819)
+* [Spletni iskalnik podatkov o osebah (2013), Matej Žniderič](https://plus.si.cobiss.net/opac7/bib/fkkri/10152276)
+* [Napredno iskanje nepremičnin (2014), Nina Žakelj](https://plus.si.cobiss.net/opac7/bib/fkkri/10715988)
+* [Analiza dimenzij kakovosti informacij spletnih strani slovenskih podjetij (2016), Matic Jazbec](https://plus.si.cobiss.net/opac7/bib/fkkri/1537211331)
+* [Vmesnik za dostop do portala odprtih podatkov Slovenije (2018), Sašo Marić](https://plus.si.cobiss.net/opac7/bib/fkkri/1537726403)
