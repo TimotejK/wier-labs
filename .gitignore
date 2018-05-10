@@ -3,3 +3,7 @@
 Book/_target
 Book/WIER_Book.rds
 Book/.Rhistory
+*.fdb_latexmk
+*.fls
+*.log
+*.synctex.gz

@@ -86,13 +86,25 @@ A number of techniques to approach this problem have been proposed. These method
 
 ###### The simple tree matching algorithm
 
-A computationally efficient solution for the problem of the tree edit distance matching is provided by the algorithm called *simple tree matching* [@selkow1977], and its variants. This optimized strategy comes at a cost: node replacement is not allowed during the matching procedure – the shortcomings of this aspects will be further discussed below. The pseudo-code of the simple tree matching algorithm is provided in TODO REF, which adopts the following notation: $d(n)$ represents the degree of a node $n$ (i.e., the number of first-level children); $T(i)$ is the i-th subtree of the tree rooted at node $T$.
+A computationally efficient solution for the problem of the tree edit distance matching is provided by the algorithm called *simple tree matching* [@selkow1977], and its variants. This optimized strategy comes at a cost: node replacement is not allowed during the matching procedure – the shortcomings of this aspects will be further discussed below. The pseudo-code of the simple tree matching algorithm is provided in Algorithm \@ref(fig:simple-tree-algorithm), which adopts the following notation: $d(n)$ represents the degree of a node $n$ (i.e., the number of first-level children); $T(i)$ is the i-th subtree of the tree rooted at node $T$.
 
-```{r simple-tree-algorithm, echo=FALSE, fig.align="center", fig.width=13, fig.cap="Simple tree matching algorithm."}
+```{r simple-tree-algorithm, echo=FALSE, fig.align="center", fig.cap="Simple tree matching algorithm."}
 knitr::include_graphics("tex/extraction/simpleTreeMatching.pdf")
 ```
 
+The computational cost of simple tree matching is $O(nodes(A) \cdot nodes(B))$, where $nodes(T)$ is the function that returns the number of nodes in a tree (or a sub-tree) $T$; the low cost ensures excellent performance when applied to HTML trees, which might be rich of nodes. Two main limitations hold with this algorithm:
 
+* It cannot match permutation of nodes.
+* No level crossing is allowed (it is impossible to match nodes at different hierarchical levels).
+
+Despite these intrinsic limits, this technique appears to fit very well to the purpose of matching HTML trees in the context of Web Data Extraction. In fact, it has been adopted in several scenarios - matching using edit distance calculation, web data extraction, self-repairable web wrappers generation, news and blogs data extraction. One of the first Web Data Extraction approaches based on a tree edit distance algorithm is due to Reis et al. [@reis2004]. Such an approach focused on a very specific application domain (i.e., news extraction from the Web) but it was general enough to be re-applied in other domains. The algorithm of Reis et al. relies on a different definition of mapping called Restricted Top-Down Mapping (RTDM). In this model, insertion, removal and replacement operations are allowed only to the leaves of the trees. The restricted top-down edit distance between two trees $A$ and $B$ is defined as the cost of the restricted top-down mapping between the two trees. To find the restricted top-down mapping between two trees $A$ and $B$, the Yang’s algorithm is applied [@yang1991]. The worst case time complexity of the approach is still $O(nodes(A) \cdot nodes(B))$ but, as shown by the authors, it works much faster because only restricted top-down mappings are managed. A normalized variant of the simple tree matching is called normalized simple tree matching. The normalization is computed as follows
+
+
+$$
+NSTM(A,B) = \frac{SimpleTreeMatching(A,B)}{(nodes(A)+nodes(B))/2}.
+$$
+
+The tree Matching algorithm and its variants are widely used in practice because they are easy to implement.
 
 #### Web wrappers
 

@@ -1,21 +1,39 @@
-\documentclass{standalone}
-\usepackage[linesnumbered,lined,boxed,commentsnumbered]{algorithm2e} 
+\documentclass[varwidth=550pt]{standalone}
+\usepackage[linesnumbered,commentsnumbered,noend]{algorithm2e} 
+
+\standaloneconfig{border=0.5cm 0cm 0cm 0cm} 
+
 \begin{document}
+\begin{LARGE}
+
+{\bf Algorithm:} SimpleTreeMatching($T'$, $T''$)
 
 \begin{algorithm}[H]
- \KwData{this text}
- \KwResult{how to write algorithm with \LaTeX2e }
- initialization\;
- \While{not at end of this document}{
-  read current\;
-  \eIf{understand}{
-   go to next section\;
-   current section becomes this one\;
-   }{
-   go back to the beginning of current section\;
-  }
- }
+	\SetEndCharOfAlgoLine{}
+	\SetAlgoNoLine
+	% \KwData{this text}
+	% \KwResult{how to write algorithm with \LaTeX2e }
+	
+	\eIf{$T'$ {\rm has the same label of} $T''$}{
+		m $\leftarrow$ d($T'$)\;
+		n $\leftarrow$ d($T''$)\;
+		\For{i = 0 {\rm to} m}{
+			$M[i][0] \leftarrow 0$\;		
+		}
+		\For{j = 0 {\rm to} n}{
+			$M[0][j] \leftarrow 0$\;		
+		}
+		\ForAll{i {\rm such that} $1 \le i \le m$}{
+			\ForAll{j {\rm such that} $1 \le i \le n$}{
+				$W_{ij}$ = {\rm SimpleTreeMatching($T'(i-1), T''(j-1)$)}\;
+				{\rm $M[i][j]$ $\leftarrow$ Max($M[i][j-1]$, $M[i-1][j]$, $M[i-1][j-1]$ + $W_{ij}$)}\;
+			}
+		}
+		return $M[m][n]+1$
+	}{
+		return 0\;
+	}	
 \end{algorithm}
 
-
+\end{LARGE}
 \end{document}
