@@ -7,3 +7,4 @@ Book/.Rhistory
 *.fls
 *.log
 *.synctex.gz
+*.aux
