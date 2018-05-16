@@ -89,7 +89,7 @@ A number of techniques to approach this problem have been proposed. These method
 A computationally efficient solution for the problem of the tree edit distance matching is provided by the algorithm called *simple tree matching* [@selkow1977], and its variants. This optimized strategy comes at a cost: node replacement is not allowed during the matching procedure – the shortcomings of this aspects will be further discussed below. The pseudo-code of the simple tree matching algorithm is provided in Algorithm \@ref(fig:simple-tree-algorithm), which adopts the following notation: $d(n)$ represents the degree of a node $n$ (i.e., the number of first-level children); $T(i)$ is the i-th subtree of the tree rooted at node $T$.
 
 ```{r simple-tree-algorithm, echo=FALSE, fig.align="center", fig.cap="Simple tree matching algorithm."}
-knitr::include_graphics("tex/extraction/simpleTreeMatching.pdf")
+knitr::include_graphics("tex/extraction/simpleTreeMatching.png")
 ```
 
 The computational cost of simple tree matching is $O(nodes(A) \cdot nodes(B))$, where $nodes(T)$ is the function that returns the number of nodes in a tree (or a sub-tree) $T$; the low cost ensures excellent performance when applied to HTML trees, which might be rich of nodes. Two main limitations hold with this algorithm:
@@ -111,7 +111,7 @@ The tree Matching algorithm and its variants are widely used in practice because
 Another variant of the simple tree matching is discussed in the following, and is called *weighted tree matching*. It adjusts the similarity values provided by the original simple tree matching by introducing a renormalization factor. The pseudo-code of the weighted tree matching, presented in [@ferrara2011], is reported in Algorithm \@ref(fig:weighted-tree-algorithm).
 
 ```{r weighted-tree-algorithm, echo=FALSE, fig.align="center", fig.cap="Weighted tree matching algorithm."}
-knitr::include_graphics("tex/extraction/weightedTreeMatching.pdf")
+knitr::include_graphics("tex/extraction/weightedTreeMatching.png")
 ```
 
 In Algorithm \@ref(fig:weighted-tree-algorithm), the notation $t(n)$ represents the number of total siblings of a node $n$ including itself. Note that Algorithm \@ref(fig:weighted-tree-algorithm) reports the differential version with respect to the simple tree matching described in Algorithm \@ref(fig:simple-tree-algorithm). The advantage of the weighted tree matching is that it better reflects a measure of similarity between two trees. In fact, in the simple tree matching algorithm the assigned matching value is always equal to one. Instead, the weighted tree matching algorithm assumes that less importance (i.e., a lower weight) is assigned to changes in the structure of the tree, when they occur in deeper sub-levels. This kind of changes can be, for example, missing or added leaves, truncated or added branches, etc. Also, a lower weight is accounted when changes occur in sub-levels with many nodes. The weighted tree matching algorithm returns a value in the interval $[0,1]$ and the closer to 1 the final value, the more similar the two input trees.
