@@ -1,0 +1,169 @@
+# Programming assignment 1 {#PA1}
+
+<img src="img/book/spider-01.png" />
+
+## Introduction
+
+The goal of this programming assignment is to build a standalone crawler that will crawl only *.gov.si* web sites. The crawler will roughly consist of the following components (Figure \@ref(fig:crawlerArchitecture)):
+
+* HTTP downloader and renderer: To retrieve and render a web page.
+* Data extractor: Minimal functionalities to extract images and hyperlinks.
+* Duplicate detector: To detect already parsed pages.
+* URL frontier: A list of URLs waiting to be parsed.
+* Datastore: To store the data and additional metadata used by the crawler.
+
+```{r crawlerArchitecture, out.width=500, echo=FALSE, fig.align="center", fig.cap="Web crawler architecture."}
+knitr::include_graphics("img/pa1/crawler.png")
+```
+
+## Instructions
+
+Implement a web crawler that will crawl only *.gov.si* web sites. You can choose a programming language of your choice. As a set of initial seed URLs use the following URLs:
+
+* *evem.gov.si*
+* *e-uprava.gov.si*
+* *podatki.gov.si*
+* *e-prostor.gov.si*
+* Add additional 5 other *.gov.si* URLs.
+
+> For the above given domains only (not other domains), [Apache Nutch](https://nutch.apache.org/) needs the following time:
+>
+> * HTTP retrieval without rendering:
+>     + cca. 60min
+>     + Retrieved around 7.000 pages at the level 14.
+> * HTTP retrieval with rendering (Selenium - HTMLUnit):
+>     + cca. 230min - 290min
+>     + Retrieved around 3.000 pages.
+>
+> All the parameters are set to default settings (5s between requests to the same server, ...). Selenium/HTMLUnit protocol retrieves significantly less web pages due to problems in parsing *evem.gov.si* and *e-uprava.gov.si* web sites.
+>
+> During your assignment you should crawl these web sites listed above in a similar time. But when crawling also other 5 web sites of your choice and with broader limitation to all *.gov.si* domains, it will take significantly more time.
+
+
+The crawler needs to be implemented with multiple workers that retrieve different web pages in parallel. The number of workers should be a parameter when starting the crawler. The frontier strategy needs to follow the breadth-first strategy. In the report explain how is your strategy implemented.
+
+For each domain respect the [*robots.txt*](https://en.wikipedia.org/wiki/Robots_exclusion_standard) file if it exists. Correctly respect the commands *User-agent*, *Allow*, *Disallow*, *Crawl-delay* and *Sitemap*. If a sitemap is defined, all the URLs that are defined within it, should be added to the frontier. Make sure to respect *robots.txt* as sites that define special crawling rules often contain [spider traps](https://en.wikipedia.org/wiki/Spider_trap).
+
+During crawling you need to detect duplicate web pages. For the deduplicated web pages, check URLs that you already parsed and URLs that you have in the frontier if a duplicate exist. Make sure that you work with canonicalized URLs only! If you do not find duplicates by a URL, check if a web page with the same content was parsed already (extend the database with a hash or compare exact HTML code).
+
+  * BONUS POINTS (10 points): Deduplication using exact match is not efficient as some minor content can be different but two web pages can still be the same. Implement one of the [Locality-sensitive hashing](https://en.wikipedia.org/wiki/Locality-sensitive_hashing) methods to find collisions and then apply Jaccard distance (e.g. using unigrams) to detect a possible duplicate. Also, select parameters for this method. Document your implementation and include an example of duplicate detection in the report.
+  
+When your crawler fetches and renders a web page, do some simple parsing to detect images and next links.
+
+  * When parsing links, include links from *href* attributes and *onclick* Javascript events (e.g. *location.href* or *document.location*). Be careful to correctly extend the relative URLs before adding them to the frontier.
+  * Detect images on a web page only based on *img* tag, where the *src* attribute points to an image URL.
+  
+Apart from web pages only, download also other files that web pages point to (there is no need to parse them). File formats that you should take into account are *.pdf*, *.doc*, *.docx*, *.ppt* and *.pptx*.
+
+In your crawler implementation you can use libraries that implement headless browsers but not libraries that already implement web crawler functionality. Therefore, some useful libraries that you can use are:
+
+  * [HTML Cleaner](http://htmlcleaner.sourceforge.net/)
+  * [HTML Parser](http://htmlparser.sourceforge.net/)
+  * [JSoup](https://jsoup.org/)
+  * [Jaunt API](https://jaunt-api.com/)
+  * [HTTP Client](http://hc.apache.org/)
+  * [Selenium](https://www.seleniumhq.org/)
+  * [phantomJS](http://phantomjs.org/)
+  * [HTMLUnit](http://htmlunit.sourceforge.net/)
+  * etc.
+
+On the other hand, you **MUST NOT** use libraries like the following:
+
+  * [Scrapy](https://scrapy.org/)
+  * [Apache Nutch](https://nutch.apache.org/)
+  * [crawler4j](https://github.com/yasserg/crawler4j)
+  * [gecco](https://github.com/xtuhcy/gecco)
+  * [Norconex HTTP Collector](https://www.norconex.com/collectors/collector-http/)
+  * [webmagic](https://github.com/code4craft/webmagic)
+  * [Webmuncher](https://github.com/dadepo/Webmuncher)
+  * etc.
+
+To make sure that you correctly gather all the needed content placed into the DOM by Javascript, you should use headless browsers. Googlebot implements this as a two-step process or expects to retrieve dynamically built web page from an HTTP server. A nice session on crawling modern web sites built using JS frameworks, link parsing and image indexing was a part of Google IO 2018 and it is suggested for you to check it:
+
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/PFwUbgvpdaQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+
+<!--
+Useful links
+ https://www.elephate.com/blog/javascript-seo-experiment/ 
+ https://searchengineland.com/tested-googlebot-crawls-javascript-heres-learned-220157
+ https://webmasters.googleblog.com/
+-->
+
+
+Examples of enabling javascript in a web browser or not:
+
+<table class="additionalSources">
+<tr>
+<td><center><b>Javascript enabled</b></center></td>
+<td><center><b>Javascript disabled</b></center></td>
+</tr>
+<tr>
+<td><img src="img/pa1/eUprava_JS.png" /></td>
+<td><img src="img/pa1/eUprava_noJS.png" /></td>
+</tr>
+<tr>
+<td><img src="img/pa1/evem_JS.png" /></td>
+<td><img src="img/pa1/evem_noJS.png" /></td>
+</tr>
+</table>
+  
+### Crawldb design
+
+Below there is a model of a crawldb database that your crawler needs to use. This is just a base model, which you **MUST NOT** change, but you can extend it with additional fields, tables, ... that your crawler might need. You should use PostgreSQL database and create a schema using a [prepared SQL script](data/pa1/crawldb.sql).
+
+<center><iframe width="879" height="814" src="data/pa1/crawldb.html" frameborder="0" scrolling="no"></iframe></center>
+
+Table *site* contains web site specific data. Each site can contain multiple web pages - table *page*. Populate all the fields accordingly when parsing. If a page is of type HTML, its content should be stored as a value within *html_content* attribute, otherwise (if crawler detects a binary file - e.g. .doc), *html_content* is set to *NULL* and a record in the *page_data* table is created. Available page type codes are *HTML*, *BINARY*, *DUPLICATE* and *FRONTIER*. The duplicate page should not have set the *html_content* value and should be linked to a duplicate version of a page. You can optionally use table *page* also as a current frontier queue storage. 
+
+> **UPDATE:** Collect images and binary data only for sites listed in the initial seed list (i.e. domains *evem.gov.si*, *e-uprava.gov.si*, *podatki.gov.si*, *e-prostor.gov.si*). Use them for reporting statistics and do not include them in the database dump. In the final SQL dump file *db.gz* include only data from tables *site*, *page*, *link* and *page_type*, other tables can be truncated prior to data export.
+>
+> You can approach the programming assignment in a way to first crawl the initial seed sites (within given sites domains only). Then do analysis, truncate the database and export *db.gz*. After that add another 5 your seed URLs to your crawler and broad the crawling to *.gov.si* domains without saving images and binary files. At the end, report final statistics and write the report.
+
+
+## What to include in the report
+
+The report should follow the [standard structure](https://fri.uni-lj.si/sl/napotki-za-pisanje-porocila).
+
+In the report include the following:
+
+* All the specifics and decisions you make based on the instructions above and describe the implementation of your crawler.
+* Document also parameters that are needed for your crawler, specifics, problems that you had during the development and solutions.
+* For the sites that are given in the instructions' seed list and also for the whole crawldb together (for both separately) report general statistics of crawldb (number of sites, number of web pages, number of duplicates, number of binary documents by type, number of images, average number of images per web page, ...). Visualize links and include images into the report. If the network is too big, take only a portion of it. Use visualization libraries such as [D3js](https://d3js.org/), [visjs](http://visjs.org/), [sigmajs](http://sigmajs.org/) or [gephi](https://gephi.org/).
+
+## What to submit
+
+Only one of the group members should make a submission of the assignment to moodle. The submission should contain only a link to the repository that contains the following:
+
+ * a file *db<span style="text-decoration: line-through;">.gz</span>* - <span style="text-decoration: line-through;">Crawldb database dump `pg_dump (dbname) | gzip > db.gz` (The dump must contain only data from the sites given as a seed URL list above!).</span>
+ * a file *report.pdf* - PDF report.
+ * a file *README.md* - Short description of the project and instructions to install, set up and run the crawler.
+ * a folder *crawler* - Implementation of the crawler.
+
+> **UPDATE:** The database dump you submit should contain only the data from domains *evem.gov.si* and *e-prostor.gov.si* (including their found subdomains) without images or binary data (truncate tables *image* and *page_data* before export). Filename *db* should be of **Custom** export format that you can export directly using pgAdmin:
+>
+> <center><img src="img/pa1/Export1.png" /></center>
+> <center><img src="img/pa1/Export2.png" /></center>
+>
+> The exported data file should not be larger than 100MB.
+>
+> For this assignment it is enough to retrieve data from up 100.000 web pages in total (number of records in table *page* of type HTML from *.gov.si* domains).
+ 
+## Grading schema
+
+All the submissions will be manually graded by the assistant. Also plagiarism check will be run across all the submissions. Grading will begin after the last late submission day. The submission time will be selected as the last commit time in the repository. 
+
+The maximum score of 100 (+10 bonus points) will consist of the following:
+
+Points | Item
+------ | ----
+20 | Database dump check (selected web pages, robots.txt compliance, rough number of web pages match)
+30 | Crawler implementation details (multiple workers, BFS frontier, robots.txt and sitemap check, binary files saving, non-crawler libraries usage, javascript rendering)
+10 | Duplicate detection (URL canonicalization, content matching)
+10 | Duplicate detection (BONUS)
+10 | Image and link detection (image tags and saving, HTML and JS)
+20 | Retrieved pages analysis (statistics and visualization; justification of retrieved pages wrt. crawler running time)
+10 | Submission compliance (report of work and issues description, readme instructions, source code availability - 0 points for the whole project if not available)
+
+
+Selected groups will need to defend their work during the lab hours. If a group does not agree with their achieved score, it will be able to "negotiate"/defend their programming assignment submission.
+

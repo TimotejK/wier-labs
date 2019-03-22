@@ -19,3 +19,7 @@ table.additionalSources tr, table.additionalSources td {
   /*background-color:#ffffff;*/
   background-color: rgba(0, 0, 0, 0.0) !important;
 }
+
+blockquote {
+  background-color: lightyellow;
+}

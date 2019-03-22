@@ -1,0 +1,5 @@
+# Programming assignment 3 {#PA3}
+
+<img src="img/book/spider-01.png" />
+
+## Indexing & querying (TBA)

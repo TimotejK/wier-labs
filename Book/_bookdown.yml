@@ -1,4 +1,4 @@
-book_filename: "WIER_Book"
+book_filename: "WIER_Labs_Book"
 output_dir: "_target"
 language:
   label:
@@ -9,14 +9,8 @@ language:
     chapter_name: "Chapter "
 rmd_files: [
   "index.Rmd",
-  "Introduction.Rmd",
-  "LAB_ToolsSetup.Rmd",
-  "Crawling.Rmd",
-  "Extraction.Rmd",
-  "Indexing.Rmd",
-  "Querying.Rmd",
-  "Glossary.Rmd",
-  "Tools.Rmd",
-  "Literature.Rmd"
+  "PA1.Rmd",
+  "PA2.Rmd",
+  "PA3.Rmd"
 ]
 new_session: yes

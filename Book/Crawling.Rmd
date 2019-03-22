@@ -1,9 +1,0 @@
-# Web crawling {#WebCrawling}
-
-<img src="img/book/spider-01.png" />
-
-## TODO
-
-TODO: book chapter 7,8
-
-Deep web, dark web
