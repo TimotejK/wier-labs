@@ -2,4 +2,86 @@
 
 <img src="img/book/spider-01.png" />
 
-## Document parsing (TBA)
+## Introduction
+
+The goal of this programming assignment is to implement three different approaches for the structured data extraction from the Web:
+
+* (A) Using regular expressions
+* (B) Using XPath
+* (C) *RoadRunner*-like implementation
+
+## Instructions
+
+In [a compressed file](data/pa2/WebPages.zip) there are four web pages - two per Web site ([Overstock](https://www.overstock.com/), [Rtvslo.si](https://www.rtvslo.si/)). In Figure \@ref(fig:overStockSample) we define the names of the data items for a data record you will need to extract from *Overstock* sample web sites. The provided sample Web sites contain a list of data records, which all need to be processed. In Figure \@ref(fig:rtvSloSample) we also provide the names of the data items for the second sample web sites. In the provided *Rtvslo.si* example, there is only one data record per sample page.
+
+```{r overStockSample, out.width=600, echo=FALSE, fig.align="center", fig.cap="Overstock.com Web page sample."}
+knitr::include_graphics("img/pa2/overstock.png")
+```
+
+```{r rtvSloSample, out.width=800, echo=FALSE, fig.align="center", fig.cap="RtvSlo.si Web page sample."}
+knitr::include_graphics("img/pa2/rtvslo.png")
+```
+
+Similarly to given Web pages above, find **your own two similar Web pages** (can be either list pages or detail pages from other domains than given ones) and define the names of the data items that you will  extract. The two Web pages **must** contain some same data item types with different values and a list of data items of different lengths. 
+
+For each of the three types of the pages, implement the following:
+
+(A) Data extraction using regular expressions only.
+(B) Data extraction using XPath only.
+(C) Generation of extraction rule following the *RoadRunner*-like algorithm implementation.
+
+Input HTML files to these method can be pre-rendered.
+
+### Regular expressions implementation
+
+For each given web page type implement a separate function that will take HTML code as input. The method should output extracted data in a JSON structured format to a standard output. Each data item must be directly extracted using a regular expression.
+
+### XPath implementation
+
+For each given web page type implement a separate function that will take HTML code as input. The method should output extracted data in a JSON structured format to a standard output. Each data item must be directly extracted using an XPath expression. If the extracted value should be further processed, use regular expressions or other techniques to normalize them.
+
+### *RoadRunner*-like implementation
+
+Implement a method that will take two HTML web pages of the same type as input. The method should output a human-readable *wrapper* that could be used to extract data from a given type of web pages. The wrapper can be represented as *union-free regular expression* or any other format, based on which someone could implement a web data extractor.
+
+Follow the implementation guidelines presented at the lectures. Apart from the guidelines you can introduce various heuristics (e.g. taking tag attributes into account, additional rules, ...) that may help you with the wrapper generation. Also, you can implement some preprocessing steps prior to running the algorithm. It is expected, that the generated wrapper may miss some of the data items and may include other unrelevant data items in the output. You should comment or identify, which data items have not been recognized using the algorithm.
+
+Full implementation of the RoadRunner algorithm proposed in [the literature](http://www.dia.uniroma3.it/db/roadRunner/publications.html) is [available online along with some examples](http://www.dia.uniroma3.it/db/roadRunner/software.html). You **must not** use this code but you can check it out or read related papers to get more in-depth knowledge, if interested (not necessary for the purposes of this programming assignment). 
+
+## What to include in the report
+
+The report should follow the [standard structure](https://fri.uni-lj.si/sl/napotki-za-pisanje-porocila).
+
+In the report include the following:
+
+* Description of the two selected web pages and identification of data items and data records (similarly as in the instructions above).
+* Description of all the implemented methods (3 x regular expressions, 3 x XPath implementation, 1 x *RoadRunner*-like implementation).
+* Provide outputs for all the web pages (6 x regular expressions, 6 x XPath implementation, 3 x *RoadRunner*-like implementation).
+* Provide pseudocode of your *RoadRunner*-like algorithm implementation and describe its implementation. Explain all the additional rules or heuristics that you added to improve the implementation of your algorithm. Justify each inclusion of a rule or heuristics. Also cite the source of the idea if you re-implemented some feature from somewhere else (e.g. literature, full RoadRunner implementation).
+
+## What to submit
+
+Only one of the group members should make a submission of the assignment to moodle. The submission should contain only a link to the repository that contains the following:
+
+ * a file *report.pdf* - PDF report.
+ * a file *README.md* - Short description of the project and instructions to install, set up and run all the methods.
+ * a folder *implementation* - Implementation of the methods.
+ * a folder *input* - All the three types of web pages that implemented methods can consume.
+ 
+## Grading schema
+
+All the submissions will be manually graded by the assistant. Plagiarism check will be run across all the submissions. Grading will begin after the last late submission day. The submission time will be selected as the last commit time in the repository. 
+
+The maximum score of 100 will consist of the following:
+
+Points | Item
+------ | ----
+10 | Selection of two similar Web pages
+45 | Description of implemented methods and implementation
+15 | Outputs generated by the methods
+20 | *RoadRunner*-like implementation details
+10 | Submission compliance (report, readme instructions, source code availability - 0 points for the whole project if not available)
+
+Selected groups will need to defend their work during the lab hours. If a group does not agree with their achieved score, it will be able to "negotiate"/defend their programming assignment submission.
+
+

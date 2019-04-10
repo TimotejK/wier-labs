@@ -31,10 +31,11 @@ knitr::include_graphics("img/timetable.png")
 
 * Programming assignment 1: Web crawling
     * <span style="text-decoration: line-through;">Tentative submission deadline: March 27, 2019 @ 6:00am</span>
-    * Tentative submission deadline: April 3, 2019 @ 6:00am
+    * Submission deadline: April 3, 2019 @ 6:00am
   
 * Programming assignment 2: Document parsing
-    * Tentative submission deadline: April 24, 2019 @ 6:00am
+    * <span style="text-decoration: line-through;">Tentative submission deadline: April 24, 2019 @ 6:00am</span>
+    * Submission deadline: May 8, 2019 @ 6:00am
   
 * Programming assignment 3: Indexing & querying
     * Tentative submission deadline: May 22, 2019 @ 6:00am
