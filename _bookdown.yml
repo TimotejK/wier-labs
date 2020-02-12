@@ -1,5 +1,5 @@
 book_filename: "WIER_Labs_Book"
-output_dir: "http_build"
+output_dir: "docs"
 language:
   label:
     fig: "Figure "
