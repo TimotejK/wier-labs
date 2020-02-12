@@ -18,13 +18,12 @@ knitr::include_graphics("img/pa1/crawler.png")
 
 ## Instructions
 
-Implement a web crawler that will crawl only *.gov.si* web sites. You can choose a programming language of your choice. As a set of initial seed URLs use the following URLs:
+Implement a web crawler that will crawl only *.gov.si* web sites. You can choose a programming language of your choice. The initial seed URLs should be: 
 
-* *evem.gov.si*
-* *e-uprava.gov.si*
-* *podatki.gov.si*
-* *e-prostor.gov.si*
-* Add additional 5 other *.gov.si* URLs.
+* *gov.si*,
+* *evem.gov.si*,
+* *e-uprava.gov.si* and
+* *e-prostor.gov.si*.
 
 > For the above given domains only (not other domains), [Apache Nutch](https://nutch.apache.org/) needs the following time:
 >
@@ -36,13 +35,11 @@ Implement a web crawler that will crawl only *.gov.si* web sites. You can choose
 >     + Retrieved around 3.000 pages.
 >
 > All the parameters are set to default settings (5s between requests to the same server, ...). Selenium/HTMLUnit protocol retrieves significantly less web pages due to problems in parsing *evem.gov.si* and *e-uprava.gov.si* web sites.
->
-> During your assignment you should crawl these web sites listed above in a similar time. But when crawling also other 5 web sites of your choice and with broader limitation to all *.gov.si* domains, it will take significantly more time.
 
 
 The crawler needs to be implemented with multiple workers that retrieve different web pages in parallel. The number of workers should be a parameter when starting the crawler. The frontier strategy needs to follow the breadth-first strategy. In the report explain how is your strategy implemented.
 
-For each domain respect the [*robots.txt*](https://en.wikipedia.org/wiki/Robots_exclusion_standard) file if it exists. Correctly respect the commands *User-agent*, *Allow*, *Disallow*, *Crawl-delay* and *Sitemap*. If a sitemap is defined, all the URLs that are defined within it, should be added to the frontier. Make sure to respect *robots.txt* as sites that define special crawling rules often contain [spider traps](https://en.wikipedia.org/wiki/Spider_trap).
+For each domain respect the [*robots.txt*](https://en.wikipedia.org/wiki/Robots_exclusion_standard) file if it exists. Correctly respect the commands *User-agent*, *Allow*, *Disallow*, *Crawl-delay* and *Sitemap*. If a sitemap is defined, all the URLs that are defined within it, should be added to the frontier. Make sure to respect *robots.txt* as sites that define special crawling rules often contain [spider traps](https://en.wikipedia.org/wiki/Spider_trap). Also make sure that you follow ethics and do not send request to the same server more often than one request in 5 seconds (not only domain but also IP!).
 
 During crawling you need to detect duplicate web pages. For the deduplicated web pages, check URLs that you already parsed and URLs that you have in the frontier if a duplicate exist. Make sure that you work with canonicalized URLs only! If you do not find duplicates by a URL, check if a web page with the same content was parsed already (extend the database with a hash or compare exact HTML code).
 
@@ -107,6 +104,8 @@ Examples of enabling javascript in a web browser or not:
 </tr>
 </table>
   
+TODO: User-Agent name fri-ieps-IME_SKUPINE, timestamp pridobljenega
+
 ### Crawldb design
 
 Below there is a model of a crawldb database that your crawler needs to use. This is just a base model, which you **MUST NOT** change, but you can extend it with additional fields, tables, ... that your crawler might need. You should use PostgreSQL database and create a schema using a [prepared SQL script](data/pa1/crawldb.sql).

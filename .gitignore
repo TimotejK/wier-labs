@@ -1,7 +1,7 @@
 # Add any directories, files, or patterns you don't want to be tracked by version control
 .Rproj.user
-Book/_target
-Book/WIER_Book.rds
+#Book/_target
+Book/WIER_Labs_Book.rds
 Book/.Rhistory
 *.fdb_latexmk
 *.fls

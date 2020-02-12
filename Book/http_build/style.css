@@ -1,0 +1,25 @@
+table {
+  width: 100% !important;
+}
+img {
+  max-width: 100%;
+}
+
+.page-inner {
+  padding: 20px 50px 40px 50px !important;
+  max-width: 100% !important;
+}
+
+table.additionalSources {
+  border:none;
+}
+table.additionalSources tr, table.additionalSources td {
+  vertical-align:top; 
+  border:none !important;
+  /*background-color:#ffffff;*/
+  background-color: rgba(0, 0, 0, 0.0) !important;
+}
+
+blockquote {
+  background-color: lightyellow;
+}
