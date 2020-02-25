@@ -114,6 +114,19 @@ Below there is a model of a crawldb database that your crawler needs to use. Thi
 
 Table *site* contains web site specific data. Each site can contain multiple web pages - table *page*. Populate all the fields accordingly when parsing. If a page is of type HTML, its content should be stored as a value within *html_content* attribute, otherwise (if crawler detects a binary file - e.g. .doc), *html_content* is set to *NULL* and a record in the *page_data* table is created. Available page type codes are *HTML*, *BINARY*, *DUPLICATE* and *FRONTIER*. The duplicate page should not have set the *html_content* value and should be linked to a duplicate version of a page. You can optionally use table *page* also as a current frontier queue storage. 
 
+## Basic tools
+
+During the lab session we will present basic tools for those who are not well experienced in Web scraping and database access. We will follow the Jupyter notebook tutorial [Web crawling - basic tools](notebooks/Web crawling - basic tools.ipynb).
+
+We propose to run the notebook using an Anaconda environment. Prepare the environment as follows:
+
+```bash
+conda create -n wier python=3.6
+conda activate wier
+conda install nb_conda # to automatically run jupyter notebook in the current conda environment
+jupyter notebook # run this command in the folder with the Jupyter notebook
+```
+
 ## What to include in the report
 
 The report should follow the [standard structure](https://fri.uni-lj.si/sl/napotki-za-pisanje-porocila). It must not exceed 2 pages.
@@ -158,7 +171,6 @@ Points | Item
 10 | Image and link detection (image tags and saving, HTML and JS)
 20 | Retrieved pages analysis (statistics and visualization; justification of retrieved pages wrt. crawler running time)
 10 | Submission compliance (report of work and issues description, readme instructions, source code availability - 0 points for the whole project if not available)
-
 
 Selected groups will need to defend their work during the lab hours. If a group does not agree with their achieved score, it will be able to "negotiate"/defend their programming assignment submission.
 
