@@ -24,7 +24,8 @@ The lab work in this course is consultation-like, so we do not check attendance.
 ## Programming assignments {-}
 
 * Programming assignment 1: Web crawling
-    * Submission deadline: March 27, 2020 @ 11:55pm
+    * <span style="text-decoration: line-through;">Submission deadline: March 27, 2020 @ 11:55pm</span>
+    * Submission deadline: April 3, 2020 @ 11:55pm
   
 * Programming assignment 2: Document parsing
     * Submission deadline: April 24, 2020 @ 11:55pm
