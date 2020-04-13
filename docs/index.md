@@ -1,7 +1,7 @@
 --- 
 title: "Web Information Extraction and Retrieval"
 author: "assist. prof. dr. Slavko Žitnik and prof. dr. Marko Bajec"
-date: "Tuesday, 24. March, 2020"
+date: "Monday, 13. April, 2020"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
 documentclass: book
@@ -26,7 +26,8 @@ The lab work in this course is consultation-like, so we do not check attendance.
     * Submission deadline: April 3, 2020 @ 11:55pm
   
 * Programming assignment 2: Document parsing
-    * Submission deadline: April 24, 2020 @ 11:55pm
+    * <span style="text-decoration: line-through;">Submission deadline: April 24, 2020 @ 11:55pm</span>
+    * Submission deadline: May 1, 2020 @ 11:55pm
   
 * Programming assignment 3: Indexing & querying
     * Submission deadline: May 22, 2020 @ 11:55pm

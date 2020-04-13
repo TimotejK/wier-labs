@@ -9,8 +9,8 @@ language:
     chapter_name: "Chapter "
 rmd_files: [
   "index.Rmd",
-  "PA1.Rmd"
-  #"PA2.Rmd",
+  "PA1.Rmd",
+  "PA2.Rmd"
   #"PA3.Rmd"
 ]
 new_session: yes
