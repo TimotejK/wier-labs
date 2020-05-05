@@ -52,9 +52,9 @@
 
 
 <style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode { white-space: pre; position: relative; }
 pre.sourceCode { margin: 0; }
@@ -63,16 +63,14 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
 }
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
+    border: none; pointer-events: all; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -81,9 +79,9 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  {  }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+a.sourceLine::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -158,6 +156,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.4" data-path="PA2.html"><a href="PA2.html#what-to-submit-1"><i class="fa fa-check"></i><b>2.4</b> What to submit</a></li>
 <li class="chapter" data-level="2.5" data-path="PA2.html"><a href="PA2.html#grading-schema-1"><i class="fa fa-check"></i><b>2.5</b> Grading schema</a></li>
 </ul></li>
+<li class="chapter" data-level="3" data-path="PA3.html"><a href="PA3.html"><i class="fa fa-check"></i><b>3</b> Programming assignment 3</a><ul>
+<li class="chapter" data-level="3.1" data-path="PA3.html"><a href="PA3.html#introduction-2"><i class="fa fa-check"></i><b>3.1</b> Introduction</a></li>
+<li class="chapter" data-level="3.2" data-path="PA3.html"><a href="PA3.html#instructions-2"><i class="fa fa-check"></i><b>3.2</b> Instructions</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="PA3.html"><a href="PA3.html#data-processing-and-indexing"><i class="fa fa-check"></i><b>3.2.1</b> Data processing and indexing</a></li>
+<li class="chapter" data-level="3.2.2" data-path="PA3.html"><a href="PA3.html#data-retrieval"><i class="fa fa-check"></i><b>3.2.2</b> Data retrieval</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="PA3.html"><a href="PA3.html#what-to-include-in-the-report-2"><i class="fa fa-check"></i><b>3.3</b> What to include in the report</a></li>
+<li class="chapter" data-level="3.4" data-path="PA3.html"><a href="PA3.html#what-to-submit-2"><i class="fa fa-check"></i><b>3.4</b> What to submit</a></li>
+<li class="chapter" data-level="3.5" data-path="PA3.html"><a href="PA3.html#grading-schema-2"><i class="fa fa-check"></i><b>3.5</b> Grading schema</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://ucilnica.fri.uni-lj.si">Moodle classroom</a></li>
 
@@ -231,7 +239,7 @@ Figure 1.1: Web crawler architecture.
 </ul>
 <p>When your crawler fetches and renders a web page, do some simple parsing to detect images and next links.</p>
 <ul>
-<li>When parsing links, include links from <em>href</em> attributes and <em>onclick</em> Javascript events (e.g. <em>location.href</em> or <em>document.location</em>). Be careful to correctly extend the relative URLs before adding them to the frontier.</li>
+<li>When parsing links, include links from <em>href</em> attributes and <em>onclick</em> Javascript events (e.g. <em>location.href</em> or <em>document.location</em>). Be careful to correctly extend the relative URLs before adding them to the frontier.</li>
 <li>Detect images on a web page only based on <em>img</em> tag, where the <em>src</em> attribute points to an image URL.</li>
 </ul>
 <p>Donwload HTML content only. List all other content (<em>.pdf</em>, <em>.doc</em>, <em>.docx</em>, <em>.ppt</em> and <em>.pptx</em>) in the <em>page_data</em> table - there is no need to populate <em>data</em> field. In case you put a link into a frontier and identify content as a binary source, you can just set its <em>page_type</em> to <em>BINARY</em>. The same holds for the image data.</p>
@@ -308,17 +316,17 @@ Useful links
 <iframe width="879" height="814" src="data/pa1/crawldb.html" frameborder="0" scrolling="no">
 </iframe>
 </center>
-<p>Table <em>site</em> contains web site specific data. Each site can contain multiple web pages - table <em>page</em>. Populate all the fields accordingly when parsing. If a page is of type HTML, its content should be stored as a value within <em>html_content</em> attribute, otherwise (if crawler detects a binary file - e.g. .doc), <em>html_content</em> is set to <em>NULL</em> and a record in the <em>page_data</em> table is created. Available page type codes are <em>HTML</em>, <em>BINARY</em>, <em>DUPLICATE</em> and <em>FRONTIER</em>. The duplicate page should not have set the <em>html_content</em> value and should be linked to a duplicate version of a page. You can optionally use table <em>page</em> also as a current frontier queue storage.</p>
+<p>Table <em>site</em> contains web site specific data. Each site can contain multiple web pages - table <em>page</em>. Populate all the fields accordingly when parsing. If a page is of type HTML, its content should be stored as a value within <em>html_content</em> attribute, otherwise (if crawler detects a binary file - e.g. .doc), <em>html_content</em> is set to <em>NULL</em> and a record in the <em>page_data</em> table is created. Available page type codes are <em>HTML</em>, <em>BINARY</em>, <em>DUPLICATE</em> and <em>FRONTIER</em>. The duplicate page should not have set the <em>html_content</em> value and should be linked to a duplicate version of a page. You can optionally use table <em>page</em> also as a current frontier queue storage.</p>
 </div>
 </div>
 <div id="basic-tools" class="section level2">
 <h2><span class="header-section-number">1.3</span> Basic tools</h2>
 <p>During the lab session we will present basic tools for those who are not well experienced in Web scraping and database access. We will follow the Jupyter notebook tutorial <a href="notebooks/Web%20crawling%20-%20basic%20tools.ipynb">Web crawling - basic tools</a>.</p>
 <p>We propose to run the notebook using an Anaconda environment. Prepare the environment as follows:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="PA1.html#cb1-1"></a><span class="ex">conda</span> create -n wier python=3.6</span>
-<span id="cb1-2"><a href="PA1.html#cb1-2"></a><span class="ex">conda</span> activate wier</span>
-<span id="cb1-3"><a href="PA1.html#cb1-3"></a><span class="ex">conda</span> install nb_conda <span class="co"># to automatically run jupyter notebook in the current conda environment</span></span>
-<span id="cb1-4"><a href="PA1.html#cb1-4"></a><span class="ex">jupyter</span> notebook <span class="co"># run this command in the folder with the Jupyter notebook</span></span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="ex">conda</span> create -n wier python=3.6</a>
+<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="ex">conda</span> activate wier</a>
+<a class="sourceLine" id="cb1-3" data-line-number="3"><span class="ex">conda</span> install nb_conda <span class="co"># to automatically run jupyter notebook in the current conda environment</span></a>
+<a class="sourceLine" id="cb1-4" data-line-number="4"><span class="ex">jupyter</span> notebook <span class="co"># run this command in the folder with the Jupyter notebook</span></a></code></pre></div>
 </div>
 <div id="what-to-include-in-the-report" class="section level2">
 <h2><span class="header-section-number">1.4</span> What to include in the report</h2>

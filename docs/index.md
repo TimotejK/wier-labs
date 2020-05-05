@@ -1,7 +1,7 @@
 --- 
 title: "Web Information Extraction and Retrieval"
 author: "assist. prof. dr. Slavko Žitnik and prof. dr. Marko Bajec"
-date: "Monday, 13. April, 2020"
+date: "Tuesday, 05. May, 2020"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
 documentclass: book
