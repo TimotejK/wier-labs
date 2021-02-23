@@ -32,8 +32,9 @@ The lab work in this course is consultation-like, so we do not check attendance.
 * Programming assignment 3: Indexing & querying
     * Submission deadline: May 14, 2020 @ 11:55pm
     
-## Alternative to programming assignments    
+### Alternative to programming assignments {-}   
 If there is someone (or a group) that is interested in a specific field of information retrieval, we can arrange a custom assignment for him (them) instead working on the above three assignments. An example of a project idea:
+
 * A large corpus acquisition, text preprocessing (vectorization) and analysis of vector-based information retrieval for similarity search (e.g. [milvus search engine](https://milvus.io/)), followed by the presentation to your colleagues.
 
 ## Grading and rules {-}

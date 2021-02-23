@@ -7,3 +7,4 @@ what-to-include-in-the-report
 what-to-submit
 grading-schema
 fig:crawlerArchitecture
+alternative-to-programming-assignments
