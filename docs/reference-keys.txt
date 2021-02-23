@@ -1,0 +1,9 @@
+PA1
+introduction
+instructions
+crawldb-design
+basic-tools
+what-to-include-in-the-report
+what-to-submit
+grading-schema
+fig:crawlerArchitecture

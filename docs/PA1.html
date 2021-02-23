@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 1 Programming assignment 1 | Web Information Extraction and Retrieval</title>
   <meta name="description" content="Instructions for the Web Information Extraction and Retrieval course labs" />
-  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 1 Programming assignment 1 | Web Information Extraction and Retrieval" />
   <meta property="og:type" content="book" />
@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="index.html"/>
-<link rel="next" href="PA2.html"/>
+
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -49,12 +49,15 @@
 
 
 
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode { white-space: pre; position: relative; }
 pre.sourceCode { margin: 0; }
@@ -63,14 +66,16 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(data-line-number);
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
+    border: none; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -79,9 +84,9 @@ pre.numberSource a.sourceLine::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {  }
+  {   }
 @media screen {
-a.sourceLine::before { text-decoration: underline; }
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -144,27 +149,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.4" data-path="PA1.html"><a href="PA1.html#what-to-include-in-the-report"><i class="fa fa-check"></i><b>1.4</b> What to include in the report</a></li>
 <li class="chapter" data-level="1.5" data-path="PA1.html"><a href="PA1.html#what-to-submit"><i class="fa fa-check"></i><b>1.5</b> What to submit</a></li>
 <li class="chapter" data-level="1.6" data-path="PA1.html"><a href="PA1.html#grading-schema"><i class="fa fa-check"></i><b>1.6</b> Grading schema</a></li>
-</ul></li>
-<li class="chapter" data-level="2" data-path="PA2.html"><a href="PA2.html"><i class="fa fa-check"></i><b>2</b> Programming assignment 2</a><ul>
-<li class="chapter" data-level="2.1" data-path="PA2.html"><a href="PA2.html#introduction-1"><i class="fa fa-check"></i><b>2.1</b> Introduction</a></li>
-<li class="chapter" data-level="2.2" data-path="PA2.html"><a href="PA2.html#instructions-1"><i class="fa fa-check"></i><b>2.2</b> Instructions</a><ul>
-<li class="chapter" data-level="2.2.1" data-path="PA2.html"><a href="PA2.html#regular-expressions-implementation"><i class="fa fa-check"></i><b>2.2.1</b> Regular expressions implementation</a></li>
-<li class="chapter" data-level="2.2.2" data-path="PA2.html"><a href="PA2.html#xpath-implementation"><i class="fa fa-check"></i><b>2.2.2</b> XPath implementation</a></li>
-<li class="chapter" data-level="2.2.3" data-path="PA2.html"><a href="PA2.html#automatic-web-extraction-algorithm-implementation"><i class="fa fa-check"></i><b>2.2.3</b> Automatic Web extraction algorithm implementation</a></li>
-</ul></li>
-<li class="chapter" data-level="2.3" data-path="PA2.html"><a href="PA2.html#what-to-include-in-the-report-1"><i class="fa fa-check"></i><b>2.3</b> What to include in the report</a></li>
-<li class="chapter" data-level="2.4" data-path="PA2.html"><a href="PA2.html#what-to-submit-1"><i class="fa fa-check"></i><b>2.4</b> What to submit</a></li>
-<li class="chapter" data-level="2.5" data-path="PA2.html"><a href="PA2.html#grading-schema-1"><i class="fa fa-check"></i><b>2.5</b> Grading schema</a></li>
-</ul></li>
-<li class="chapter" data-level="3" data-path="PA3.html"><a href="PA3.html"><i class="fa fa-check"></i><b>3</b> Programming assignment 3</a><ul>
-<li class="chapter" data-level="3.1" data-path="PA3.html"><a href="PA3.html#introduction-2"><i class="fa fa-check"></i><b>3.1</b> Introduction</a></li>
-<li class="chapter" data-level="3.2" data-path="PA3.html"><a href="PA3.html#instructions-2"><i class="fa fa-check"></i><b>3.2</b> Instructions</a><ul>
-<li class="chapter" data-level="3.2.1" data-path="PA3.html"><a href="PA3.html#data-processing-and-indexing"><i class="fa fa-check"></i><b>3.2.1</b> Data processing and indexing</a></li>
-<li class="chapter" data-level="3.2.2" data-path="PA3.html"><a href="PA3.html#data-retrieval"><i class="fa fa-check"></i><b>3.2.2</b> Data retrieval</a></li>
-</ul></li>
-<li class="chapter" data-level="3.3" data-path="PA3.html"><a href="PA3.html#what-to-include-in-the-report-2"><i class="fa fa-check"></i><b>3.3</b> What to include in the report</a></li>
-<li class="chapter" data-level="3.4" data-path="PA3.html"><a href="PA3.html#what-to-submit-2"><i class="fa fa-check"></i><b>3.4</b> What to submit</a></li>
-<li class="chapter" data-level="3.5" data-path="PA3.html"><a href="PA3.html#grading-schema-2"><i class="fa fa-check"></i><b>3.5</b> Grading schema</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://ucilnica.fri.uni-lj.si">Moodle classroom</a></li>
@@ -232,17 +216,18 @@ Figure 1.1: Web crawler architecture.
 <p>All the parameters are set to default settings (5s between requests to the same server, …). Selenium/HTMLUnit protocol retrieves significantly less web pages due to problems in parsing <em>evem.gov.si</em> and <em>e-uprava.gov.si</em> web sites.</p>
 </blockquote>
 <p>The crawler needs to be implemented with multiple workers that retrieve different web pages in parallel. The number of workers should be a parameter when starting the crawler. The frontier strategy needs to follow the breadth-first strategy. In the report explain how is your strategy implemented.</p>
-<p>For each domain respect the <a href="https://en.wikipedia.org/wiki/Robots_exclusion_standard"><em>robots.txt</em></a> file if it exists. Correctly respect the commands <em>User-agent</em>, <em>Allow</em>, <em>Disallow</em>, <em>Crawl-delay</em> and <em>Sitemap</em>. Make sure to respect <em>robots.txt</em> as sites that define special crawling rules often contain <a href="https://en.wikipedia.org/wiki/Spider_trap">spider traps</a>. Also make sure that you follow ethics and do not send request to the same server more often than one request in 5 seconds (not only domain but also IP!).</p>
-<p>During crawling you need to detect duplicate web pages. Check URLs that you already parsed and URLs that you have in the frontier if a duplicate exist. Make sure that you work with canonicalized URLs only! If you do not find duplicates by a URL, check if a web page with the same content was parsed already (extend the database with a hash or compare exact HTML code).</p>
+<p>Check and respect the <a href="https://en.wikipedia.org/wiki/Robots_exclusion_standard"><em>robots.txt</em></a> file for each domain if it exists. Correctly respect the commands <em>User-agent</em>, <em>Allow</em>, <em>Disallow</em>, <em>Crawl-delay</em> and <em>Sitemap</em>. Make sure to respect <em>robots.txt</em> as sites that define special crawling rules often contain <a href="https://en.wikipedia.org/wiki/Spider_trap">spider traps</a>. Also make sure that you follow ethics and do not send request to the same server more often than one request in 5 seconds (not only domain but also IP!).</p>
+<p>In a database store canonicalized URLs only!</p>
+<p>During crawling you need to detect duplicate web pages. The easiest solution is to check whether a web page with the same page content was already parsed (hint: you can extend the database with a hash, otherwise you need compare exact HTML code). If your crawler gets a URL from a frontier that has already been parsed, this is not treated as a duplicate. In such cases there is no need to re-crawl the page, just add a record into to the table <em>link</em> accordingly.</p>
 <ul>
-<li>BONUS POINTS (10 points): Deduplication using exact match is not efficient as some minor content can be different but two web pages can still be the same. Implement one of the <a href="https://en.wikipedia.org/wiki/Locality-sensitive_hashing">Locality-sensitive hashing</a> methods to find collisions and then apply Jaccard distance (e.g. using unigrams) to detect a possible duplicate. Also, select parameters for this method. Document your implementation and include an example of duplicate detection in the report.</li>
+<li>BONUS POINTS (10 points): Deduplication using exact match is not efficient as some minor content can be different but two web pages can still be the same. Implement one of the <a href="https://en.wikipedia.org/wiki/Locality-sensitive_hashing">Locality-sensitive hashing</a> methods to find collisions and then apply Jaccard distance (e.g. using unigrams) to detect a possible duplicate. Also, select parameters for this method. Document your implementation and include an example of duplicate detection in the report. Note, you need to implement the method yourself to get bonus points.</li>
 </ul>
 <p>When your crawler fetches and renders a web page, do some simple parsing to detect images and next links.</p>
 <ul>
-<li>When parsing links, include links from <em>href</em> attributes and <em>onclick</em> Javascript events (e.g. <em>location.href</em> or <em>document.location</em>). Be careful to correctly extend the relative URLs before adding them to the frontier.</li>
+<li>When parsing links, include links from <em>href</em> attributes and <em>onclick</em> Javascript events (e.g. <em>location.href</em> or <em>document.location</em>). Be careful to correctly extend the relative URLs before adding them to the frontier.</li>
 <li>Detect images on a web page only based on <em>img</em> tag, where the <em>src</em> attribute points to an image URL.</li>
 </ul>
-<p>Donwload HTML content only. List all other content (<em>.pdf</em>, <em>.doc</em>, <em>.docx</em>, <em>.ppt</em> and <em>.pptx</em>) in the <em>page_data</em> table - there is no need to populate <em>data</em> field. In case you put a link into a frontier and identify content as a binary source, you can just set its <em>page_type</em> to <em>BINARY</em>. The same holds for the image data.</p>
+<p>Donwload HTML content only. List all other content (<em>.pdf</em>, <em>.doc</em>, <em>.docx</em>, <em>.ppt</em> and <em>.pptx</em>) in the <em>page_data</em> table - there is no need to populate <em>data</em> field (i.e. binary content). In case you put a link into a frontier and identify content as a binary source, you can just set its <em>page_type</em> to <em>BINARY</em>. The same holds for the image data.</p>
 <p>In your crawler implementation you can use libraries that implement headless browsers but not libraries that already implement web crawler functionality. Therefore, some useful libraries that you can use are:</p>
 <ul>
 <li><a href="http://htmlcleaner.sourceforge.net/">HTML Cleaner</a></li>
@@ -308,7 +293,7 @@ Useful links
 </td>
 </tr>
 </table>
-<p>In your implementation you must set the <em>User-Agent</em> field of your bot to <em>fri-ieps-NAME_OF_YOUR_GROUP</em>.</p>
+<p>In your implementation you must set the <em>User-Agent</em> field of your bot to <em>fri-wier-NAME_OF_YOUR_GROUP</em>.</p>
 <div id="crawldb-design" class="section level3">
 <h3><span class="header-section-number">1.2.1</span> Crawldb design</h3>
 <p>Below there is a model of a crawldb database that your crawler needs to use. This is just a base model, which you <strong>MUST NOT</strong> change, but you can extend it with additional fields, tables, … that your crawler might need. You should use PostgreSQL database and create a schema using a <a href="data/pa1/crawldb.sql">prepared SQL script</a>.</p>
@@ -316,17 +301,18 @@ Useful links
 <iframe width="879" height="814" src="data/pa1/crawldb.html" frameborder="0" scrolling="no">
 </iframe>
 </center>
-<p>Table <em>site</em> contains web site specific data. Each site can contain multiple web pages - table <em>page</em>. Populate all the fields accordingly when parsing. If a page is of type HTML, its content should be stored as a value within <em>html_content</em> attribute, otherwise (if crawler detects a binary file - e.g. .doc), <em>html_content</em> is set to <em>NULL</em> and a record in the <em>page_data</em> table is created. Available page type codes are <em>HTML</em>, <em>BINARY</em>, <em>DUPLICATE</em> and <em>FRONTIER</em>. The duplicate page should not have set the <em>html_content</em> value and should be linked to a duplicate version of a page. You can optionally use table <em>page</em> also as a current frontier queue storage.</p>
+<p>Table <em>site</em> contains web site specific data. Each site can contain multiple web pages - table <em>page</em>. Populate all the fields accordingly when parsing. If a page is of type HTML, its content should be stored as a value within <em>html_content</em> attribute, otherwise (if crawler detects a binary file - e.g. .doc), <em>html_content</em> is set to <em>NULL</em> and a record in the <em>page_data</em> table is created. Available page type codes are <em>HTML</em>, <em>BINARY</em>, <em>DUPLICATE</em> and <em>FRONTIER</em>. The duplicate page should not have set the <em>html_content</em> value and should be linked to a duplicate version of a page.</p>
+<p>You can optionally use table <em>page</em> also as a current frontier queue storage.</p>
 </div>
 </div>
 <div id="basic-tools" class="section level2">
 <h2><span class="header-section-number">1.3</span> Basic tools</h2>
 <p>During the lab session we will present basic tools for those who are not well experienced in Web scraping and database access. We will follow the Jupyter notebook tutorial <a href="notebooks/Web%20crawling%20-%20basic%20tools.ipynb">Web crawling - basic tools</a>.</p>
 <p>We propose to run the notebook using an Anaconda environment. Prepare the environment as follows:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="ex">conda</span> create -n wier python=3.6</a>
-<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="ex">conda</span> activate wier</a>
-<a class="sourceLine" id="cb1-3" data-line-number="3"><span class="ex">conda</span> install nb_conda <span class="co"># to automatically run jupyter notebook in the current conda environment</span></a>
-<a class="sourceLine" id="cb1-4" data-line-number="4"><span class="ex">jupyter</span> notebook <span class="co"># run this command in the folder with the Jupyter notebook</span></a></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="PA1.html#cb1-1"></a><span class="ex">conda</span> create -n wier python=3.6</span>
+<span id="cb1-2"><a href="PA1.html#cb1-2"></a><span class="ex">conda</span> activate wier</span>
+<span id="cb1-3"><a href="PA1.html#cb1-3"></a><span class="ex">conda</span> install nb_conda <span class="co"># to automatically run jupyter notebook in the current conda environment</span></span>
+<span id="cb1-4"><a href="PA1.html#cb1-4"></a><span class="ex">jupyter</span> notebook <span class="co"># run this command in the folder with the Jupyter notebook</span></span></code></pre></div>
 </div>
 <div id="what-to-include-in-the-report" class="section level2">
 <h2><span class="header-section-number">1.4</span> What to include in the report</h2>
@@ -341,12 +327,12 @@ Useful links
 </div>
 <div id="what-to-submit" class="section level2">
 <h2><span class="header-section-number">1.5</span> What to submit</h2>
-<p>Only one of the group members should make a submission of the assignment in moodle. The submission should contain only a link to the repository that contains the following:</p>
+<p>Only one of the group members should make a submission of the assignment in moodle. The submission should contain only a link to the repository that contains the following which you will use for all the submissions during the course:</p>
 <ul>
-<li>a file <em>db</em></li>
-<li>a file <em>report.pdf</em> - PDF report.</li>
-<li>a file <em>README.md</em> - Short description of the project and instructions to install, set up and run the crawler.</li>
-<li>a folder <em>crawler</em> - Implementation of the crawler.</li>
+<li>a file <em>pa1/db</em></li>
+<li>a file <em>pa1/report.pdf</em> - PDF report.</li>
+<li>a file <em>pa1/README.md</em> - Short description of the project and instructions to install, set up and run the crawler.</li>
+<li>a folder <em>pa1/crawler</em> - Implementation of the crawler.</li>
 </ul>
 <blockquote>
 <p><strong>NOTE:</strong> The database dump you submit should not contain images or binary data. Filename <em>db</em> should be of <strong>Custom</strong> export format that you can export directly using pgAdmin:</p>
@@ -362,7 +348,7 @@ Useful links
 </div>
 <div id="grading-schema" class="section level2">
 <h2><span class="header-section-number">1.6</span> Grading schema</h2>
-<p>All the submissions will be manually graded by the assistant. Also plagiarism check will be run across all the submissions. Grading will begin after the last late submission day. The submission time will be selected as the last commit time in the repository.</p>
+<p>All the submissions will be manually graded by the assistant. Also, plagiarism check will be run across all the submissions. Grading will begin after the last late submission day. The submission time will be selected as the last commit time in the repository.</p>
 <p>The maximum score of 100 (+10 bonus points) will consist of the following:</p>
 <table>
 <colgroup>
@@ -415,8 +401,8 @@ Useful links
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="PA2.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="index.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

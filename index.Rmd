@@ -18,33 +18,32 @@ This script includes instructions for the lab work for the [**Web Information Ex
 
 ## Lab work {-}
 
-The lab work in this course is consultation-like, so we do not check attendance. The assistant is available during the scheduled times and you can select the time to ask questions in person, while you are also encouraged to use [the course Slack channel](https://wier-workspace.slack.com).
+The lab work in this course is consultation-like, so we do not check attendance. The assistant is available during the scheduled times and you can select the time to ask questions in person, while you are also encouraged to use [the course Slack channel](https://wierfri.slack.com).
 
 
 ## Programming assignments {-}
 
 * Programming assignment 1: Web crawling
-    * <span style="text-decoration: line-through;">Submission deadline: March 27, 2020 @ 11:55pm</span>
-    * Submission deadline: April 3, 2020 @ 11:55pm
+    * Submission deadline: March 26, 2021 @ 11:55pm
   
 * Programming assignment 2: Document parsing
-    * <span style="text-decoration: line-through;">Submission deadline: April 24, 2020 @ 11:55pm</span>
-    * Submission deadline: May 1, 2020 @ 11:55pm
+    * Submission deadline: April 23, 2021 @ 11:55pm
   
 * Programming assignment 3: Indexing & querying
-    * Submission deadline: May 22, 2020 @ 11:55pm
+    * Submission deadline: May 14, 2020 @ 11:55pm
     
-OPTIONAL assignment completion task: If there is someone (or a group) that is interested in a specific field of information retrieval, we can arrange a custom assignment for him (them) instead working on the above three assignment. An example of a project idea:
-* A large corpus acquisition, text preprocessing (vectorization) and analysis of vector-based information retrieval (e.g. [milvus search engine](https://milvus.io/)).
+## Alternative to programming assignments    
+If there is someone (or a group) that is interested in a specific field of information retrieval, we can arrange a custom assignment for him (them) instead working on the above three assignments. An example of a project idea:
+* A large corpus acquisition, text preprocessing (vectorization) and analysis of vector-based information retrieval for similarity search (e.g. [milvus search engine](https://milvus.io/)), followed by the presentation to your colleagues.
 
 ## Grading and rules {-}
 
-Each assigment is worth 100 points. Therefore, altogether 300 points. For late submission, there will be penalty of 10 points per each late day. It will be possible to submit up to 3 days after the assignment deadline.
+Each assigment is worth 100 points. Therefore, altogether 300 points. For late submission, there will be a penalty of 10 points per each late day. It will be possible to submit up to 3 days after the assignment deadline.
 
-Lab work can be done in groups (preferably) of up to three students. Groups with two or a single member have the same pass conditions - they do not need to coordinate so much and are also more independent.
+Lab work can be done in groups of minimum two and maximum three students. Groups with two or three members have the same pass conditions.
 
-As a result of an assignment, a group needs to create a private GitHub repository and add user *szitnik* to the repository with at least read credentials. All the submissions will be subject to plagiarism check. **Groups that will copy the results or code from the others will be graded with zero points.**
+As a result of an assignment, a group needs to create a private GitHub repository (preferably) and add user *szitnik* to the repository with at least read credentials. All the submissions will be subject to plagiarism check. **Groups that will copy the results or code from the others will be graded with zero points.**
 
-After the submission of an assignment, all the submissions will be marked and each group will get a response. Randomly chosen groups will be selected to explain their solution and to show the execution in practice - each group will need to defend an assigment at least once during the course.
+After the submission deadline and late days of an assignment, all the submissions will be marked and each group will get a response. Randomly chosen groups will be selected to explain their solution and to show the execution in practice - each group will need to defend an assigment at least once during the course.
 
-Labs are mostly organized in a consultation-like manner. Assistant will be present at every lab time slot. If there is a no-show after 15min, he will be accessible in R2.58. Do not hesitate to reach out to the assistant or ask questions via Slack. 
+Labs are mostly organized in a consultation-like manner. Firs lab session in the week will be recorded and then available via moodle (PA presentations, hands-on examples). Do not hesitate to reach out to the assistant or ask questions via Slack. 

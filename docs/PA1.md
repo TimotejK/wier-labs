@@ -40,18 +40,20 @@ Implement a web crawler that will crawl only *\*.gov.si* web sites. You can choo
 
 The crawler needs to be implemented with multiple workers that retrieve different web pages in parallel. The number of workers should be a parameter when starting the crawler. The frontier strategy needs to follow the breadth-first strategy. In the report explain how is your strategy implemented.
 
-For each domain respect the [*robots.txt*](https://en.wikipedia.org/wiki/Robots_exclusion_standard) file if it exists. Correctly respect the commands *User-agent*, *Allow*, *Disallow*, *Crawl-delay* and *Sitemap*. Make sure to respect *robots.txt* as sites that define special crawling rules often contain [spider traps](https://en.wikipedia.org/wiki/Spider_trap). Also make sure that you follow ethics and do not send request to the same server more often than one request in 5 seconds (not only domain but also IP!).
+Check and respect the [*robots.txt*](https://en.wikipedia.org/wiki/Robots_exclusion_standard) file for each domain if it exists. Correctly respect the commands *User-agent*, *Allow*, *Disallow*, *Crawl-delay* and *Sitemap*. Make sure to respect *robots.txt* as sites that define special crawling rules often contain [spider traps](https://en.wikipedia.org/wiki/Spider_trap). Also make sure that you follow ethics and do not send request to the same server more often than one request in 5 seconds (not only domain but also IP!).
 
-During crawling you need to detect duplicate web pages. Check URLs that you already parsed and URLs that you have in the frontier if a duplicate exist. Make sure that you work with canonicalized URLs only! If you do not find duplicates by a URL, check if a web page with the same content was parsed already (extend the database with a hash or compare exact HTML code).
+In a database store canonicalized URLs only!
 
-  * BONUS POINTS (10 points): Deduplication using exact match is not efficient as some minor content can be different but two web pages can still be the same. Implement one of the [Locality-sensitive hashing](https://en.wikipedia.org/wiki/Locality-sensitive_hashing) methods to find collisions and then apply Jaccard distance (e.g. using unigrams) to detect a possible duplicate. Also, select parameters for this method. Document your implementation and include an example of duplicate detection in the report.
+During crawling you need to detect duplicate web pages. The easiest solution is to check whether a web page with the same page content was already parsed (hint: you can extend the database with a hash, otherwise you need compare exact HTML code). If your crawler gets a URL from a frontier that has already been parsed, this is not treated as a duplicate. In such cases there is no need to re-crawl the page, just add a record into to the table *link* accordingly.  
+
+  * BONUS POINTS (10 points): Deduplication using exact match is not efficient as some minor content can be different but two web pages can still be the same. Implement one of the [Locality-sensitive hashing](https://en.wikipedia.org/wiki/Locality-sensitive_hashing) methods to find collisions and then apply Jaccard distance (e.g. using unigrams) to detect a possible duplicate. Also, select parameters for this method. Document your implementation and include an example of duplicate detection in the report. Note, you need to implement the method yourself to get bonus points.
   
 When your crawler fetches and renders a web page, do some simple parsing to detect images and next links.
 
   * When parsing links, include links from *href* attributes and *onclick* Javascript events (e.g. *location.href* or *document.location*). Be careful to correctly extend the relative URLs before adding them to the frontier.
   * Detect images on a web page only based on *img* tag, where the *src* attribute points to an image URL.
   
-Donwload HTML content only. List all other content (*.pdf*, *.doc*, *.docx*, *.ppt* and *.pptx*) in the *page_data* table - there is no need to populate *data* field. In case you put a link into a frontier and identify content as a binary source, you can just set its *page_type* to *BINARY*. The same holds for the image data.
+Donwload HTML content only. List all other content (*.pdf*, *.doc*, *.docx*, *.ppt* and *.pptx*) in the *page_data* table - there is no need to populate *data* field (i.e. binary content). In case you put a link into a frontier and identify content as a binary source, you can just set its *page_type* to *BINARY*. The same holds for the image data.
 
 In your crawler implementation you can use libraries that implement headless browsers but not libraries that already implement web crawler functionality. Therefore, some useful libraries that you can use are:
 
@@ -105,7 +107,7 @@ Examples of enabling javascript in a web browser or not:
 </tr>
 </table>
 
-In your implementation you must set the *User-Agent* field of your bot to *fri-ieps-NAME_OF_YOUR_GROUP*.
+In your implementation you must set the *User-Agent* field of your bot to *fri-wier-NAME_OF_YOUR_GROUP*.
 
 ### Crawldb design
 
@@ -113,7 +115,9 @@ Below there is a model of a crawldb database that your crawler needs to use. Thi
 
 <center><iframe width="879" height="814" src="data/pa1/crawldb.html" frameborder="0" scrolling="no"></iframe></center>
 
-Table *site* contains web site specific data. Each site can contain multiple web pages - table *page*. Populate all the fields accordingly when parsing. If a page is of type HTML, its content should be stored as a value within *html_content* attribute, otherwise (if crawler detects a binary file - e.g. .doc), *html_content* is set to *NULL* and a record in the *page_data* table is created. Available page type codes are *HTML*, *BINARY*, *DUPLICATE* and *FRONTIER*. The duplicate page should not have set the *html_content* value and should be linked to a duplicate version of a page. You can optionally use table *page* also as a current frontier queue storage. 
+Table *site* contains web site specific data. Each site can contain multiple web pages - table *page*. Populate all the fields accordingly when parsing. If a page is of type HTML, its content should be stored as a value within *html_content* attribute, otherwise (if crawler detects a binary file - e.g. .doc), *html_content* is set to *NULL* and a record in the *page_data* table is created. Available page type codes are *HTML*, *BINARY*, *DUPLICATE* and *FRONTIER*. The duplicate page should not have set the *html_content* value and should be linked to a duplicate version of a page. 
+
+You can optionally use table *page* also as a current frontier queue storage. 
 
 ## Basic tools
 
@@ -141,12 +145,12 @@ In the report include the following:
 
 ## What to submit
 
-Only one of the group members should make a submission of the assignment in moodle. The submission should contain only a link to the repository that contains the following:
+Only one of the group members should make a submission of the assignment in moodle. The submission should contain only a link to the repository that contains the following which you will use for all the submissions during the course:
 
- * a file *db*
- * a file *report.pdf* - PDF report.
- * a file *README.md* - Short description of the project and instructions to install, set up and run the crawler.
- * a folder *crawler* - Implementation of the crawler.
+ * a file *pa1/db*
+ * a file *pa1/report.pdf* - PDF report.
+ * a file *pa1/README.md* - Short description of the project and instructions to install, set up and run the crawler.
+ * a folder *pa1/crawler* - Implementation of the crawler.
 
 > **NOTE:** The database dump you submit should not contain images or binary data. Filename *db* should be of **Custom** export format that you can export directly using pgAdmin:
 >
@@ -159,7 +163,7 @@ Only one of the group members should make a submission of the assignment in mood
  
 ## Grading schema
 
-All the submissions will be manually graded by the assistant. Also plagiarism check will be run across all the submissions. Grading will begin after the last late submission day. The submission time will be selected as the last commit time in the repository. 
+All the submissions will be manually graded by the assistant. Also, plagiarism check will be run across all the submissions. Grading will begin after the last late submission day. The submission time will be selected as the last commit time in the repository. 
 
 The maximum score of 100 (+10 bonus points) will consist of the following:
 
