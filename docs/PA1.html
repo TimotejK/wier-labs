@@ -137,7 +137,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About the course</a><ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#lab-work"><i class="fa fa-check"></i>Lab work</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#programming-assignments"><i class="fa fa-check"></i>Programming assignments</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#programming-assignments"><i class="fa fa-check"></i>Programming assignments</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#alternative-to-programming-assignments"><i class="fa fa-check"></i>Alternative to programming assignments</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#grading-and-rules"><i class="fa fa-check"></i>Grading and rules</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="PA1.html"><a href="PA1.html"><i class="fa fa-check"></i><b>1</b> Programming assignment 1</a><ul>
@@ -307,12 +309,23 @@ Useful links
 </div>
 <div id="basic-tools" class="section level2">
 <h2><span class="header-section-number">1.3</span> Basic tools</h2>
-<p>During the lab session we will present basic tools for those who are not well experienced in Web scraping and database access. We will follow the Jupyter notebook tutorial <a href="notebooks/Web%20crawling%20-%20basic%20tools.ipynb">Web crawling - basic tools</a>.</p>
 <p>We propose to run the notebook using an Anaconda environment. Prepare the environment as follows:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="PA1.html#cb1-1"></a><span class="ex">conda</span> create -n wier python=3.6</span>
-<span id="cb1-2"><a href="PA1.html#cb1-2"></a><span class="ex">conda</span> activate wier</span>
-<span id="cb1-3"><a href="PA1.html#cb1-3"></a><span class="ex">conda</span> install nb_conda <span class="co"># to automatically run jupyter notebook in the current conda environment</span></span>
-<span id="cb1-4"><a href="PA1.html#cb1-4"></a><span class="ex">jupyter</span> notebook <span class="co"># run this command in the folder with the Jupyter notebook</span></span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="PA1.html#cb1-1"></a><span class="co"># Create and activate environment (activate it before each use)</span></span>
+<span id="cb1-2"><a href="PA1.html#cb1-2"></a><span class="ex">conda</span> create -n wier python=3.6</span>
+<span id="cb1-3"><a href="PA1.html#cb1-3"></a><span class="ex">conda</span> activate wier</span>
+<span id="cb1-4"><a href="PA1.html#cb1-4"></a></span>
+<span id="cb1-5"><a href="PA1.html#cb1-5"></a><span class="co"># Install dependencies</span></span>
+<span id="cb1-6"><a href="PA1.html#cb1-6"></a><span class="ex">conda</span> install selenium psycopg2 nb_conda requests</span>
+<span id="cb1-7"><a href="PA1.html#cb1-7"></a><span class="ex">conda</span> install -c anaconda flask pyopenssl</span>
+<span id="cb1-8"><a href="PA1.html#cb1-8"></a><span class="ex">conda</span> install -c conda-forge flask-httpauth</span>
+<span id="cb1-9"><a href="PA1.html#cb1-9"></a></span>
+<span id="cb1-10"><a href="PA1.html#cb1-10"></a><span class="co"># Run Jupyter notebook</span></span>
+<span id="cb1-11"><a href="PA1.html#cb1-11"></a><span class="ex">jupyter</span> notebook </span></code></pre></div>
+<p>During the lab session we will present basic tools for those who are not well experienced in Web scraping and database access:</p>
+<ul>
+<li>Jupyter notebook tutorial <a href="notebooks/Web%20crawling%20-%20basic%20tools.ipynb">Web crawling - basic tools</a> that introduces the basic tools to start working on the assignment.</li>
+<li>A showcase of server (<a href="notebooks/Remote%20crawler%20database%20(server).ipynb">Remote crawler database (server)</a>) and client (<a href="notebooks/Remote%20crawler%20database%20(client).ipynb">Remote crawler database (client)</a>) implementation in case you would like to run multiple crawlers (e.g. from each group member homes) and have the same crawler database.</li>
+</ul>
 </div>
 <div id="what-to-include-in-the-report" class="section level2">
 <h2><span class="header-section-number">1.4</span> What to include in the report</h2>

@@ -7,3 +7,4 @@ WIER_Labs_Book.rds
 *.log
 *.synctex.gz
 *.aux
+.ipynb_checkpoints

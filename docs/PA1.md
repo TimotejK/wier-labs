@@ -121,16 +121,26 @@ You can optionally use table *page* also as a current frontier queue storage.
 
 ## Basic tools
 
-During the lab session we will present basic tools for those who are not well experienced in Web scraping and database access. We will follow the Jupyter notebook tutorial [Web crawling - basic tools](notebooks/Web crawling - basic tools.ipynb).
-
 We propose to run the notebook using an Anaconda environment. Prepare the environment as follows:
 
 ```bash
+# Create and activate environment (activate it before each use)
 conda create -n wier python=3.6
 conda activate wier
-conda install nb_conda # to automatically run jupyter notebook in the current conda environment
-jupyter notebook # run this command in the folder with the Jupyter notebook
+
+# Install dependencies
+conda install selenium psycopg2 nb_conda requests
+conda install -c anaconda flask pyopenssl
+conda install -c conda-forge flask-httpauth
+
+# Run Jupyter notebook
+jupyter notebook 
 ```
+
+During the lab session we will present basic tools for those who are not well experienced in Web scraping and database access:
+
+* Jupyter notebook tutorial [Web crawling - basic tools](notebooks/Web crawling - basic tools.ipynb) that introduces the basic tools to start working on the assignment.
+* A showcase of server ([Remote crawler database (server)](notebooks/Remote crawler database (server).ipynb)) and client ([Remote crawler database (client)](notebooks/Remote crawler database (client).ipynb)) implementation in case you would like to run multiple crawlers (e.g. from each group member homes) and have the same crawler database.
 
 ## What to include in the report
 
