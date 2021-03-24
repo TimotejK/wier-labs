@@ -1,7 +1,7 @@
 --- 
 title: "Web Information Extraction and Retrieval"
 author: "assist. prof. dr. Slavko Žitnik and prof. dr. Marko Bajec"
-date: "Monday, 15. March, 2021"
+date: "Wednesday, 24. March, 2021"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
 documentclass: book
@@ -22,7 +22,8 @@ The lab work in this course is consultation-like, so we do not check attendance.
 ## Programming assignments {-}
 
 * Programming assignment 1: Web crawling
-    * Submission deadline: March 26, 2021 @ 11:55pm
+    * <span style="text-decoration:line-through">Submission deadline: March 26, 2021 @ 11:55pm</span>
+    * Submission deadline: March 30, 2021 @ 11:55pm
   
 * Programming assignment 2: Document parsing
     * Submission deadline: April 23, 2021 @ 11:55pm
