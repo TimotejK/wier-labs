@@ -8,3 +8,14 @@ what-to-submit
 grading-schema
 fig:crawlerArchitecture
 alternative-to-programming-assignments
+PA2
+introduction-1
+instructions-1
+regular-expressions-implementation
+xpath-implementation
+automatic-web-extraction-algorithm-implementation
+what-to-include-in-the-report-1
+what-to-submit-1
+grading-schema-1
+fig:overStockSample
+fig:rtvSloSample
