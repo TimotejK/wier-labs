@@ -6,8 +6,6 @@ basic-tools
 what-to-include-in-the-report
 what-to-submit
 grading-schema
-fig:crawlerArchitecture
-alternative-to-programming-assignments
 PA2
 introduction-1
 instructions-1
@@ -17,5 +15,14 @@ automatic-web-extraction-algorithm-implementation
 what-to-include-in-the-report-1
 what-to-submit-1
 grading-schema-1
+PA3
+introduction-2
+instructions-2
+data-processing-and-indexing
+data-retrieval
+what-to-include-in-the-report-2
+what-to-submit-2
+grading-schema-2
+fig:crawlerArchitecture
 fig:overStockSample
 fig:rtvSloSample
