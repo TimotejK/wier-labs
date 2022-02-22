@@ -1,7 +1,7 @@
 --- 
 title: "Web Information Extraction and Retrieval"
 author: "assist. prof. dr. Slavko Žitnik and prof. dr. Marko Bajec"
-date: "Friday, 07. May, 2021"
+date: "Tuesday, 22. February, 2022"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
 documentclass: book
@@ -10,42 +10,29 @@ description: "Instructions for the Web Information Extraction and Retrieval cour
 
 # About the course {-}
 
-<img src="img/book/oil-rig.png" style="display: block; margin: auto;" />
+<img src="img/book/oil-rig.png" width="359" style="display: block; margin: auto;" />
 
 This script includes instructions for the lab work for the [**Web Information Extraction and Retrieval**](https://ucilnica.fri.uni-lj.si/course/view.php?id=284) course at the [Faculty for computer and information science](http://www.fri.uni-lj.si/), [University of Ljubljana](http://www.uni-lj.si/).
 
 ## Lab work {-}
 
-The lab work in this course is consultation-like, so we do not check attendance. The assistant is available during the scheduled times and you can select the time to ask questions in person, while you are also encouraged to use [the course Slack channel](https://wierfri.slack.com).
+The lab work in this course is consultation-like, so we do not check attendance. The assistant is available during the scheduled times and you can select the time to ask questions in person, while you are also encouraged to use [the course Discord channel](https://discord.gg/WBSkNtGE9G).
 
 
 ## Programming assignments {-}
 
 * Programming assignment 1: Web crawling
-    * <span style="text-decoration:line-through">Submission deadline: March 26, 2021 @ 11:55pm</span>
-    * Submission deadline: March 30, 2021 @ 11:55pm
-  
 * Programming assignment 2: Document parsing
-    * <span style="text-decoration:line-through">Submission deadline: April 23, 2021 @ 11:55pm</span>
-    * Submission deadline: April 30, 2021 @ 11:55pm
-  
 * Programming assignment 3: Indexing & querying
-    * <span style="text-decoration:line-through">Submission deadline: May 14, 2020 @ 11:55pm</span>
-    * Submission deadline: May 21, 2020 @ 11:55pm
     
-### Alternative to programming assignments {-}   
-If there is someone (or a group) that is interested in a specific field of information retrieval, we can arrange a custom assignment for him (them) instead working on the above three assignments. An example of a project idea:
+More information available in the course Moodle classroom.    
+  
+### Course projects (alternative to the programming assignments) {-}   
+If there is someone (or a group) that is interested in a specific field of information retrieval, we can arrange a custom assignment for her/him/them instead working on the above three assignments. Such project can also be extended into a masters thesis.
 
-* A large corpus acquisition, text preprocessing (vectorization) and analysis of vector-based information retrieval for similarity search (e.g. [milvus search engine](https://milvus.io/)), followed by the presentation to your colleagues.
+Proposed projects:
 
-## Grading and rules {-}
-
-Each assigment is worth 100 points. Therefore, altogether 300 points. For late submission, there will be a penalty of 10 points per each late day. It will be possible to submit up to 3 days after the assignment deadline.
-
-Lab work can be done in groups of minimum two and maximum three students. Groups with two or three members have the same pass conditions.
-
-As a result of an assignment, a group needs to create a private GitHub repository (preferably) and add user *szitnik* to the repository with at least read credentials. All the submissions will be subject to plagiarism check. **Groups that will copy the results or code from the others will be graded with zero points.**
-
-After the submission deadline and late days of an assignment, all the submissions will be marked and each group will get a response. Randomly chosen groups will be selected to explain their solution and to show the execution in practice - each group will need to defend an assigment at least once during the course.
-
-Labs are mostly organized in a consultation-like manner. Firs lab session in the week will be recorded and then available via moodle (PA presentations, hands-on examples). Do not hesitate to reach out to the assistant or ask questions via Slack. 
+* *Slovenian support for Apache Solr*: [Apache Solr](https://solr.apache.org) is an open-source search engine and widely adopted. It allows for rich customization and definition of own filters, tokenizers, processes, etc. The idea of the project is to implement an Apache Solr plugin that would integrate [CLASSLA library](https://github.com/clarinsi/classla) - e.g., lemmatization, tokenization, named entity recognition.
+  * Expected project deliverables are (a) implemented plugin in a source code repository with documentation, (b) written report, and (c) practical presentation of your work.
+* *Information retrieval systems evaluation*: Some information retrieval systems have been developed into rich systems that require some knowledge and configuration to create a useful search engine. The idea of the project is that you are given crawled data from PA1 and then you use an information retrieval system to create a Web-based search engine. The selection of a search engine must be agreed with the assistant - e.g.  [milvus search engine](https://milvus.io/)). 
+  * Expected project deliverables are (a) Docker-based implementation of a search engine with documentation, (b) Web-based functions for searching and documents insert (bulk), and (c) written report.

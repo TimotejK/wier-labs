@@ -171,6 +171,7 @@ Only one of the group members should make a submission of the assignment in mood
 >
 > For this assignment it is enough to retrieve data from up 50.000 web pages in total (number of records in table *page* of type HTML from *.gov.si* domains).
  
+<!--
 ## Grading schema
 
 All the submissions will be manually graded by the assistant. Also, plagiarism check will be run across all the submissions. Grading will begin after the last late submission day. The submission time will be selected as the last commit time in the repository. 
@@ -188,4 +189,4 @@ Points | Item
 10 | Submission compliance (report of work and issues description, readme instructions, source code availability - 0 points for the whole project if not available)
 
 Selected groups will need to defend their work during the lab hours. If a group does not agree with their achieved score, it will be able to "negotiate"/defend their programming assignment submission.
-
+-->
