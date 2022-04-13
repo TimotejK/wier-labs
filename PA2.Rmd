@@ -56,7 +56,7 @@ You can implement an algorithm of your choice. We propose to implement one of th
 Follow the implementation guidelines presented at the lectures. Apart from the guidelines you can introduce various heuristics (e.g. taking tag attributes into account, additional rules, ...) that may help you with the wrapper generation. Also, you can implement some preprocessing steps prior to running the algorithm. It is expected, that the generated wrapper may miss some of the data items and may include other unrelevant data items in the output. You should comment or identify, which data items have not been recognized using the algorithm. Full (official) implementation of the RoadRunner algorithm proposed in [the literature](http://www.dia.uniroma3.it/db/roadRunner/publications.html) is [available online along with some examples](http://www.dia.uniroma3.it/db/roadRunner/software.html). Check also other descriptions, e.g. [paper 1](http://vldb.org/conf/2001/P109.pdf) or [paper 2](https://link.springer.com/content/pdf/10.1007%2F3-540-46140-X_21.pdf). 
 
 * *Webstemmer-like* implementation:
-Follow the implementation guidelines of the [Webstemmer algorithm](http://www.unixuser.org/~euske/python/Webstemmer/howitworks.html) and try to implement it on your own.
+Follow the implementation guidelines of the [Webstemmer algorithm](http://www.unixuser.org/~euske/python/webstemmer/howitworks.html) and try to implement it on your own.
 
 * Other implementations (for this option consult with the assistant):
 
