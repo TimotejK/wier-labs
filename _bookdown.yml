@@ -10,7 +10,7 @@ language:
 rmd_files: [
   "index.Rmd",
   "PA1.Rmd",
-  "PA2.Rmd"
-  #"PA3.Rmd"
+  "PA2.Rmd",
+  "PA3.Rmd"
 ]
 new_session: yes
