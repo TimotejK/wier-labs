@@ -18,7 +18,7 @@ This script includes instructions for the lab work for the [**Web Information Ex
 
 ## Lab work {-}
 
-The lab work in this course is consultation-like, so we do not check attendance. The assistant is available during the scheduled times and you can select the time to ask questions in person, while you are also encouraged to use [the course Discord channel](https://discord.gg/WBSkNtGE9G).
+The lab work in this course is mostly consultation-like, so we do not check attendance. The assistant is available during the scheduled times and you can select the time to ask questions in person, while you are also encouraged to use the Moodle forum for communication.
 
 
 ## Programming assignments {-}
@@ -34,7 +34,10 @@ If there is someone (or a group) that is interested in a specific field of infor
 
 Proposed projects:
 
-* *Slovenian support for Apache Solr*: [Apache Solr](https://solr.apache.org) is an open-source search engine and widely adopted. It allows for rich customization and definition of own filters, tokenizers, processes, etc. The idea of the project is to implement an Apache Solr plugin that would integrate [CLASSLA library](https://github.com/clarinsi/classla) - e.g., lemmatization, tokenization, named entity recognition.
-  * Expected project deliverables are (a) implemented plugin in a source code repository with documentation, (b) written report, and (c) practical presentation of your work.
+* *Slovenian support for Apache Solr (update and evaluation)*: [Apache Solr](https://solr.apache.org) is an open-source search engine and widely adopted. It allows for rich customization and definition of own filters, tokenizers, processes, etc. The idea of the project is to update and evaluate the [Apache Solr plugin for Slovene](https://github.com/UL-FRI-Zitnik/solr-classla) - e.g., lemmatization, tokenization, named entity recognition.
+  * Expected project deliverables are (a) updated plugin in a forked source code repository with documentation, (b) written report, and (c) practical presentation/evaluation of your work.
+* *"Production-ready" crawler setup*: There exist some open-source projects such as [Apache Nutch](https://nutch.apache.org/) that allow full crawling functionalities + extensions. The idea of the project is to get to know the specifics of a selected crawler, solve PA1 with it, and use specific extensions (e.g., custom document parsing, filtering, ...).
+  * Expected project deliverables are (a) a source code repository setup and with documentation for running the crawler, (b) written report, and (c) practical presentation/evaluation of your work.
 * *Information retrieval systems evaluation*: Some information retrieval systems have been developed into rich systems that require some knowledge and configuration to create a useful search engine. The idea of the project is that you are given crawled data from PA1 and then you use an information retrieval system to create a Web-based search engine. The selection of a search engine must be agreed with the assistant - e.g.  [milvus search engine](https://milvus.io/)). 
   * Expected project deliverables are (a) Docker-based implementation of a search engine with documentation, (b) Web-based functions for searching and documents insert (bulk), and (c) written report.
+* *Other ideas* from the fiels of Web information extraction. You can think of graph databases; ontologies, SPARQL with databases such as Oracle Graph Database, Amazon Neptune; CKAN review and extensions; [RelFinder](http://www.visualdataweb.org/relfinder.php#:~:text=Interactive%20Relationship%20Discovery%20in%20RDF%20Data&text=The%20RelFinder%20helps%20to%20get,a%20global%20and%20detailed%20level.) rewrite to Javascript from [Adobe Flex implementation](https://github.com/VisualDataWeb/RelFinder); ...

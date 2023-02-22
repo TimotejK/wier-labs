@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Web Information Extraction and Retrieval</title>
   <meta name="description" content="Instructions for the Web Information Extraction and Retrieval course labs" />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Web Information Extraction and Retrieval" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Instructions for the Web Information Extraction and Retrieval course labs" />
   
@@ -32,7 +31,6 @@
   
 
 <link rel="next" href="PA1.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -50,8 +48,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
@@ -155,29 +154,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.4" data-path="PA1.html"><a href="PA1.html#what-to-include-in-the-report"><i class="fa fa-check"></i><b>1.4</b> What to include in the report</a></li>
 <li class="chapter" data-level="1.5" data-path="PA1.html"><a href="PA1.html#what-to-submit"><i class="fa fa-check"></i><b>1.5</b> What to submit</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="PA2.html"><a href="PA2.html"><i class="fa fa-check"></i><b>2</b> Programming assignment 2</a>
-<ul>
-<li class="chapter" data-level="2.1" data-path="PA2.html"><a href="PA2.html#introduction-1"><i class="fa fa-check"></i><b>2.1</b> Introduction</a></li>
-<li class="chapter" data-level="2.2" data-path="PA2.html"><a href="PA2.html#instructions-1"><i class="fa fa-check"></i><b>2.2</b> Instructions</a>
-<ul>
-<li class="chapter" data-level="2.2.1" data-path="PA2.html"><a href="PA2.html#regular-expressions-implementation"><i class="fa fa-check"></i><b>2.2.1</b> Regular expressions implementation</a></li>
-<li class="chapter" data-level="2.2.2" data-path="PA2.html"><a href="PA2.html#xpath-implementation"><i class="fa fa-check"></i><b>2.2.2</b> XPath implementation</a></li>
-<li class="chapter" data-level="2.2.3" data-path="PA2.html"><a href="PA2.html#automatic-web-extraction-algorithm-implementation"><i class="fa fa-check"></i><b>2.2.3</b> Automatic Web extraction algorithm implementation</a></li>
-</ul></li>
-<li class="chapter" data-level="2.3" data-path="PA2.html"><a href="PA2.html#what-to-include-in-the-report-1"><i class="fa fa-check"></i><b>2.3</b> What to include in the report</a></li>
-<li class="chapter" data-level="2.4" data-path="PA2.html"><a href="PA2.html#what-to-submit-1"><i class="fa fa-check"></i><b>2.4</b> What to submit</a></li>
-</ul></li>
-<li class="chapter" data-level="3" data-path="PA3.html"><a href="PA3.html"><i class="fa fa-check"></i><b>3</b> Programming assignment 3</a>
-<ul>
-<li class="chapter" data-level="3.1" data-path="PA3.html"><a href="PA3.html#introduction-2"><i class="fa fa-check"></i><b>3.1</b> Introduction</a></li>
-<li class="chapter" data-level="3.2" data-path="PA3.html"><a href="PA3.html#instructions-2"><i class="fa fa-check"></i><b>3.2</b> Instructions</a>
-<ul>
-<li class="chapter" data-level="3.2.1" data-path="PA3.html"><a href="PA3.html#data-processing-and-indexing"><i class="fa fa-check"></i><b>3.2.1</b> Data processing and indexing</a></li>
-<li class="chapter" data-level="3.2.2" data-path="PA3.html"><a href="PA3.html#data-retrieval"><i class="fa fa-check"></i><b>3.2.2</b> Data retrieval</a></li>
-</ul></li>
-<li class="chapter" data-level="3.3" data-path="PA3.html"><a href="PA3.html#what-to-include-in-the-report-2"><i class="fa fa-check"></i><b>3.3</b> What to include in the report</a></li>
-<li class="chapter" data-level="3.4" data-path="PA3.html"><a href="PA3.html#what-to-submit-2"><i class="fa fa-check"></i><b>3.4</b> What to submit</a></li>
-</ul></li>
 <li class="divider"></li>
 <li><a href="https://ucilnica.fri.uni-lj.si">Moodle classroom</a></li>
 
@@ -201,37 +177,42 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="header">
 <h1 class="title">Web Information Extraction and Retrieval</h1>
 <p class="author"><em>assist. prof. dr. Slavko Žitnik and prof. dr. Marko Bajec</em></p>
-<p class="date"><em>Tuesday, 03. May, 2022</em></p>
+<p class="date"><em>Wednesday, 22. February, 2023</em></p>
 </div>
-<div id="about-the-course" class="section level1 unnumbered">
-<h1>About the course</h1>
+<div id="about-the-course" class="section level1 unnumbered hasAnchor">
+<h1>About the course<a href="index.html#about-the-course" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p><img src="img/book/oil-rig.png" width="359" style="display: block; margin: auto;" /></p>
 <p>This script includes instructions for the lab work for the <a href="https://ucilnica.fri.uni-lj.si/course/view.php?id=284"><strong>Web Information Extraction and Retrieval</strong></a> course at the <a href="http://www.fri.uni-lj.si/">Faculty for computer and information science</a>, <a href="http://www.uni-lj.si/">University of Ljubljana</a>.</p>
-<div id="lab-work" class="section level2 unnumbered">
-<h2>Lab work</h2>
-<p>The lab work in this course is consultation-like, so we do not check attendance. The assistant is available during the scheduled times and you can select the time to ask questions in person, while you are also encouraged to use <a href="https://discord.gg/WBSkNtGE9G">the course Discord channel</a>.</p>
+<div id="lab-work" class="section level2 unnumbered hasAnchor">
+<h2>Lab work<a href="index.html#lab-work" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The lab work in this course is mostly consultation-like, so we do not check attendance. The assistant is available during the scheduled times and you can select the time to ask questions in person, while you are also encouraged to use the Moodle forum for communication.</p>
 </div>
-<div id="programming-assignments" class="section level2 unnumbered">
-<h2>Programming assignments</h2>
+<div id="programming-assignments" class="section level2 unnumbered hasAnchor">
+<h2>Programming assignments<a href="index.html#programming-assignments" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
 <li>Programming assignment 1: Web crawling</li>
 <li>Programming assignment 2: Document parsing</li>
 <li>Programming assignment 3: Indexing &amp; querying</li>
 </ul>
 <p>More information available in the course Moodle classroom.</p>
-<div id="course-projects-alternative-to-the-programming-assignments" class="section level3 unnumbered">
-<h3>Course projects (alternative to the programming assignments)</h3>
+<div id="course-projects-alternative-to-the-programming-assignments" class="section level3 unnumbered hasAnchor">
+<h3>Course projects (alternative to the programming assignments)<a href="index.html#course-projects-alternative-to-the-programming-assignments" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>If there is someone (or a group) that is interested in a specific field of information retrieval, we can arrange a custom assignment for her/him/them instead working on the above three assignments. Such project can also be extended into a masters thesis.</p>
 <p>Proposed projects:</p>
 <ul>
-<li><em>Slovenian support for Apache Solr</em>: <a href="https://solr.apache.org">Apache Solr</a> is an open-source search engine and widely adopted. It allows for rich customization and definition of own filters, tokenizers, processes, etc. The idea of the project is to implement an Apache Solr plugin that would integrate <a href="https://github.com/clarinsi/classla">CLASSLA library</a> - e.g., lemmatization, tokenization, named entity recognition.
+<li><em>Slovenian support for Apache Solr (update and evaluation)</em>: <a href="https://solr.apache.org">Apache Solr</a> is an open-source search engine and widely adopted. It allows for rich customization and definition of own filters, tokenizers, processes, etc. The idea of the project is to update and evaluate the <a href="https://github.com/UL-FRI-Zitnik/solr-classla">Apache Solr plugin for Slovene</a> - e.g., lemmatization, tokenization, named entity recognition.
 <ul>
-<li>Expected project deliverables are (a) implemented plugin in a source code repository with documentation, (b) written report, and (c) practical presentation of your work.</li>
+<li>Expected project deliverables are (a) updated plugin in a forked source code repository with documentation, (b) written report, and (c) practical presentation/evaluation of your work.</li>
+</ul></li>
+<li><em>“Production-ready” crawler setup</em>: There exist some open-source projects such as <a href="https://nutch.apache.org/">Apache Nutch</a> that allow full crawling functionalities + extensions. The idea of the project is to get to know the specifics of a selected crawler, solve PA1 with it, and use specific extensions (e.g., custom document parsing, filtering, …).
+<ul>
+<li>Expected project deliverables are (a) a source code repository setup and with documentation for running the crawler, (b) written report, and (c) practical presentation/evaluation of your work.</li>
 </ul></li>
 <li><em>Information retrieval systems evaluation</em>: Some information retrieval systems have been developed into rich systems that require some knowledge and configuration to create a useful search engine. The idea of the project is that you are given crawled data from PA1 and then you use an information retrieval system to create a Web-based search engine. The selection of a search engine must be agreed with the assistant - e.g. <a href="https://milvus.io/">milvus search engine</a>).
 <ul>
 <li>Expected project deliverables are (a) Docker-based implementation of a search engine with documentation, (b) Web-based functions for searching and documents insert (bulk), and (c) written report.</li>
 </ul></li>
+<li><em>Other ideas</em> from the fiels of Web information extraction. You can think of graph databases; ontologies, SPARQL with databases such as Oracle Graph Database, Amazon Neptune; CKAN review and extensions; <a href="http://www.visualdataweb.org/relfinder.php#:~:text=Interactive%20Relationship%20Discovery%20in%20RDF%20Data&amp;text=The%20RelFinder%20helps%20to%20get,a%20global%20and%20detailed%20level.">RelFinder</a> rewrite to Javascript from <a href="https://github.com/VisualDataWeb/RelFinder">Adobe Flex implementation</a>; …</li>
 </ul>
 
 </div>
