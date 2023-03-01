@@ -124,7 +124,7 @@ We propose to run the notebook using an Anaconda environment. Prepare the enviro
 
 ```bash
 # Create and activate environment (activate it before each use)
-conda create -n wier python=3.6
+conda create -n wier python=3.9
 conda activate wier
 
 # Install dependencies
