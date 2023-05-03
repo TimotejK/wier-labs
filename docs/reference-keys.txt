@@ -16,8 +16,6 @@ xpath-implementation
 automatic-web-extraction-algorithm-implementation
 what-to-include-in-the-report-1
 what-to-submit-1
-grading-schema
-grading-schema-1
 PA3
 introduction-2
 instructions-2
