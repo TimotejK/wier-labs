@@ -77,6 +77,7 @@ The report should follow the [standard structure](https://fri.uni-lj.si/sl/napot
 In the report include the following:
 
 * All the specifics and decisions you made based on the instructions above and the description of the implementation. Separately describe (A) data processing with indexing, (B) data retrieval with inverted index and (C) data retrieval without inverted index.
+  * Instead of (B) you can alternatively use an existing search-engine/indexing tool. Some examples of such are [Apache Solr](https://solr.apache.org/), [Elasticsearch](https://www.elastic.co/), [typesense](https://typesense.org/), [MongoDB Full Text Search](https://www.mongodb.com/docs/manual/text-search/), [Apache Lucene](https://lucene.apache.org/), ...
 * Describe the database (number of indexed words, words and documents with the highest frequencies, ...).
 * Describe and comment on the results of the test queries.
 
