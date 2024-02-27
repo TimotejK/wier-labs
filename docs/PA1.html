@@ -4,23 +4,23 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 1 Programming assignment 1 | Web Information Extraction and Retrieval</title>
+  <title>Chapter 2 Programming assignment 1 | Web Information Extraction and Retrieval</title>
   <meta name="description" content="Instructions for the Web Information Extraction and Retrieval course labs" />
-  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 1 Programming assignment 1 | Web Information Extraction and Retrieval" />
+  <meta property="og:title" content="Chapter 2 Programming assignment 1 | Web Information Extraction and Retrieval" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Instructions for the Web Information Extraction and Retrieval course labs" />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 1 Programming assignment 1 | Web Information Extraction and Retrieval" />
+  <meta name="twitter:title" content="Chapter 2 Programming assignment 1 | Web Information Extraction and Retrieval" />
   
   <meta name="twitter:description" content="Instructions for the Web Information Extraction and Retrieval course labs" />
   
 
-<meta name="author" content="assist. prof. dr. Slavko Žitnik and prof. dr. Marko Bajec" />
+<meta name="author" content="Timotej Knez and prof. dr. Marko Bajec" />
 
 
 
@@ -30,7 +30,7 @@
   
   
 <link rel="prev" href="index.html"/>
-<link rel="next" href="PA2.html"/>
+
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -55,7 +55,7 @@
 
 <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -91,7 +91,7 @@ code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
+code span.bu { color: #008000; } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -104,7 +104,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
+code span.im { color: #008000; font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -118,6 +118,10 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -143,39 +147,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#course-projects-alternative-to-the-programming-assignments"><i class="fa fa-check"></i>Course projects (alternative to the programming assignments)</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="PA1.html"><a href="PA1.html"><i class="fa fa-check"></i><b>1</b> Programming assignment 1</a>
+<li class="chapter" data-level="2" data-path="PA1.html"><a href="PA1.html"><i class="fa fa-check"></i><b>2</b> Programming assignment 1</a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="PA1.html"><a href="PA1.html#introduction"><i class="fa fa-check"></i><b>1.1</b> Introduction</a></li>
-<li class="chapter" data-level="1.2" data-path="PA1.html"><a href="PA1.html#instructions"><i class="fa fa-check"></i><b>1.2</b> Instructions</a>
+<li class="chapter" data-level="2.1" data-path="PA1.html"><a href="PA1.html#introduction"><i class="fa fa-check"></i><b>2.1</b> Introduction</a></li>
+<li class="chapter" data-level="2.2" data-path="PA1.html"><a href="PA1.html#instructions"><i class="fa fa-check"></i><b>2.2</b> Instructions</a>
 <ul>
-<li class="chapter" data-level="1.2.1" data-path="PA1.html"><a href="PA1.html#crawldb-design"><i class="fa fa-check"></i><b>1.2.1</b> Crawldb design</a></li>
+<li class="chapter" data-level="2.2.1" data-path="PA1.html"><a href="PA1.html#crawldb-design"><i class="fa fa-check"></i><b>2.2.1</b> Crawldb design</a></li>
 </ul></li>
-<li class="chapter" data-level="1.3" data-path="PA1.html"><a href="PA1.html#basic-tools"><i class="fa fa-check"></i><b>1.3</b> Basic tools</a></li>
-<li class="chapter" data-level="1.4" data-path="PA1.html"><a href="PA1.html#what-to-include-in-the-report"><i class="fa fa-check"></i><b>1.4</b> What to include in the report</a></li>
-<li class="chapter" data-level="1.5" data-path="PA1.html"><a href="PA1.html#what-to-submit"><i class="fa fa-check"></i><b>1.5</b> What to submit</a></li>
-</ul></li>
-<li class="chapter" data-level="2" data-path="PA2.html"><a href="PA2.html"><i class="fa fa-check"></i><b>2</b> Programming assignment 2</a>
-<ul>
-<li class="chapter" data-level="2.1" data-path="PA2.html"><a href="PA2.html#introduction-1"><i class="fa fa-check"></i><b>2.1</b> Introduction</a></li>
-<li class="chapter" data-level="2.2" data-path="PA2.html"><a href="PA2.html#instructions-1"><i class="fa fa-check"></i><b>2.2</b> Instructions</a>
-<ul>
-<li class="chapter" data-level="2.2.1" data-path="PA2.html"><a href="PA2.html#regular-expressions-implementation"><i class="fa fa-check"></i><b>2.2.1</b> Regular expressions implementation</a></li>
-<li class="chapter" data-level="2.2.2" data-path="PA2.html"><a href="PA2.html#xpath-implementation"><i class="fa fa-check"></i><b>2.2.2</b> XPath implementation</a></li>
-<li class="chapter" data-level="2.2.3" data-path="PA2.html"><a href="PA2.html#automatic-web-extraction-algorithm-implementation"><i class="fa fa-check"></i><b>2.2.3</b> Automatic Web extraction algorithm implementation</a></li>
-</ul></li>
-<li class="chapter" data-level="2.3" data-path="PA2.html"><a href="PA2.html#what-to-include-in-the-report-1"><i class="fa fa-check"></i><b>2.3</b> What to include in the report</a></li>
-<li class="chapter" data-level="2.4" data-path="PA2.html"><a href="PA2.html#what-to-submit-1"><i class="fa fa-check"></i><b>2.4</b> What to submit</a></li>
-</ul></li>
-<li class="chapter" data-level="3" data-path="PA3.html"><a href="PA3.html"><i class="fa fa-check"></i><b>3</b> Programming assignment 3</a>
-<ul>
-<li class="chapter" data-level="3.1" data-path="PA3.html"><a href="PA3.html#introduction-2"><i class="fa fa-check"></i><b>3.1</b> Introduction</a></li>
-<li class="chapter" data-level="3.2" data-path="PA3.html"><a href="PA3.html#instructions-2"><i class="fa fa-check"></i><b>3.2</b> Instructions</a>
-<ul>
-<li class="chapter" data-level="3.2.1" data-path="PA3.html"><a href="PA3.html#data-processing-and-indexing"><i class="fa fa-check"></i><b>3.2.1</b> Data processing and indexing</a></li>
-<li class="chapter" data-level="3.2.2" data-path="PA3.html"><a href="PA3.html#data-retrieval"><i class="fa fa-check"></i><b>3.2.2</b> Data retrieval</a></li>
-</ul></li>
-<li class="chapter" data-level="3.3" data-path="PA3.html"><a href="PA3.html#what-to-include-in-the-report-2"><i class="fa fa-check"></i><b>3.3</b> What to include in the report</a></li>
-<li class="chapter" data-level="3.4" data-path="PA3.html"><a href="PA3.html#what-to-submit-2"><i class="fa fa-check"></i><b>3.4</b> What to submit</a></li>
+<li class="chapter" data-level="2.3" data-path="PA1.html"><a href="PA1.html#basic-tools"><i class="fa fa-check"></i><b>2.3</b> Basic tools</a></li>
+<li class="chapter" data-level="2.4" data-path="PA1.html"><a href="PA1.html#what-to-include-in-the-report"><i class="fa fa-check"></i><b>2.4</b> What to include in the report</a></li>
+<li class="chapter" data-level="2.5" data-path="PA1.html"><a href="PA1.html#what-to-submit"><i class="fa fa-check"></i><b>2.5</b> What to submit</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://ucilnica.fri.uni-lj.si">Moodle classroom</a></li>
@@ -197,12 +178,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="PA1" class="section level1 hasAnchor" number="1">
-<h1><span class="header-section-number">Chapter 1</span> Programming assignment 1<a href="PA1.html#PA1" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="PA1" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">Chapter 2</span> Programming assignment 1<a href="PA1.html#PA1" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p><img src="img/book/spider-01.png" /></p>
-<div id="introduction" class="section level2 hasAnchor" number="1.1">
-<h2><span class="header-section-number">1.1</span> Introduction<a href="PA1.html#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The goal of this programming assignment is to build a standalone crawler that will crawl only <em>.gov.si</em> web sites. The crawler will roughly consist of the following components (Figure <a href="PA1.html#fig:crawlerArchitecture">1.1</a>):</p>
+<div id="introduction" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Introduction<a href="PA1.html#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The goal of this programming assignment is to build a standalone crawler that will crawl only <em>.gov.si</em> web sites. The crawler will roughly consist of the following components (Figure <a href="PA1.html#fig:crawlerArchitecture">2.1</a>):</p>
 <ul>
 <li>HTTP downloader and renderer: To retrieve and render a web page.</li>
 <li>Data extractor: Minimal functionalities to extract images and hyperlinks.</li>
@@ -213,12 +194,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:crawlerArchitecture"></span>
 <img src="img/pa1/crawler.png" alt="Web crawler architecture." width="500" />
 <p class="caption">
-Figure 1.1: Web crawler architecture.
+Figure 2.1: Web crawler architecture.
 </p>
 </div>
 </div>
-<div id="instructions" class="section level2 hasAnchor" number="1.2">
-<h2><span class="header-section-number">1.2</span> Instructions<a href="PA1.html#instructions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="instructions" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Instructions<a href="PA1.html#instructions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Implement a web crawler that will crawl only <em>*.gov.si</em> web sites. You can choose a programming language of your choice. The initial seed URLs should be:</p>
 <ul>
 <li><em>gov.si</em>,</li>
@@ -305,24 +286,24 @@ Useful links
 </tr>
 <tr>
 <td>
-<img src="img/pa1/eUprava_JS.png" />
+<img src="img/pa1/ess-javascript.png" />
 </td>
 <td>
-<img src="img/pa1/eUprava_noJS.png" />
+<img src="img/pa1/ess-brez.png" />
 </td>
 </tr>
 <tr>
 <td>
-<img src="img/pa1/evem_JS.png" />
+<img src="img/pa1/arso-javascript.png" />
 </td>
 <td>
-<img src="img/pa1/evem_noJS.png" />
+<img src="img/pa1/arso-brez.png" />
 </td>
 </tr>
 </table>
 <p>In your implementation you must set the <em>User-Agent</em> field of your bot to <em>fri-wier-NAME_OF_YOUR_GROUP</em>.</p>
-<div id="crawldb-design" class="section level3 hasAnchor" number="1.2.1">
-<h3><span class="header-section-number">1.2.1</span> Crawldb design<a href="PA1.html#crawldb-design" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="crawldb-design" class="section level3 hasAnchor" number="2.2.1">
+<h3><span class="header-section-number">2.2.1</span> Crawldb design<a href="PA1.html#crawldb-design" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Below there is a model of a crawldb database that your crawler needs to use. This is just a base model, which you <strong>MUST NOT</strong> change, but you can extend it with additional fields, tables, … that your crawler might need. You should use PostgreSQL database and create a schema using a <a href="data/pa1/crawldb.sql">prepared SQL script</a>.</p>
 <center>
 <iframe width="879" height="814" src="data/pa1/crawldb.html" frameborder="0" scrolling="no">
@@ -332,28 +313,28 @@ Useful links
 <p>You can optionally use table <em>page</em> also as a current frontier queue storage.</p>
 </div>
 </div>
-<div id="basic-tools" class="section level2 hasAnchor" number="1.3">
-<h2><span class="header-section-number">1.3</span> Basic tools<a href="PA1.html#basic-tools" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="basic-tools" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> Basic tools<a href="PA1.html#basic-tools" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We propose to run the notebook using an Anaconda environment. Prepare the environment as follows:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="PA1.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create and activate environment (activate it before each use)</span></span>
-<span id="cb1-2"><a href="PA1.html#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> create <span class="at">-n</span> wier python=3.9</span>
-<span id="cb1-3"><a href="PA1.html#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate wier</span>
-<span id="cb1-4"><a href="PA1.html#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="PA1.html#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Install dependencies</span></span>
-<span id="cb1-6"><a href="PA1.html#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> install selenium psycopg2 nb_conda requests</span>
-<span id="cb1-7"><a href="PA1.html#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> install <span class="at">-c</span> anaconda flask pyopenssl</span>
-<span id="cb1-8"><a href="PA1.html#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> install <span class="at">-c</span> conda-forge flask-httpauth</span>
-<span id="cb1-9"><a href="PA1.html#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="PA1.html#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Run Jupyter notebook</span></span>
-<span id="cb1-11"><a href="PA1.html#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="ex">jupyter</span> notebook </span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="PA1.html#cb1-1" tabindex="-1"></a><span class="co"># Create and activate environment (activate it before each use)</span></span>
+<span id="cb1-2"><a href="PA1.html#cb1-2" tabindex="-1"></a><span class="ex">conda</span> create <span class="at">-n</span> wier python=3.9</span>
+<span id="cb1-3"><a href="PA1.html#cb1-3" tabindex="-1"></a><span class="ex">conda</span> activate wier</span>
+<span id="cb1-4"><a href="PA1.html#cb1-4" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="PA1.html#cb1-5" tabindex="-1"></a><span class="co"># Install dependencies</span></span>
+<span id="cb1-6"><a href="PA1.html#cb1-6" tabindex="-1"></a><span class="ex">conda</span> install selenium psycopg2 nb_conda requests</span>
+<span id="cb1-7"><a href="PA1.html#cb1-7" tabindex="-1"></a><span class="ex">conda</span> install <span class="at">-c</span> anaconda flask pyopenssl</span>
+<span id="cb1-8"><a href="PA1.html#cb1-8" tabindex="-1"></a><span class="ex">conda</span> install <span class="at">-c</span> conda-forge flask-httpauth</span>
+<span id="cb1-9"><a href="PA1.html#cb1-9" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="PA1.html#cb1-10" tabindex="-1"></a><span class="co"># Run Jupyter notebook</span></span>
+<span id="cb1-11"><a href="PA1.html#cb1-11" tabindex="-1"></a><span class="ex">jupyter</span> notebook </span></code></pre></div>
 <p>During the lab session we will present basic tools for those who are not well experienced in Web scraping and database access:</p>
 <ul>
 <li>Jupyter notebook tutorial <a href="notebooks/Web%20crawling%20-%20basic%20tools.ipynb">Web crawling - basic tools</a> that introduces the basic tools to start working on the assignment.</li>
 <li>A showcase of server (<a href="notebooks/Remote%20crawler%20database%20(server).ipynb">Remote crawler database (server)</a>) and client (<a href="notebooks/Remote%20crawler%20database%20(client).ipynb">Remote crawler database (client)</a>) implementation in case you would like to run multiple crawlers (e.g. from each group member homes) and have the same crawler database.</li>
 </ul>
 </div>
-<div id="what-to-include-in-the-report" class="section level2 hasAnchor" number="1.4">
-<h2><span class="header-section-number">1.4</span> What to include in the report<a href="PA1.html#what-to-include-in-the-report" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="what-to-include-in-the-report" class="section level2 hasAnchor" number="2.4">
+<h2><span class="header-section-number">2.4</span> What to include in the report<a href="PA1.html#what-to-include-in-the-report" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The report should follow the <a href="https://fri.uni-lj.si/sl/napotki-za-pisanje-porocila">standard structure</a>. It must not exceed 2 pages.</p>
 <p>In the report include the following:</p>
 <ul>
@@ -363,8 +344,8 @@ Useful links
 <li>Visualize links and include images into the report. If the network is too big, take only a portion of it or high-level representation (e.g. interconnectedness of specific domains). Use visualization libraries such as <a href="https://d3js.org/">D3js</a>, <a href="http://visjs.org/">visjs</a>, <a href="http://sigmajs.org/">sigmajs</a> or <a href="https://gephi.org/">gephi</a>.</li>
 </ul>
 </div>
-<div id="what-to-submit" class="section level2 hasAnchor" number="1.5">
-<h2><span class="header-section-number">1.5</span> What to submit<a href="PA1.html#what-to-submit" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="what-to-submit" class="section level2 hasAnchor" number="2.5">
+<h2><span class="header-section-number">2.5</span> What to submit<a href="PA1.html#what-to-submit" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Only one of the group members should make a submission of the assignment in moodle. The submission should contain only a link to the repository that contains the following which you will use for all the submissions during the course:</p>
 <ul>
 <li>a file <em>pa1/db</em></li>
@@ -410,8 +391,8 @@ Selected groups will need to defend their work during the lab hours. If a group 
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="PA2.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="index.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

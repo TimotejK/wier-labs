@@ -1,7 +1,7 @@
 --- 
 title: "Web Information Extraction and Retrieval"
-author: "assist. prof. dr. Slavko Žitnik and prof. dr. Marko Bajec"
-date: "Wednesday, 03. May, 2023"
+author: "Timotej Knez and prof. dr. Marko Bajec"
+date: "Tuesday, 27. February, 2024"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
 documentclass: book
@@ -10,7 +10,7 @@ description: "Instructions for the Web Information Extraction and Retrieval cour
 
 # About the course {-}
 
-<img src="img/book/oil-rig.png" width="359" style="display: block; margin: auto;" />
+<img src="img/book/oil-rig.png" style="display: block; margin: auto;" />
 
 This script includes instructions for the lab work for the [**Web Information Extraction and Retrieval**](https://ucilnica.fri.uni-lj.si/course/view.php?id=284) course at the [Faculty for computer and information science](http://www.fri.uni-lj.si/), [University of Ljubljana](http://www.uni-lj.si/).
 

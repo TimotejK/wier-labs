@@ -97,12 +97,12 @@ Examples of enabling javascript in a web browser or not:
 <td><center><b>Javascript disabled</b></center></td>
 </tr>
 <tr>
-<td><img src="img/pa1/eUprava_JS.png" /></td>
-<td><img src="img/pa1/eUprava_noJS.png" /></td>
+<td><img src="img/pa1/ess-javascript.png" /></td>
+<td><img src="img/pa1/ess-brez.png" /></td>
 </tr>
 <tr>
-<td><img src="img/pa1/evem_JS.png" /></td>
-<td><img src="img/pa1/evem_noJS.png" /></td>
+<td><img src="img/pa1/arso-javascript.png" /></td>
+<td><img src="img/pa1/arso-brez.png" /></td>
 </tr>
 </table>
 

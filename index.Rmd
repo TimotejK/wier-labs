@@ -1,6 +1,6 @@
 --- 
 title: "Web Information Extraction and Retrieval"
-author: "assist. prof. dr. Slavko Žitnik and prof. dr. Marko Bajec"
+author: "Timotej Knez and prof. dr. Marko Bajec"
 date: "`r format(Sys.Date(), '%A, %d. %B, %Y', tz='Europe/Ljubljana')`"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
