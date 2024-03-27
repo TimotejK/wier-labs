@@ -1,7 +1,7 @@
 --- 
 title: "Web Information Extraction and Retrieval"
 author: "Timotej Knez and prof. dr. Marko Bajec"
-date: "Tuesday, 27. February, 2024"
+date: "Wednesday, 27. March, 2024"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
 documentclass: book
