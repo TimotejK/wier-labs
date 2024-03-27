@@ -10,5 +10,6 @@ language:
 rmd_files: [
   "index.Rmd",
   "PA1.Rmd",
+  "PA2.Rmd",
 ]
 new_session: yes
