@@ -22,7 +22,7 @@ The goal of this programming assignment is to build a standalone crawler that wi
 Implement a web crawler that will crawl only *\*.gov.si* web sites. You can choose a programming language of your choice. The initial seed URLs should be: 
 
 * *gov.si*,
-* *evem.gov.si*,
+* *spot.gov.si*,
 * *e-uprava.gov.si* and
 * *e-prostor.gov.si*.
 

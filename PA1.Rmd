@@ -21,7 +21,7 @@ knitr::include_graphics("img/pa1/crawler.png")
 Implement a web crawler that will crawl only *\*.gov.si* web sites. You can choose a programming language of your choice. The initial seed URLs should be: 
 
 * *gov.si*,
-* *evem.gov.si*,
+* *spot.gov.si*,
 * *e-uprava.gov.si* and
 * *e-prostor.gov.si*.
 
