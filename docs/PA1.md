@@ -144,7 +144,7 @@ During the lab session we will present basic tools for those who are not well ex
 
 ## What to include in the report
 
-The report should follow the [standard structure](https://fri.uni-lj.si/sl/napotki-za-pisanje-porocila). It must not exceed 2 pages.
+The report should follow the [standard structure](https://fri.uni-lj.si/sl/napotki-za-pisanje-porocila). It must not exceed 2 pages. You can include extra pages if you need them for visualisations of the database.
 
 In the report include the following:
 
@@ -167,9 +167,9 @@ Only one of the group members should make a submission of the assignment in mood
 > <center><img src="img/pa1/Export1.png" /></center>
 > <center><img src="img/pa1/Export2.png" /></center>
 >
-> The exported data file should not be larger than 100MB.
+> The exported data file should not be larger than 100MB. If you get a larger file after exporting the database, please upload it to a cloud service like Google drive and include a text file with a link in your repository.
 >
-> For this assignment it is enough to retrieve data from up 50.000 web pages in total (number of records in table *page* of type HTML from *.gov.si* domains).
+> For this assignment it is enough to retrieve data from 50.000 web pages in total (number of records in table *page* of type HTML from *.gov.si* domains).
  
 <!--
 ## Grading schema
