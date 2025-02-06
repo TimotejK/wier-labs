@@ -1,6 +1,4 @@
 fig:crawlerArchitecture
-fig:overStockSample
-fig:rtvSloSample
 PA1
 introduction
 instructions
@@ -8,18 +6,3 @@ crawldb-design
 basic-tools
 what-to-include-in-the-report
 what-to-submit
-PA2
-introduction-1
-instructions-1
-regular-expressions-implementation
-xpath-implementation
-automatic-web-extraction-algorithm-implementation
-what-to-include-in-the-report-1
-what-to-submit-1
-PA3
-introduction-2
-instructions-2
-data-processing-and-indexing
-data-retrieval
-what-to-include-in-the-report-2
-what-to-submit-2
