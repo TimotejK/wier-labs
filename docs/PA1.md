@@ -22,6 +22,7 @@ The goal of this programming assignment is to build a standalone crawler that wi
 Implement a web crawler that will crawl websites within your chosen domain. You can choose a programming language of your choice.
 
 Choose a domain you will be exploring in your project assignments. We have prepared some domains that could be interesting: 
+
 - *Slovenian legal domain*: Crawl documents available on [sodnapraksa.si](https://www.sodnapraksa.si/). The website offers a large repository of legal documents structured in HTML format, which should help your chatbot answer legal questions.
 
 - *English research papers*: Crawl a large number of research papers from the repository [arxiv.org](https://arxiv.org/). You should select a specific field of interest and crawl papers from that field. Some papers are available in HTML format and some only in PDF format. You should follow paper references which are also on the arxiv.org website as links.
