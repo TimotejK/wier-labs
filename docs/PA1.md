@@ -22,11 +22,15 @@ The goal of this programming assignment is to build a standalone crawler that wi
 Implement a web crawler that will crawl websites within your chosen domain. You can choose a programming language of your choice.
 
 Choose a domain you will be exploring in your project assignments. We have prepared some domains that could be interesting: 
-* *Slovenian legal domain*: Crawl documents available on [sodnapraksa.si](https://www.sodnapraksa.si/). The website offers a large repository of legal documents structured in HTML format, which should help your chatbot answer legal questions.
-* *English research papers*: Crawl a large number of research papers from the repository [arxiv.org](https://arxiv.org/). You should select a specific field of interest and crawl papers from that field. Some papers are available in HTML format and some only in PDF format. You should follow paper references which are also on the arxiv.org website as links.
-* *Faculty regulations*: The goal is to answer questions about FRI regulations like for example what are the requirements for enroling in higher year. To achieve this you should crawl the [FRI website](https://fri.uni-lj.si/sl) and create a database of faculty information with special emphasys on faculty ragulatory documents. In this domain the amount of documents will be smaller; however, you will need to extract information from PDF documents which can be more challenging than extracting information from HTML pages.
-* *Reddit content*: Select a subreddit from a webpage [reddit.com](https://www.reddit.com/) (like for example [Slovenia FIRE](https://www.reddit.com/r/SlovenijaFIRE/) subreddit) and crawl the discussions in that subreddit.
-* *Other domains*: If you would like to explore a different domain, let us know and we can determine the details.
+- *Slovenian legal domain*: Crawl documents available on [sodnapraksa.si](https://www.sodnapraksa.si/). The website offers a large repository of legal documents structured in HTML format, which should help your chatbot answer legal questions.
+
+- *English research papers*: Crawl a large number of research papers from the repository [arxiv.org](https://arxiv.org/). You should select a specific field of interest and crawl papers from that field. Some papers are available in HTML format and some only in PDF format. You should follow paper references which are also on the arxiv.org website as links.
+
+- *Faculty regulations*: The goal is to answer questions about FRI regulations like for example what are the requirements for enroling in higher year. To achieve this you should crawl the [FRI website](https://fri.uni-lj.si/sl) and create a database of faculty information with special emphasys on faculty ragulatory documents. In this domain the amount of documents will be smaller; however, you will need to extract information from PDF documents which can be more challenging than extracting information from HTML pages.
+
+- *Reddit content*: Select a subreddit from a webpage [reddit.com](https://www.reddit.com/) (like for example [Slovenia FIRE](https://www.reddit.com/r/SlovenijaFIRE/) subreddit) and crawl the discussions in that subreddit.
+
+- *Other domains*: If you would like to explore a different domain, let us know and we can determine the details.
 
 
 The crawler needs to be implemented with multiple workers that retrieve different web pages in parallel. The number of workers should be a parameter when starting the crawler. The frontier strategy needs to follow the breadth-first strategy. In the report explain how your strategy is implemented.
