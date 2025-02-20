@@ -142,7 +142,7 @@ During the lab session we will present basic tools for those who are not well ex
 
 ## What to include in the report
 
-The report should follow the [standard structure](https://fri.uni-lj.si/sl/napotki-za-pisanje-porocila). It must not exceed 2 pages. You can include extra pages if you need them for visualisations of the database.
+The report should follow the [standard structure](https://fri.uni-lj.si/sl/napotki-za-pisanje-porocila). It should not exceed 2-3 pages. You can include extra pages if you need them for visualisations of the database or large tables.
 
 In the report include the following:
 
@@ -150,6 +150,8 @@ In the report include the following:
 * Document also parameters that are needed for your crawler, specifics, problems that you had during the development and solutions.
 * For the sites that are given in the instructions' seed list and also for the whole crawldb together (for both separately) report general statistics of crawldb (number of sites, number of web pages, number of duplicates, number of binary documents by type, number of images, average number of images per web page, ...). 
 * Visualize links and include images into the report. If the network is too big, take only a portion of it or high-level representation (e.g. interconnectedness of specific domains). Use visualization libraries such as [D3js](https://d3js.org/), [visjs](http://visjs.org/), [sigmajs](http://sigmajs.org/) or [gephi](https://gephi.org/).
+* Describe how you implemented deduplication strategy with partial matching.
+* Describe how you implemented a strategy for preferential crawling.
 
 ## What to submit
 
