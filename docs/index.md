@@ -1,7 +1,7 @@
 --- 
 title: "Web Information Extraction and Retrieval"
 author: "Timotej Knez, Melanija Vezočnik, prof. dr. Marko Bajec, Slavko Žitnik"
-date: "Thursday, 06. February, 2025"
+date: "Thursday, 20. February, 2025"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
 documentclass: book
@@ -16,7 +16,7 @@ This script includes instructions for the lab work for the [**Web Information Ex
 
 ## Lab work {-}
 
-The lab work in this course is mostly consultation-like, so we do not check attendance. The assistant is available during the scheduled times and you can select the time to ask questions in person, while you are also encouraged to use the Moodle forum for communication.
+Please regularly check the Weekly plan and course announcements for possible changes. Attendance at labs is optional. However, it is mandatory to attend all programming assignments’ defences.
 
 
 ## Programming assignments {-}
