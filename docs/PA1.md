@@ -23,13 +23,13 @@ Implement a web crawler that will crawl websites within your chosen domain. You 
 
 Choose a domain you will be exploring in your project assignments. We have prepared some domains that could be interesting: 
 
-- *University of Ljubljana (UL) and Faculty of Computer and Information Science (FRI) regulations*: unravel the complexities of the UL's regulations by developing a web crawler to extract key policies and rules of the UL and FRI. For example, what is the Code of Ethics at UL, and what are the requirements for enrolling in the higher year on FRI. To achieve this, you should crawl the [UL website](https://www.uni-lj.si/) and [FRI website] (https://www.fri.uni-lj.si/sl) and create a database of information with special emphasis on regulatory documents. In this domain, the amount of documents will be smaller; however, you will need to extract information from PDF documents, which can be more challenging than extracting information from HTML pages.
+- *University of Ljubljana (UL) and Faculty of Computer and Information Science (FRI) regulations*: Create a system for answering quesitons about the study process at the University of Ljubljana. The goal is to answer questions like: "What are the requirements for enrolling in a higher grade", "What is the class web information extraction and retrieval about?" or "What is the Code of Ethics at UL". To achieve this, you should crawl the [UL website](https://www.uni-lj.si/) and [FRI website] (https://www.fri.uni-lj.si/sl) and create a database of information with special emphasis on regulatory documents. In this domain, the amount of documents will be smaller; however, you will need to extract information from PDF documents, which can be more challenging than extracting information from HTML pages.
 
 - *Reddit content*: Extract discussions, trends, and insights by crawling a selected subreddit from a webpage [reddit.com](https://www.reddit.com/) (like for example [Slovenia FIRE](https://www.reddit.com/r/SlovenijaFIRE/) subreddit).
 
-- *Workaway*: Uncover global volunteering opportunities by crawling the platform [Workaway](https://www.workaway.info/) that connects travellers with hosts worldwide. The goal is to extract publicly available information (e.g., host descriptions, FAQs)
+- *Workaway*: Crate a system for answering questions about global volunteering opportunities by crawling the platform [Workaway](https://www.workaway.info/) that connects travellers with hosts worldwide. The goal is to extract publicly available information (e.g., host descriptions, FAQs)
 
-- *Med.Over.Net*: Explore the depths of [Med.Over.Net](https://med.over.net/) by crawling its content to uncover insights into Slovenian online health discussions.
+- *Med.Over.Net*: Gather useful advice on a variety of topics by crawling [Med.Over.Net](https://med.over.net/). Med.Over.Net is a forum that contains discussions about health related issues.
 
 - *Slovenian legal domain*: Crawl documents available on [sodnapraksa.si](https://www.sodnapraksa.si/). The website offers a large repository of legal documents structured in HTML format, which should help your chatbot answer legal questions.
 
