@@ -54,9 +54,8 @@
 
 
 <style type="text/css">
-html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -66,7 +65,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -204,14 +203,14 @@ Figure 1.1: Web crawler architecture.
 <p>Implement a web crawler that will crawl websites within your chosen domain. You can choose a programming language of your choice.</p>
 <p>Choose a domain you will be exploring in your project assignments. We have prepared some domains that could be interesting:</p>
 <ul>
-<li><p><em>University of Ljubljana (UL) and Faculty of Computer and Information Science (FRI) regulations</em>: Create a system for answering quesitons about the study process at the University of Ljubljana. The goal is to answer questions like: “What are the requirements for enrolling in a higher grade”, “What is the class web information extraction and retrieval about?” or “What is the Code of Ethics at UL”. To achieve this, you should crawl the <a href="https://www.uni-lj.si/">UL website</a> and [FRI website] (<a href="https://www.fri.uni-lj.si/sl" class="uri">https://www.fri.uni-lj.si/sl</a>) and create a database of information with special emphasis on regulatory documents. In this domain, the amount of documents will be smaller; however, you will need to extract information from PDF documents, which can be more challenging than extracting information from HTML pages.</p></li>
-<li><p><em>Reddit content</em>: Extract discussions, trends, and insights by crawling a selected subreddit from a webpage <a href="https://www.reddit.com/">reddit.com</a> (like for example <a href="https://www.reddit.com/r/SlovenijaFIRE/">Slovenia FIRE</a> subreddit).</p></li>
+<li><p><em>University of Ljubljana (UL) and Faculty of Computer and Information Science (FRI) regulations</em>: Create a system for answering quesitons about the study process at the University of Ljubljana. The goal is to answer questions like: “What are the requirements for enrolling in a higher grade”, “What is the class web information extraction and retrieval about?” or “What is the Code of Ethics at UL”. To achieve this, you should crawl the <a href="https://www.uni-lj.si/">UL website</a> and <a href="https://www.fri.uni-lj.si/sl">FRI website</a> and create a database of information with special emphasis on regulatory documents. In this domain, the amount of documents will be smaller; however, you will need to extract information from PDF documents, which can be more challenging than extracting information from HTML pages.</p></li>
+<li><p><em>Slo-Tech</em>: Extract discussions, trends, and insights by crawling Slo-Tech, a Slovenian online portal focused on the field of information technologies from a webpage <a href="https://slo-tech.com/">slo-tech.com</a>.</p></li>
 <li><p><em>Workaway</em>: Crate a system for answering questions about global volunteering opportunities by crawling the platform <a href="https://www.workaway.info/">Workaway</a> that connects travellers with hosts worldwide. The goal is to extract publicly available information (e.g., host descriptions, FAQs)</p></li>
 <li><p><em>Med.Over.Net</em>: Gather useful advice on a variety of topics by crawling <a href="https://med.over.net/">Med.Over.Net</a>. Med.Over.Net is a forum that contains discussions about health related issues.</p></li>
 <li><p><em>Slovenian legal domain</em>: Crawl documents available on <a href="https://www.sodnapraksa.si/">sodnapraksa.si</a>. The website offers a large repository of legal documents structured in HTML format, which should help your chatbot answer legal questions.</p></li>
 <li><p><em>Other domains</em>: If you would like to explore a different domain, let us know and we can determine the details.</p></li>
 </ul>
-<p>The crawler needs to be implemented with multiple workers that retrieve different web pages in parallel. The number of workers should be a parameter when starting the crawler. The frontier strategy needs to follow the breadth-first strategy. In the report explain how your strategy is implemented.</p>
+<p>The crawler needs to be implemented with multiple workers that retrieve different web pages in parallel. The number of workers should be a parameter when starting the crawler. The frontier strategy needs to follow the preferential strategy. In the report explain how your strategy is implemented.</p>
 <p>Check and respect the <a href="https://en.wikipedia.org/wiki/Robots_exclusion_standard"><em>robots.txt</em></a> file for each domain if it exists. Correctly respect the commands <em>User-agent</em>, <em>Allow</em>, <em>Disallow</em>, <em>Crawl-delay</em> and <em>Sitemap</em>. Make sure to respect <em>robots.txt</em> as sites that define special crawling rules often contain <a href="https://en.wikipedia.org/wiki/Spider_trap">spider traps</a>. Also make sure that you follow ethics and do not send request to the same server more often than one request in 5 seconds (not only domain but also IP!).</p>
 <p>In a database store canonicalized URLs only!</p>
 <p>During crawling you need to detect duplicate web pages. The easiest solution is to check whether a web page with the same page content was already parsed (hint: you can extend the database with a hash, otherwise you need compare exact HTML code). If your crawler gets a URL from a frontier that has already been parsed, this is not treated as a duplicate. In such cases there is no need to re-crawl the page, just add a record into to the table <em>link</em> accordingly.</p>
@@ -397,46 +396,46 @@ Selected groups will need to defend their work during the lab hours. If a group 
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
-"sharing": {
-"github": false,
-"facebook": false,
-"twitter": false,
-"linkedin": false,
-"weibo": false,
-"instapaper": false,
-"vk": false,
-"whatsapp": false,
-"all": {}
-},
-"fontsettings": {
-"theme": "white",
-"family": "sans",
-"size": 1
-},
-"edit": {
-"link": null,
-"text": null
-},
-"history": {
-"link": null,
-"text": null
-},
-"view": {
-"link": null,
-"text": null
-},
-"download": null,
-"search": {
-"engine": "fuse",
-"options": null
-},
-"toc": {
-"collapse": "section",
-"scroll_highlight": true
-},
-"toolbar": {
-"position": "fixed"
-}
+  "sharing": {
+    "github": false,
+    "facebook": false,
+    "twitter": false,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": {}
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 1
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "section",
+    "scroll_highlight": true
+  },
+  "toolbar": {
+    "position": "fixed"
+  }
 });
 });
 </script>

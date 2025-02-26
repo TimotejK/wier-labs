@@ -23,9 +23,9 @@ Implement a web crawler that will crawl websites within your chosen domain. You 
 
 Choose a domain you will be exploring in your project assignments. We have prepared some domains that could be interesting: 
 
-- *University of Ljubljana (UL) and Faculty of Computer and Information Science (FRI) regulations*: Create a system for answering quesitons about the study process at the University of Ljubljana. The goal is to answer questions like: "What are the requirements for enrolling in a higher grade", "What is the class web information extraction and retrieval about?" or "What is the Code of Ethics at UL". To achieve this, you should crawl the [UL website](https://www.uni-lj.si/) and [FRI website] (https://www.fri.uni-lj.si/sl) and create a database of information with special emphasis on regulatory documents. In this domain, the amount of documents will be smaller; however, you will need to extract information from PDF documents, which can be more challenging than extracting information from HTML pages.
+- *University of Ljubljana (UL) and Faculty of Computer and Information Science (FRI) regulations*: Create a system for answering quesitons about the study process at the University of Ljubljana. The goal is to answer questions like: "What are the requirements for enrolling in a higher grade", "What is the class web information extraction and retrieval about?" or "What is the Code of Ethics at UL". To achieve this, you should crawl the [UL website](https://www.uni-lj.si/) and [FRI website](https://www.fri.uni-lj.si/sl) and create a database of information with special emphasis on regulatory documents. In this domain, the amount of documents will be smaller; however, you will need to extract information from PDF documents, which can be more challenging than extracting information from HTML pages.
 
-- *Reddit content*: Extract discussions, trends, and insights by crawling a selected subreddit from a webpage [reddit.com](https://www.reddit.com/) (like for example [Slovenia FIRE](https://www.reddit.com/r/SlovenijaFIRE/) subreddit).
+- *Slo-Tech*: Extract discussions, trends, and insights by crawling Slo-Tech, a Slovenian online portal focused on the field of information technologies from a webpage [slo-tech.com](https://slo-tech.com/).
 
 - *Workaway*: Crate a system for answering questions about global volunteering opportunities by crawling the platform [Workaway](https://www.workaway.info/) that connects travellers with hosts worldwide. The goal is to extract publicly available information (e.g., host descriptions, FAQs)
 
@@ -36,7 +36,7 @@ Choose a domain you will be exploring in your project assignments. We have prepa
 - *Other domains*: If you would like to explore a different domain, let us know and we can determine the details.
 
 
-The crawler needs to be implemented with multiple workers that retrieve different web pages in parallel. The number of workers should be a parameter when starting the crawler. The frontier strategy needs to follow the breadth-first strategy. In the report explain how your strategy is implemented.
+The crawler needs to be implemented with multiple workers that retrieve different web pages in parallel. The number of workers should be a parameter when starting the crawler. The frontier strategy needs to follow the preferential strategy. In the report explain how your strategy is implemented.
 
 Check and respect the [*robots.txt*](https://en.wikipedia.org/wiki/Robots_exclusion_standard) file for each domain if it exists. Correctly respect the commands *User-agent*, *Allow*, *Disallow*, *Crawl-delay* and *Sitemap*. Make sure to respect *robots.txt* as sites that define special crawling rules often contain [spider traps](https://en.wikipedia.org/wiki/Spider_trap). Also make sure that you follow ethics and do not send request to the same server more often than one request in 5 seconds (not only domain but also IP!).
 
