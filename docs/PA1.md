@@ -141,6 +141,7 @@ During the lab session we will present basic tools for those who are not well ex
 * Jupyter notebook tutorial [Web crawling - basic tools](notebooks/Web crawling - basic tools.ipynb) that introduces the basic tools to start working on the assignment.
 * A showcase of server ([Remote crawler database (server)](notebooks/Remote crawler database (server).ipynb)) and client ([Remote crawler database (client)](notebooks/Remote crawler database (client).ipynb)) implementation in case you would like to run multiple crawlers (e.g. from each group member homes) and have the same crawler database.
 * Jupiter notebook tutorial on [Preferential crawling](notebooks/Preferential crawling.ipynb).
+* Jupiter notebook tutorial on [Vector databases](notebooks/introduction_to_vector_databases.ipynb). **This introductory tutorial to vector databases is NOT applicable for PA1**
 
 ## What to include in the report
 
