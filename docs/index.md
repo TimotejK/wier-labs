@@ -1,7 +1,7 @@
 --- 
 title: "Web Information Extraction and Retrieval"
 author: "Timotej Knez, Melanija Vezočnik, prof. dr. Marko Bajec, Slavko Žitnik"
-date: "torek, 04. marec, 2025"
+date: "torek, 11. marec, 2025"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
 documentclass: book
