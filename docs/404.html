@@ -54,8 +54,9 @@
 
 
 <style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -65,7 +66,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -158,6 +159,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.4" data-path="PA1.html"><a href="PA1.html#what-to-include-in-the-report"><i class="fa fa-check"></i><b>1.4</b> What to include in the report</a></li>
 <li class="chapter" data-level="1.5" data-path="PA1.html"><a href="PA1.html#what-to-submit"><i class="fa fa-check"></i><b>1.5</b> What to submit</a></li>
 </ul></li>
+<li class="chapter" data-level="2" data-path="PA2.html"><a href="PA2.html"><i class="fa fa-check"></i><b>2</b> Programming assignment 2</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="PA2.html"><a href="PA2.html#introduction-1"><i class="fa fa-check"></i><b>2.1</b> Introduction</a></li>
+<li class="chapter" data-level="2.2" data-path="PA2.html"><a href="PA2.html#identifying-and-extracting-information"><i class="fa fa-check"></i><b>2.2</b> Identifying and extracting information</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="PA2.html"><a href="PA2.html#using-xpath-expressions"><i class="fa fa-check"></i><b>2.2.1</b> Using XPath expressions</a></li>
+<li class="chapter" data-level="2.2.2" data-path="PA2.html"><a href="PA2.html#using-regular-expressions"><i class="fa fa-check"></i><b>2.2.2</b> Using regular expressions</a></li>
+<li class="chapter" data-level="2.2.3" data-path="PA2.html"><a href="PA2.html#your-task"><i class="fa fa-check"></i><b>2.2.3</b> Your task</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="PA2.html"><a href="PA2.html#storing-extracted-information-in-a-vector-database"><i class="fa fa-check"></i><b>2.3</b> Storing extracted information in a vector database</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="PA2.html"><a href="PA2.html#preparing-the-database"><i class="fa fa-check"></i><b>2.3.1</b> Preparing the database</a></li>
+<li class="chapter" data-level="2.3.2" data-path="PA2.html"><a href="PA2.html#generate-vector-embeddings"><i class="fa fa-check"></i><b>2.3.2</b> Generate vector embeddings</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="PA2.html"><a href="PA2.html#information-retrieval"><i class="fa fa-check"></i><b>2.4</b> Information retrieval</a></li>
+<li class="chapter" data-level="2.5" data-path="PA2.html"><a href="PA2.html#what-to-submit-1"><i class="fa fa-check"></i><b>2.5</b> What to submit</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="PA2.html"><a href="PA2.html#what-to-include-in-the-report-1"><i class="fa fa-check"></i><b>2.5.1</b> What to include in the report</a></li>
+</ul></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://ucilnica.fri.uni-lj.si">Moodle classroom</a></li>
 
@@ -204,46 +225,46 @@ the table of contents to find the page you are looking for.</p>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
-  "sharing": {
-    "github": false,
-    "facebook": false,
-    "twitter": false,
-    "linkedin": false,
-    "weibo": false,
-    "instapaper": false,
-    "vk": false,
-    "whatsapp": false,
-    "all": {}
-  },
-  "fontsettings": {
-    "theme": "white",
-    "family": "sans",
-    "size": 1
-  },
-  "edit": {
-    "link": null,
-    "text": null
-  },
-  "history": {
-    "link": null,
-    "text": null
-  },
-  "view": {
-    "link": null,
-    "text": null
-  },
-  "download": null,
-  "search": {
-    "engine": "fuse",
-    "options": null
-  },
-  "toc": {
-    "collapse": "section",
-    "scroll_highlight": true
-  },
-  "toolbar": {
-    "position": "fixed"
-  }
+"sharing": {
+"github": false,
+"facebook": false,
+"twitter": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": {}
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 1
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section",
+"scroll_highlight": true
+},
+"toolbar": {
+"position": "fixed"
+}
 });
 });
 </script>

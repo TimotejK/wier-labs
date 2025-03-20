@@ -6,4 +6,15 @@ crawldb-design
 basic-tools
 what-to-include-in-the-report
 what-to-submit
-grading-schema
+PA2
+introduction-1
+identifying-and-extracting-information
+using-xpath-expressions
+using-regular-expressions
+your-task
+storing-extracted-information-in-a-vector-database
+preparing-the-database
+generate-vector-embeddings
+information-retrieval
+what-to-submit-1
+what-to-include-in-the-report-1
