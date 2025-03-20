@@ -65,9 +65,9 @@ Another approach to content extraction is using **regular expressions** (regex).
 - `[]` — matches any one character in the brackets  
 - `()` — groups expressions  
 - `\d` — matches any digit  
-- `\s` — matches whitespace  
-- `^` — matches the start of a string  
-- `$` — matches the end of a string  
+- `\s` — matches whitespace
+- `^` — matches the start of a string
+- `$` — matches the end of a string
 
 **Common Regex Examples and What They Match:**
 
@@ -75,10 +75,12 @@ Another approach to content extraction is using **regular expressions** (regex).
 |------------------------|------------------------------------------------------|
 | `<h2>(.*?)</h2>`       | The text inside an `<h2>` tag                        |
 | `href="(.*?)"`         | The value of an `href` attribute                     |
-| `<p>(.*?)</p>`         | Paragraph content between `<p>` tags                |
+| `<p>(.*?)</p>`         | Paragraph content between `<p>` tags                 |
 | `\d{4}-\d{2}-\d{2}`    | Dates in `YYYY-MM-DD` format                         |
 | `\$[0-9]+\.[0-9]{2}`   | Dollar amounts like `$19.99`                         |
 | `<[^>]+>`              | Any HTML tag                                         |
+
+You can test your regular expressions expressions at [regexr.com](https://regexr.com/).
 
 **Python Example Using Regular Expressions:**
 
