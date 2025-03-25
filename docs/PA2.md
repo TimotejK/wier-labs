@@ -12,7 +12,10 @@ The goal of this programming assignment is to extract useful information from th
 
 ## Identifying and extracting information
 
-In this part of the assignment, your task is to identify meaningful content (such as article titles, product names, descriptions, prices, or publication dates) from HTML documents and extract it in a structured format. The goal is to prepare high-quality data that can later be stored in a vector database and queried effectively. You will explore two main techniques: XPath expressions and regular expressions.
+In this part of the assignment, your task is to identify meaningful content (such as article titles, product names, descriptions, prices, or publication dates) from HTML documents and extract it in a structured format. The goal is to prepare high-quality data that can later be stored in a vector database and queried effectively. 
+
+
+You will explore two main techniques: XPath expressions and regular expressions.
 
 ### Using XPath expressions
 
@@ -122,13 +125,16 @@ Regular expressions can be concise and effective for small-scale, well-formatted
 ### Your task
 You should use XPath and Regular expressions to filter the HTML websites you gathered in PA1.
 
-1. Prepare a plain text version of the website where you remove static elements like website headers, menus, footers etc. while keeping the page's content.
-2. Split the page into multiple thematic sections based on your judgment. You can use paragraphs, sentences, page sections, or any other indicator, with the goal of each section being a full description of one topic.
+1. Prepare a plain text version of the website where you remove static elements like website headers, menus, footers, etc., while keeping the page's content.
+2. Define criteria for splitting the page into multiple thematic sections. Some suggestions include using paragraphs, sentences, page sections, or any other indicators, with the goal of each section being a complete description of one topic. Include a brief description of the criteria in the PA2 report.
+3. You have to select the most appropriate strategy for dividing text and list its advantages and disadvantages in the PA2 report. It is often necessary to conduct some testing to determine what works best. Without a proper approach, you risk overlooking important information or providing incomplete or out-of-context retrieved segments when querying the vector database. Some of the key factors to consider when dividing the text into smaller portions are the size of segments and context preservation.
 
 
 ## Storing extracted information in a vector database
 
-The second step of the assignment is to store the extracted information in a **vector database**. For this, you will expand the database you created in PA1 with a new table that stores **document segments** and their **vector representations**.
+The next step of the assignment is to calculate embeddings for text segments and store the extracted information in a **vector database**. For this, you will expand the database you created in PA1 with a new table that stores **document segments** and their **vector representations**.
+
+For a more streamlined start, you can utilize the following [sample](notebooks/vector_db_sample).
 
 ### Preparing the database
 
@@ -185,7 +191,11 @@ You should experiment with **different embedding models**, such as:
 - Hugging Face Transformers like `distilbert-base-uncased`
 - Any domain-specific models relevant to your dataset (e.g. legal, medical)
 
-The goal is that **similar queries and segments have similar embeddings** — so that when you compare a query embedding to the segment embeddings, you retrieve the most relevant content.
+### Querying the database
+
+By default, *pgvector* performs an exact search when querying the database. Adding [index](https://github.com/pgvector/pgvector?tab=readme-ov-file#indexing) enables us to use approximate nearest neighbour (ANN) search, which takes less time when compared to exact search. The *pgvector* supports two indexes, HSNW and IVFFlat. Use one of them in your assignment. 
+
+Queries and segments that are similar will map to similar embeddings. By comparing a query embedding to the segment embeddings, you can retrieve the most relevant content based on the chosen metric, such as cosine distance, L1 distance, or inner product..
 
 You can generate embeddings using Python libraries like `sentence-transformers`, `transformers`, or `openai`.
 
@@ -218,9 +228,17 @@ You should implement a small Python demo program that:
 3. Performs a similarity search over the segment embeddings in your database
 4. Returns and displays the top-k most relevant segments
 
+## Basic tools
+
+Utilize the following Jupyter notebooks for a more streamlined start:
+
+* [Introductuctory sample to vector databases](notebooks/introduction_to_vector_databases.ipynb). 
+* [Sample for the pgvector database](notebooks/vector_db_sample)
+
+
 ## What to submit
 
-Push your work into the **same repository** as you used for the first assignment. The repository must comply with the following structure:
+Publish your work into the **same repository** as you used for the first assignment. The repository must comply with the following structure:
 
 ```
 pa2/
@@ -237,11 +255,11 @@ pa2/
 
 Your report should include the following:
 
-* Information about how you performed website filtering
-* How did you determine page the segments
-* What embeddings did you decide to use, and why
+* Information about how you performed website filtering.
+* Approach to chunking the text, including criteria for splitting the page into multiple thematic sections, the implemented strategy for dividing text, and advantages and disadvantages of the implemented strategy.
+* What embeddings did you decide to use, and why?
 * What similarity metric did you decide to use, and why
 * Examples of queries and your retriever's responses
-* Limitations of your document retriever (e.g. examples of queries with bad responses)
+* Limitations of your document retriever (e.g. examples of queries with inadequate responses)
 
 **Make sure to also describe methods you tried but decided not to use.**

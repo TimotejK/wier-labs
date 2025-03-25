@@ -18,3 +18,6 @@ generate-vector-embeddings
 information-retrieval
 what-to-submit-1
 what-to-include-in-the-report-1
+grading-schema
+querying-the-database
+basic-tools-1
