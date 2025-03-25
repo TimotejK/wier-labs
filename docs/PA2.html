@@ -223,7 +223,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="identifying-and-extracting-information" class="section level2 hasAnchor" number="2.2">
 <h2><span class="header-section-number">2.2</span> Identifying and extracting information<a href="PA2.html#identifying-and-extracting-information" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>In this part of the assignment, your task is to identify meaningful content (such as article titles, product names, descriptions, prices, or publication dates) from HTML documents and extract it in a structured format. The goal is to prepare high-quality data that can later be stored in a vector database and queried effectively.</p>
+<p>In this part of the assignment, your task is to identify meaningful content (such as article titles, product names, descriptions, prices, or publication dates) from HTML documents and extract it in a structured format. The goal is to prepare high-quality data that can later be stored in a vector database and queried efficiently.</p>
 <p>You will explore two main techniques: XPath expressions and regular expressions.</p>
 <div id="using-xpath-expressions" class="section level3 hasAnchor" number="2.2.1">
 <h3><span class="header-section-number">2.2.1</span> Using XPath expressions<a href="PA2.html#using-xpath-expressions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -443,6 +443,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Performs a similarity search over the segment embeddings in your database</li>
 <li>Returns and displays the top-k most relevant segments</li>
 </ol>
+<p>In the demo program, include five queries that return relevant results for your domain, and prepare at least one query that does not return the expected result.</p>
 </div>
 <div id="basic-tools-1" class="section level2 hasAnchor" number="2.5">
 <h2><span class="header-section-number">2.5</span> Basic tools<a href="PA2.html#basic-tools-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -467,8 +468,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Your report should include the following:</p>
 <ul>
 <li>Information about how you performed website filtering.</li>
-<li>Approach to chunking the text, including criteria for splitting the page into multiple thematic sections, the implemented strategy for dividing text, and advantages and disadvantages of the implemented strategy.</li>
-<li>What embeddings did you decide to use, and why?</li>
+<li>Approach to dividing the text, including criteria for splitting the page into multiple thematic sections, the implemented strategy for dividing text, and advantages and disadvantages of the implemented strategy.</li>
+<li>What embeddings did you decide to use, and why</li>
 <li>What similarity metric did you decide to use, and why</li>
 <li>Examples of queries and your retriever’s responses</li>
 <li>Limitations of your document retriever (e.g. examples of queries with inadequate responses)</li>
