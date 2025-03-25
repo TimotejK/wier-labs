@@ -12,7 +12,7 @@ The goal of this programming assignment is to extract useful information from th
 
 ## Identifying and extracting information
 
-In this part of the assignment, your task is to identify meaningful content (such as article titles, product names, descriptions, prices, or publication dates) from HTML documents and extract it in a structured format. The goal is to prepare high-quality data that can later be stored in a vector database and queried effectively. 
+In this part of the assignment, your task is to identify meaningful content (such as article titles, product names, descriptions, prices, or publication dates) from HTML documents and extract it in a structured format. The goal is to prepare high-quality data that can later be stored in a vector database and queried efficiently. 
 
 
 You will explore two main techniques: XPath expressions and regular expressions.
@@ -256,8 +256,8 @@ pa2/
 Your report should include the following:
 
 * Information about how you performed website filtering.
-* Approach to chunking the text, including criteria for splitting the page into multiple thematic sections, the implemented strategy for dividing text, and advantages and disadvantages of the implemented strategy.
-* What embeddings did you decide to use, and why?
+* Approach to dividing the text, including criteria for splitting the page into multiple thematic sections, the implemented strategy for dividing text, and advantages and disadvantages of the implemented strategy.
+* What embeddings did you decide to use, and why
 * What similarity metric did you decide to use, and why
 * Examples of queries and your retriever's responses
 * Limitations of your document retriever (e.g. examples of queries with inadequate responses)
