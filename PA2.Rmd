@@ -228,6 +228,8 @@ You should implement a small Python demo program that:
 3. Performs a similarity search over the segment embeddings in your database
 4. Returns and displays the top-k most relevant segments
 
+In the demo program, include five queries that return relevant results for your domain, and prepare at least one query that does not return the expected result.
+
 ## Basic tools
 
 Utilize the following Jupyter notebooks for a more streamlined start:
