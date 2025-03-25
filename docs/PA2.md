@@ -134,7 +134,7 @@ You should use XPath and Regular expressions to filter the HTML websites you gat
 
 The next step of the assignment is to calculate embeddings for text segments and store the extracted information in a **vector database**. For this, you will expand the database you created in PA1 with a new table that stores **document segments** and their **vector representations**.
 
-For a more streamlined start, you can utilize the following [sample](notebooks/vector_db_sample).
+For a more streamlined start, you can utilize the following [sample](notebooks/vector_db_sample.ipynb).
 
 ### Preparing the database
 
@@ -233,7 +233,7 @@ You should implement a small Python demo program that:
 Utilize the following Jupyter notebooks for a more streamlined start:
 
 * [Introductuctory sample to vector databases](notebooks/introduction_to_vector_databases.ipynb). 
-* [Sample for the pgvector database](notebooks/vector_db_sample)
+* [Sample for the pgvector database](notebooks/vector_db_sample.ipynb)
 
 
 ## What to submit
