@@ -54,8 +54,9 @@
 
 
 <style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -65,7 +66,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -157,7 +158,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.3" data-path="PA1.html"><a href="PA1.html#basic-tools"><i class="fa fa-check"></i><b>1.3</b> Basic tools</a></li>
 <li class="chapter" data-level="1.4" data-path="PA1.html"><a href="PA1.html#what-to-include-in-the-report"><i class="fa fa-check"></i><b>1.4</b> What to include in the report</a></li>
 <li class="chapter" data-level="1.5" data-path="PA1.html"><a href="PA1.html#what-to-submit"><i class="fa fa-check"></i><b>1.5</b> What to submit</a></li>
-<li class="chapter" data-level="1.6" data-path="PA1.html"><a href="PA1.html#grading-schema"><i class="fa fa-check"></i><b>1.6</b> Grading schema</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="PA2.html"><a href="PA2.html"><i class="fa fa-check"></i><b>2</b> Programming assignment 2</a>
 <ul>
@@ -242,22 +242,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><code>//a[@href]</code> — selects all anchor tags with an <code>href</code> attribute</li>
 </ul>
 <p><strong>Python Example Using XPath:</strong></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="PA2.html#cb1-1" tabindex="-1"></a><span class="im">from</span> lxml <span class="im">import</span> html</span>
-<span id="cb1-2"><a href="PA2.html#cb1-2" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="PA2.html#cb1-3" tabindex="-1"></a>html_content <span class="op">=</span> <span class="st">&quot;&quot;&quot;</span></span>
-<span id="cb1-4"><a href="PA2.html#cb1-4" tabindex="-1"></a><span class="st">&lt;html&gt;</span></span>
-<span id="cb1-5"><a href="PA2.html#cb1-5" tabindex="-1"></a><span class="st">  &lt;body&gt;</span></span>
-<span id="cb1-6"><a href="PA2.html#cb1-6" tabindex="-1"></a><span class="st">    &lt;div class=&quot;article&quot;&gt;</span></span>
-<span id="cb1-7"><a href="PA2.html#cb1-7" tabindex="-1"></a><span class="st">      &lt;h2&gt;Sample Article&lt;/h2&gt;</span></span>
-<span id="cb1-8"><a href="PA2.html#cb1-8" tabindex="-1"></a><span class="st">      &lt;p&gt;This is a test paragraph.&lt;/p&gt;</span></span>
-<span id="cb1-9"><a href="PA2.html#cb1-9" tabindex="-1"></a><span class="st">    &lt;/div&gt;</span></span>
-<span id="cb1-10"><a href="PA2.html#cb1-10" tabindex="-1"></a><span class="st">  &lt;/body&gt;</span></span>
-<span id="cb1-11"><a href="PA2.html#cb1-11" tabindex="-1"></a><span class="st">&lt;/html&gt;</span></span>
-<span id="cb1-12"><a href="PA2.html#cb1-12" tabindex="-1"></a><span class="st">&quot;&quot;&quot;</span></span>
-<span id="cb1-13"><a href="PA2.html#cb1-13" tabindex="-1"></a></span>
-<span id="cb1-14"><a href="PA2.html#cb1-14" tabindex="-1"></a>tree <span class="op">=</span> html.fromstring(html_content)</span>
-<span id="cb1-15"><a href="PA2.html#cb1-15" tabindex="-1"></a>title <span class="op">=</span> tree.xpath(<span class="st">&#39;//div[@class=&quot;article&quot;]/h2/text()&#39;</span>)</span>
-<span id="cb1-16"><a href="PA2.html#cb1-16" tabindex="-1"></a><span class="bu">print</span>(title)  <span class="co"># Output: [&#39;Sample Article&#39;]</span></span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="PA2.html#cb2-1" tabindex="-1"></a><span class="im">from</span> lxml <span class="im">import</span> html</span>
+<span id="cb2-2"><a href="PA2.html#cb2-2" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="PA2.html#cb2-3" tabindex="-1"></a>html_content <span class="op">=</span> <span class="st">&quot;&quot;&quot;</span></span>
+<span id="cb2-4"><a href="PA2.html#cb2-4" tabindex="-1"></a><span class="st">&lt;html&gt;</span></span>
+<span id="cb2-5"><a href="PA2.html#cb2-5" tabindex="-1"></a><span class="st">  &lt;body&gt;</span></span>
+<span id="cb2-6"><a href="PA2.html#cb2-6" tabindex="-1"></a><span class="st">    &lt;div class=&quot;article&quot;&gt;</span></span>
+<span id="cb2-7"><a href="PA2.html#cb2-7" tabindex="-1"></a><span class="st">      &lt;h2&gt;Sample Article&lt;/h2&gt;</span></span>
+<span id="cb2-8"><a href="PA2.html#cb2-8" tabindex="-1"></a><span class="st">      &lt;p&gt;This is a test paragraph.&lt;/p&gt;</span></span>
+<span id="cb2-9"><a href="PA2.html#cb2-9" tabindex="-1"></a><span class="st">    &lt;/div&gt;</span></span>
+<span id="cb2-10"><a href="PA2.html#cb2-10" tabindex="-1"></a><span class="st">  &lt;/body&gt;</span></span>
+<span id="cb2-11"><a href="PA2.html#cb2-11" tabindex="-1"></a><span class="st">&lt;/html&gt;</span></span>
+<span id="cb2-12"><a href="PA2.html#cb2-12" tabindex="-1"></a><span class="st">&quot;&quot;&quot;</span></span>
+<span id="cb2-13"><a href="PA2.html#cb2-13" tabindex="-1"></a></span>
+<span id="cb2-14"><a href="PA2.html#cb2-14" tabindex="-1"></a>tree <span class="op">=</span> html.fromstring(html_content)</span>
+<span id="cb2-15"><a href="PA2.html#cb2-15" tabindex="-1"></a>title <span class="op">=</span> tree.xpath(<span class="st">&#39;//div[@class=&quot;article&quot;]/h2/text()&#39;</span>)</span>
+<span id="cb2-16"><a href="PA2.html#cb2-16" tabindex="-1"></a><span class="bu">print</span>(title)  <span class="co"># Output: [&#39;Sample Article&#39;]</span></span></code></pre></div>
 </div>
 <div id="using-regular-expressions" class="section level3 hasAnchor" number="2.2.2">
 <h3><span class="header-section-number">2.2.2</span> Using regular expressions<a href="PA2.html#using-regular-expressions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -323,36 +323,36 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </table>
 <p>You can test your regular expressions expressions at <a href="https://regexr.com/">regexr.com</a>.</p>
 <p><strong>Python Example Using Regular Expressions:</strong></p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="PA2.html#cb2-1" tabindex="-1"></a><span class="im">import</span> re</span>
-<span id="cb2-2"><a href="PA2.html#cb2-2" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="PA2.html#cb2-3" tabindex="-1"></a>html_content <span class="op">=</span> <span class="st">&quot;&quot;&quot;</span></span>
-<span id="cb2-4"><a href="PA2.html#cb2-4" tabindex="-1"></a><span class="st">&lt;html&gt;</span></span>
-<span id="cb2-5"><a href="PA2.html#cb2-5" tabindex="-1"></a><span class="st">  &lt;body&gt;</span></span>
-<span id="cb2-6"><a href="PA2.html#cb2-6" tabindex="-1"></a><span class="st">    &lt;div class=&quot;article&quot;&gt;</span></span>
-<span id="cb2-7"><a href="PA2.html#cb2-7" tabindex="-1"></a><span class="st">      &lt;h2&gt;Sample Article&lt;/h2&gt;</span></span>
-<span id="cb2-8"><a href="PA2.html#cb2-8" tabindex="-1"></a><span class="st">      &lt;p&gt;Published on 2024-12-05&lt;/p&gt;</span></span>
-<span id="cb2-9"><a href="PA2.html#cb2-9" tabindex="-1"></a><span class="st">      &lt;p&gt;Price: $19.99&lt;/p&gt;</span></span>
-<span id="cb2-10"><a href="PA2.html#cb2-10" tabindex="-1"></a><span class="st">      &lt;a href=&quot;https://example.com&quot;&gt;Read more&lt;/a&gt;</span></span>
-<span id="cb2-11"><a href="PA2.html#cb2-11" tabindex="-1"></a><span class="st">    &lt;/div&gt;</span></span>
-<span id="cb2-12"><a href="PA2.html#cb2-12" tabindex="-1"></a><span class="st">  &lt;/body&gt;</span></span>
-<span id="cb2-13"><a href="PA2.html#cb2-13" tabindex="-1"></a><span class="st">&lt;/html&gt;</span></span>
-<span id="cb2-14"><a href="PA2.html#cb2-14" tabindex="-1"></a><span class="st">&quot;&quot;&quot;</span></span>
-<span id="cb2-15"><a href="PA2.html#cb2-15" tabindex="-1"></a></span>
-<span id="cb2-16"><a href="PA2.html#cb2-16" tabindex="-1"></a><span class="co"># Extract article title</span></span>
-<span id="cb2-17"><a href="PA2.html#cb2-17" tabindex="-1"></a>title <span class="op">=</span> re.search(<span class="vs">r&#39;&lt;h2&gt;(.*?)&lt;/h2&gt;&#39;</span>, html_content)</span>
-<span id="cb2-18"><a href="PA2.html#cb2-18" tabindex="-1"></a><span class="bu">print</span>(title.group(<span class="dv">1</span>))  <span class="co"># Output: Sample Article</span></span>
-<span id="cb2-19"><a href="PA2.html#cb2-19" tabindex="-1"></a></span>
-<span id="cb2-20"><a href="PA2.html#cb2-20" tabindex="-1"></a><span class="co"># Extract date</span></span>
-<span id="cb2-21"><a href="PA2.html#cb2-21" tabindex="-1"></a>date <span class="op">=</span> re.search(<span class="vs">r&#39;\d</span><span class="sc">{4}</span><span class="vs">-\d</span><span class="sc">{2}</span><span class="vs">-\d</span><span class="sc">{2}</span><span class="vs">&#39;</span>, html_content)</span>
-<span id="cb2-22"><a href="PA2.html#cb2-22" tabindex="-1"></a><span class="bu">print</span>(date.group(<span class="dv">0</span>))  <span class="co"># Output: 2024-12-05</span></span>
-<span id="cb2-23"><a href="PA2.html#cb2-23" tabindex="-1"></a></span>
-<span id="cb2-24"><a href="PA2.html#cb2-24" tabindex="-1"></a><span class="co"># Extract price</span></span>
-<span id="cb2-25"><a href="PA2.html#cb2-25" tabindex="-1"></a>price <span class="op">=</span> re.search(<span class="vs">r&#39;\$[0-9]+\.[0-9]</span><span class="sc">{2}</span><span class="vs">&#39;</span>, html_content)</span>
-<span id="cb2-26"><a href="PA2.html#cb2-26" tabindex="-1"></a><span class="bu">print</span>(price.group(<span class="dv">0</span>))  <span class="co"># Output: $19.99</span></span>
-<span id="cb2-27"><a href="PA2.html#cb2-27" tabindex="-1"></a></span>
-<span id="cb2-28"><a href="PA2.html#cb2-28" tabindex="-1"></a><span class="co"># Extract link</span></span>
-<span id="cb2-29"><a href="PA2.html#cb2-29" tabindex="-1"></a>link <span class="op">=</span> re.search(<span class="vs">r&#39;href=&quot;(.*?)&quot;&#39;</span>, html_content)</span>
-<span id="cb2-30"><a href="PA2.html#cb2-30" tabindex="-1"></a><span class="bu">print</span>(link.group(<span class="dv">1</span>))  <span class="co"># Output: https://example.com</span></span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="PA2.html#cb3-1" tabindex="-1"></a><span class="im">import</span> re</span>
+<span id="cb3-2"><a href="PA2.html#cb3-2" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="PA2.html#cb3-3" tabindex="-1"></a>html_content <span class="op">=</span> <span class="st">&quot;&quot;&quot;</span></span>
+<span id="cb3-4"><a href="PA2.html#cb3-4" tabindex="-1"></a><span class="st">&lt;html&gt;</span></span>
+<span id="cb3-5"><a href="PA2.html#cb3-5" tabindex="-1"></a><span class="st">  &lt;body&gt;</span></span>
+<span id="cb3-6"><a href="PA2.html#cb3-6" tabindex="-1"></a><span class="st">    &lt;div class=&quot;article&quot;&gt;</span></span>
+<span id="cb3-7"><a href="PA2.html#cb3-7" tabindex="-1"></a><span class="st">      &lt;h2&gt;Sample Article&lt;/h2&gt;</span></span>
+<span id="cb3-8"><a href="PA2.html#cb3-8" tabindex="-1"></a><span class="st">      &lt;p&gt;Published on 2024-12-05&lt;/p&gt;</span></span>
+<span id="cb3-9"><a href="PA2.html#cb3-9" tabindex="-1"></a><span class="st">      &lt;p&gt;Price: $19.99&lt;/p&gt;</span></span>
+<span id="cb3-10"><a href="PA2.html#cb3-10" tabindex="-1"></a><span class="st">      &lt;a href=&quot;https://example.com&quot;&gt;Read more&lt;/a&gt;</span></span>
+<span id="cb3-11"><a href="PA2.html#cb3-11" tabindex="-1"></a><span class="st">    &lt;/div&gt;</span></span>
+<span id="cb3-12"><a href="PA2.html#cb3-12" tabindex="-1"></a><span class="st">  &lt;/body&gt;</span></span>
+<span id="cb3-13"><a href="PA2.html#cb3-13" tabindex="-1"></a><span class="st">&lt;/html&gt;</span></span>
+<span id="cb3-14"><a href="PA2.html#cb3-14" tabindex="-1"></a><span class="st">&quot;&quot;&quot;</span></span>
+<span id="cb3-15"><a href="PA2.html#cb3-15" tabindex="-1"></a></span>
+<span id="cb3-16"><a href="PA2.html#cb3-16" tabindex="-1"></a><span class="co"># Extract article title</span></span>
+<span id="cb3-17"><a href="PA2.html#cb3-17" tabindex="-1"></a>title <span class="op">=</span> re.search(<span class="vs">r&#39;&lt;h2&gt;</span><span class="kw">(</span><span class="dv">.</span><span class="op">*?</span><span class="kw">)</span><span class="vs">&lt;/h2&gt;&#39;</span>, html_content)</span>
+<span id="cb3-18"><a href="PA2.html#cb3-18" tabindex="-1"></a><span class="bu">print</span>(title.group(<span class="dv">1</span>))  <span class="co"># Output: Sample Article</span></span>
+<span id="cb3-19"><a href="PA2.html#cb3-19" tabindex="-1"></a></span>
+<span id="cb3-20"><a href="PA2.html#cb3-20" tabindex="-1"></a><span class="co"># Extract date</span></span>
+<span id="cb3-21"><a href="PA2.html#cb3-21" tabindex="-1"></a>date <span class="op">=</span> re.search(<span class="vs">r&#39;</span><span class="dv">\d</span><span class="op">{4}</span><span class="vs">-</span><span class="dv">\d</span><span class="op">{2}</span><span class="vs">-</span><span class="dv">\d</span><span class="op">{2}</span><span class="vs">&#39;</span>, html_content)</span>
+<span id="cb3-22"><a href="PA2.html#cb3-22" tabindex="-1"></a><span class="bu">print</span>(date.group(<span class="dv">0</span>))  <span class="co"># Output: 2024-12-05</span></span>
+<span id="cb3-23"><a href="PA2.html#cb3-23" tabindex="-1"></a></span>
+<span id="cb3-24"><a href="PA2.html#cb3-24" tabindex="-1"></a><span class="co"># Extract price</span></span>
+<span id="cb3-25"><a href="PA2.html#cb3-25" tabindex="-1"></a>price <span class="op">=</span> re.search(<span class="vs">r&#39;</span><span class="ch">\$</span><span class="pp">[0-9]</span><span class="op">+</span><span class="ch">\.</span><span class="pp">[0-9]</span><span class="op">{2}</span><span class="vs">&#39;</span>, html_content)</span>
+<span id="cb3-26"><a href="PA2.html#cb3-26" tabindex="-1"></a><span class="bu">print</span>(price.group(<span class="dv">0</span>))  <span class="co"># Output: $19.99</span></span>
+<span id="cb3-27"><a href="PA2.html#cb3-27" tabindex="-1"></a></span>
+<span id="cb3-28"><a href="PA2.html#cb3-28" tabindex="-1"></a><span class="co"># Extract link</span></span>
+<span id="cb3-29"><a href="PA2.html#cb3-29" tabindex="-1"></a>link <span class="op">=</span> re.search(<span class="vs">r&#39;href=&quot;</span><span class="kw">(</span><span class="dv">.</span><span class="op">*?</span><span class="kw">)</span><span class="vs">&quot;&#39;</span>, html_content)</span>
+<span id="cb3-30"><a href="PA2.html#cb3-30" tabindex="-1"></a><span class="bu">print</span>(link.group(<span class="dv">1</span>))  <span class="co"># Output: https://example.com</span></span></code></pre></div>
 <p>Regular expressions can be concise and effective for small-scale, well-formatted content. However, for more complex HTML, tools like XPath (or HTML parsers like BeautifulSoup) are generally more reliable.</p>
 </div>
 <div id="your-task" class="section level3 hasAnchor" number="2.2.3">
@@ -372,32 +372,32 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="preparing-the-database" class="section level3 hasAnchor" number="2.3.1">
 <h3><span class="header-section-number">2.3.1</span> Preparing the database<a href="PA2.html#preparing-the-database" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Make sure you are using a <a href="https://github.com/pgvector/pgvector">pgvector database</a>. Pgvector is a PostgreSQL extension that adds support for storing and indexing vector data. You can create a new pgvector database using the following command:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="PA2.html#cb3-1" tabindex="-1"></a><span class="ex">docker</span> run <span class="at">--name</span> postgresql-wier <span class="dt">\</span></span>
-<span id="cb3-2"><a href="PA2.html#cb3-2" tabindex="-1"></a> <span class="at">-e</span> POSTGRES_PASSWORD=SecretPassword <span class="dt">\</span></span>
-<span id="cb3-3"><a href="PA2.html#cb3-3" tabindex="-1"></a> <span class="at">-e</span> POSTGRES_USER=user <span class="dt">\</span></span>
-<span id="cb3-4"><a href="PA2.html#cb3-4" tabindex="-1"></a> <span class="at">-e</span> POSTGRES_DB=wier <span class="dt">\</span></span>
-<span id="cb3-5"><a href="PA2.html#cb3-5" tabindex="-1"></a> <span class="at">-v</span> <span class="va">$PWD</span>/pgdata:/var/lib/postgresql/data <span class="dt">\</span></span>
-<span id="cb3-6"><a href="PA2.html#cb3-6" tabindex="-1"></a> <span class="at">-v</span> <span class="va">$PWD</span>/init-scripts:/docker-entrypoint-initdb.d <span class="dt">\</span></span>
-<span id="cb3-7"><a href="PA2.html#cb3-7" tabindex="-1"></a> <span class="at">-p</span> 5432:5432 <span class="dt">\</span></span>
-<span id="cb3-8"><a href="PA2.html#cb3-8" tabindex="-1"></a> <span class="at">-d</span> pgvector/pgvector:pg16</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="PA2.html#cb4-1" tabindex="-1"></a><span class="ex">docker</span> run <span class="at">--name</span> postgresql-wier <span class="dt">\</span></span>
+<span id="cb4-2"><a href="PA2.html#cb4-2" tabindex="-1"></a> <span class="at">-e</span> POSTGRES_PASSWORD=SecretPassword <span class="dt">\</span></span>
+<span id="cb4-3"><a href="PA2.html#cb4-3" tabindex="-1"></a> <span class="at">-e</span> POSTGRES_USER=user <span class="dt">\</span></span>
+<span id="cb4-4"><a href="PA2.html#cb4-4" tabindex="-1"></a> <span class="at">-e</span> POSTGRES_DB=wier <span class="dt">\</span></span>
+<span id="cb4-5"><a href="PA2.html#cb4-5" tabindex="-1"></a> <span class="at">-v</span> <span class="va">$PWD</span>/pgdata:/var/lib/postgresql/data <span class="dt">\</span></span>
+<span id="cb4-6"><a href="PA2.html#cb4-6" tabindex="-1"></a> <span class="at">-v</span> <span class="va">$PWD</span>/init-scripts:/docker-entrypoint-initdb.d <span class="dt">\</span></span>
+<span id="cb4-7"><a href="PA2.html#cb4-7" tabindex="-1"></a> <span class="at">-p</span> 5432:5432 <span class="dt">\</span></span>
+<span id="cb4-8"><a href="PA2.html#cb4-8" tabindex="-1"></a> <span class="at">-d</span> pgvector/pgvector:pg16</span></code></pre></div>
 <p>In your database, enable the <code>vector</code> extension using the statement:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb4-1"><a href="PA2.html#cb4-1" tabindex="-1"></a><span class="kw">CREATE</span> EXTENSION <span class="cf">IF</span> <span class="kw">NOT</span> <span class="kw">EXISTS</span> vector;</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb5-1"><a href="PA2.html#cb5-1" tabindex="-1"></a><span class="kw">CREATE</span> EXTENSION <span class="cf">IF</span> <span class="kw">NOT</span> <span class="kw">EXISTS</span> vector;</span></code></pre></div>
 <p>Once you have the database set up, add a new column to the <code>page</code> table to store <strong>cleaned plain text content</strong>, and create a new table to store <strong>page segments</strong> and their <strong>vector embeddings</strong>.</p>
 <p><img src="img/pa2/vector-db-schema.png" /></p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb5-1"><a href="PA2.html#cb5-1" tabindex="-1"></a><span class="kw">ALTER</span> <span class="kw">TABLE</span> crawl_db.page <span class="kw">ADD</span> <span class="kw">COLUMN</span> cleaned_content TEXT;</span>
-<span id="cb5-2"><a href="PA2.html#cb5-2" tabindex="-1"></a></span>
-<span id="cb5-3"><a href="PA2.html#cb5-3" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> crawl_db.page_segment (</span>
-<span id="cb5-4"><a href="PA2.html#cb5-4" tabindex="-1"></a>  <span class="kw">id</span> serial <span class="kw">NOT</span> <span class="kw">NULL</span>,</span>
-<span id="cb5-5"><a href="PA2.html#cb5-5" tabindex="-1"></a>  page_id <span class="dt">integer</span>,</span>
-<span id="cb5-6"><a href="PA2.html#cb5-6" tabindex="-1"></a>  page_segment TEXT,</span>
-<span id="cb5-7"><a href="PA2.html#cb5-7" tabindex="-1"></a>  embedding vector(<span class="dv">768</span>)</span>
-<span id="cb5-8"><a href="PA2.html#cb5-8" tabindex="-1"></a>);</span>
-<span id="cb5-9"><a href="PA2.html#cb5-9" tabindex="-1"></a></span>
-<span id="cb5-10"><a href="PA2.html#cb5-10" tabindex="-1"></a><span class="kw">ALTER</span> <span class="kw">TABLE</span> crawl_db.page_segment</span>
-<span id="cb5-11"><a href="PA2.html#cb5-11" tabindex="-1"></a>  <span class="kw">ADD</span> <span class="kw">CONSTRAINT</span> fk_page_page_segment</span>
-<span id="cb5-12"><a href="PA2.html#cb5-12" tabindex="-1"></a>  <span class="kw">FOREIGN</span> <span class="kw">KEY</span> (page_id)</span>
-<span id="cb5-13"><a href="PA2.html#cb5-13" tabindex="-1"></a>  <span class="kw">REFERENCES</span> crawl_db.page(<span class="kw">id</span>)</span>
-<span id="cb5-14"><a href="PA2.html#cb5-14" tabindex="-1"></a>  <span class="kw">ON</span> <span class="kw">DELETE</span> <span class="kw">RESTRICT</span>;</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb6-1"><a href="PA2.html#cb6-1" tabindex="-1"></a><span class="kw">ALTER</span> <span class="kw">TABLE</span> crawl_db.page <span class="kw">ADD</span> <span class="kw">COLUMN</span> cleaned_content TEXT;</span>
+<span id="cb6-2"><a href="PA2.html#cb6-2" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="PA2.html#cb6-3" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> crawl_db.page_segment (</span>
+<span id="cb6-4"><a href="PA2.html#cb6-4" tabindex="-1"></a>  <span class="kw">id</span> serial <span class="kw">NOT</span> <span class="kw">NULL</span>,</span>
+<span id="cb6-5"><a href="PA2.html#cb6-5" tabindex="-1"></a>  page_id <span class="dt">integer</span>,</span>
+<span id="cb6-6"><a href="PA2.html#cb6-6" tabindex="-1"></a>  page_segment TEXT,</span>
+<span id="cb6-7"><a href="PA2.html#cb6-7" tabindex="-1"></a>  embedding vector(<span class="dv">768</span>)</span>
+<span id="cb6-8"><a href="PA2.html#cb6-8" tabindex="-1"></a>);</span>
+<span id="cb6-9"><a href="PA2.html#cb6-9" tabindex="-1"></a></span>
+<span id="cb6-10"><a href="PA2.html#cb6-10" tabindex="-1"></a><span class="kw">ALTER</span> <span class="kw">TABLE</span> crawl_db.page_segment</span>
+<span id="cb6-11"><a href="PA2.html#cb6-11" tabindex="-1"></a>  <span class="kw">ADD</span> <span class="kw">CONSTRAINT</span> fk_page_page_segment</span>
+<span id="cb6-12"><a href="PA2.html#cb6-12" tabindex="-1"></a>  <span class="kw">FOREIGN</span> <span class="kw">KEY</span> (page_id)</span>
+<span id="cb6-13"><a href="PA2.html#cb6-13" tabindex="-1"></a>  <span class="kw">REFERENCES</span> crawl_db.page(<span class="kw">id</span>)</span>
+<span id="cb6-14"><a href="PA2.html#cb6-14" tabindex="-1"></a>  <span class="kw">ON</span> <span class="kw">DELETE</span> <span class="kw">RESTRICT</span>;</span></code></pre></div>
 <p>You are encouraged to extend the database schema with additional metadata fields that may be useful during retrieval — for example, the HTML tag, section title, heading level, or local context of a segment. If you do, describe these design decisions in your report.</p>
 </div>
 <div id="generate-vector-embeddings" class="section level3 hasAnchor" number="2.3.2">
@@ -499,46 +499,46 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
-  "sharing": {
-    "github": false,
-    "facebook": false,
-    "twitter": false,
-    "linkedin": false,
-    "weibo": false,
-    "instapaper": false,
-    "vk": false,
-    "whatsapp": false,
-    "all": {}
-  },
-  "fontsettings": {
-    "theme": "white",
-    "family": "sans",
-    "size": 1
-  },
-  "edit": {
-    "link": null,
-    "text": null
-  },
-  "history": {
-    "link": null,
-    "text": null
-  },
-  "view": {
-    "link": null,
-    "text": null
-  },
-  "download": null,
-  "search": {
-    "engine": "fuse",
-    "options": null
-  },
-  "toc": {
-    "collapse": "section",
-    "scroll_highlight": true
-  },
-  "toolbar": {
-    "position": "fixed"
-  }
+"sharing": {
+"github": false,
+"facebook": false,
+"twitter": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": {}
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 1
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section",
+"scroll_highlight": true
+},
+"toolbar": {
+"position": "fixed"
+}
 });
 });
 </script>
