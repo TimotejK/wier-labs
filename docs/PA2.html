@@ -405,7 +405,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>The next step is to generate <strong>vector embeddings</strong> for each page segment. Embeddings are fixed-length vector representations of text that capture its semantic meaning.</p>
 <p>You should experiment with <strong>different embedding models</strong>, such as:</p>
 <ul>
-<li><code>all-MiniLM-L6-v2</code> from <a href="https://www.sbert.net/">sentence-transformers</a> (multilingual)</li>
+<li><code>all-MiniLM-L6-v2</code> (English) or <code>LaBSE</code> (Multilingual) from <a href="https://www.sbert.net/">sentence-transformers</a></li>
 <li>OpenAI’s <code>text-embedding-ada-002</code></li>
 <li>Hugging Face Transformers like <code>distilbert-base-uncased</code> (English), <code>SloBERETa</code> (Slovene), <code>CroSloEngualBERT</code> (multilingual)</li>
 <li>Any domain-specific models relevant to your dataset (e.g. legal, medical)</li>

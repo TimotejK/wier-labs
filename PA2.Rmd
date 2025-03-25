@@ -186,7 +186,7 @@ The next step is to generate **vector embeddings** for each page segment. Embedd
 
 You should experiment with **different embedding models**, such as:
 
-- `all-MiniLM-L6-v2` from [sentence-transformers](https://www.sbert.net/) (multilingual)
+- `all-MiniLM-L6-v2` (English) or `LaBSE` (Multilingual) from [sentence-transformers](https://www.sbert.net/)
 - OpenAI’s `text-embedding-ada-002`
 - Hugging Face Transformers like `distilbert-base-uncased` (English), `SloBERETa` (Slovene), `CroSloEngualBERT` (multilingual)
 - Any domain-specific models relevant to your dataset (e.g. legal, medical)
