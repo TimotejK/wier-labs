@@ -245,7 +245,9 @@ Publish your work into the **same repository** as you used for the first assignm
 ```
 pa2/
 ├── report-extraction.pdf           # PDF report with description and evaluation
-├── README.md                       # Setup instructions for running the code
+├── README.md                       # Setup instructions for running the code as well as 
+                                    # detailed instructions for restoring your exported
+                                    # database file in pgAdmin
 ├── implementation-extraction/      # Your implementation code (well documented)
 │   └── demo.py                     # A demo script that allows us to test the retriever
 ├── extraction-db/                  # Your database including extracted segments and their embeddings
