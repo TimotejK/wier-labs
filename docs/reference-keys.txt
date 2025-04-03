@@ -15,9 +15,8 @@ your-task
 storing-extracted-information-in-a-vector-database
 preparing-the-database
 generate-vector-embeddings
+querying-the-database
 information-retrieval
+basic-tools-1
 what-to-submit-1
 what-to-include-in-the-report-1
-grading-schema
-querying-the-database
-basic-tools-1
