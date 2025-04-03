@@ -20,3 +20,4 @@ information-retrieval
 basic-tools-1
 what-to-submit-1
 what-to-include-in-the-report-1
+grading-schema
