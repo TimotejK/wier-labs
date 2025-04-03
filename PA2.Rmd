@@ -234,7 +234,7 @@ In the demo program, include five queries that return relevant results for your 
 
 Utilize the following Jupyter notebooks for a more streamlined start:
 
-* [Introductuctory sample to vector databases](notebooks/introduction_to_vector_databases.ipynb). 
+* [Introductuctory sample to vector databases](notebooks/introduction_to_vector_databases.ipynb)
 * [Sample for the pgvector database](notebooks/vector_db_sample.ipynb)
 
 
