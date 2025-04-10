@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 3 Programming assignment 3 | Web Information Extraction and Retrieval</title>
+  <meta name="description" content="Instructions for the Web Information Extraction and Retrieval course labs" />
+  <meta name="generator" content="bookdown 0.42 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 3 Programming assignment 3 | Web Information Extraction and Retrieval" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Instructions for the Web Information Extraction and Retrieval course labs" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 3 Programming assignment 3 | Web Information Extraction and Retrieval" />
+  
+  <meta name="twitter:description" content="Instructions for the Web Information Extraction and Retrieval course labs" />
+  
+
+<meta name="author" content="Timotej Knez, Melanija Vezočnik, prof. dr. Marko Bajec, Slavko Žitnik" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="PA2.html"/>
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./index.html">Web Information Extraction and Retrieval</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About the course</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#lab-work"><i class="fa fa-check"></i>Lab work</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#programming-assignments"><i class="fa fa-check"></i>Programming assignments</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#course-projects-alternative-to-the-programming-assignments"><i class="fa fa-check"></i>Course projects (alternative to the programming assignments)</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="PA1.html"><a href="PA1.html"><i class="fa fa-check"></i><b>1</b> Programming assignment 1</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="PA1.html"><a href="PA1.html#introduction"><i class="fa fa-check"></i><b>1.1</b> Introduction</a></li>
+<li class="chapter" data-level="1.2" data-path="PA1.html"><a href="PA1.html#instructions"><i class="fa fa-check"></i><b>1.2</b> Instructions</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="PA1.html"><a href="PA1.html#crawldb-design"><i class="fa fa-check"></i><b>1.2.1</b> Crawldb design</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="PA1.html"><a href="PA1.html#basic-tools"><i class="fa fa-check"></i><b>1.3</b> Basic tools</a></li>
+<li class="chapter" data-level="1.4" data-path="PA1.html"><a href="PA1.html#what-to-include-in-the-report"><i class="fa fa-check"></i><b>1.4</b> What to include in the report</a></li>
+<li class="chapter" data-level="1.5" data-path="PA1.html"><a href="PA1.html#what-to-submit"><i class="fa fa-check"></i><b>1.5</b> What to submit</a></li>
+<li class="chapter" data-level="1.6" data-path="PA1.html"><a href="PA1.html#grading-schema"><i class="fa fa-check"></i><b>1.6</b> Grading schema</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="PA2.html"><a href="PA2.html"><i class="fa fa-check"></i><b>2</b> Programming assignment 2</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="PA2.html"><a href="PA2.html#introduction-1"><i class="fa fa-check"></i><b>2.1</b> Introduction</a></li>
+<li class="chapter" data-level="2.2" data-path="PA2.html"><a href="PA2.html#identifying-and-extracting-information"><i class="fa fa-check"></i><b>2.2</b> Identifying and extracting information</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="PA2.html"><a href="PA2.html#using-xpath-expressions"><i class="fa fa-check"></i><b>2.2.1</b> Using XPath expressions</a></li>
+<li class="chapter" data-level="2.2.2" data-path="PA2.html"><a href="PA2.html#using-regular-expressions"><i class="fa fa-check"></i><b>2.2.2</b> Using regular expressions</a></li>
+<li class="chapter" data-level="2.2.3" data-path="PA2.html"><a href="PA2.html#your-task"><i class="fa fa-check"></i><b>2.2.3</b> Your task</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="PA2.html"><a href="PA2.html#storing-extracted-information-in-a-vector-database"><i class="fa fa-check"></i><b>2.3</b> Storing extracted information in a vector database</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="PA2.html"><a href="PA2.html#preparing-the-database"><i class="fa fa-check"></i><b>2.3.1</b> Preparing the database</a></li>
+<li class="chapter" data-level="2.3.2" data-path="PA2.html"><a href="PA2.html#generate-vector-embeddings"><i class="fa fa-check"></i><b>2.3.2</b> Generate vector embeddings</a></li>
+<li class="chapter" data-level="2.3.3" data-path="PA2.html"><a href="PA2.html#querying-the-database"><i class="fa fa-check"></i><b>2.3.3</b> Querying the database</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="PA2.html"><a href="PA2.html#information-retrieval"><i class="fa fa-check"></i><b>2.4</b> Information retrieval</a></li>
+<li class="chapter" data-level="2.5" data-path="PA2.html"><a href="PA2.html#basic-tools-1"><i class="fa fa-check"></i><b>2.5</b> Basic tools</a></li>
+<li class="chapter" data-level="2.6" data-path="PA2.html"><a href="PA2.html#what-to-submit-1"><i class="fa fa-check"></i><b>2.6</b> What to submit</a>
+<ul>
+<li class="chapter" data-level="2.6.1" data-path="PA2.html"><a href="PA2.html#what-to-include-in-the-report-1"><i class="fa fa-check"></i><b>2.6.1</b> What to include in the report</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="PA3.html"><a href="PA3.html"><i class="fa fa-check"></i><b>3</b> Programming assignment 3</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="PA3.html"><a href="PA3.html#introduction-2"><i class="fa fa-check"></i><b>3.1</b> Introduction</a></li>
+<li class="chapter" data-level="3.2" data-path="PA3.html"><a href="PA3.html#instructions-1"><i class="fa fa-check"></i><b>3.2</b> Instructions</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="PA3.html"><a href="PA3.html#provided-material"><i class="fa fa-check"></i><b>3.2.1</b> Provided Material</a></li>
+<li class="chapter" data-level="3.2.2" data-path="PA3.html"><a href="PA3.html#instructions-2"><i class="fa fa-check"></i><b>3.2.2</b> Instructions</a></li>
+<li class="chapter" data-level="3.2.3" data-path="PA3.html"><a href="PA3.html#evaluation"><i class="fa fa-check"></i><b>3.2.3</b> Evaluation</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="PA3.html"><a href="PA3.html#what-to-include-in-the-report-2"><i class="fa fa-check"></i><b>3.3</b> What to include in the report</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="PA3.html"><a href="PA3.html#implementation-summary"><i class="fa fa-check"></i><b>3.3.1</b> Implementation Summary</a></li>
+<li class="chapter" data-level="3.3.2" data-path="PA3.html"><a href="PA3.html#system-evaluation-criteria"><i class="fa fa-check"></i><b>3.3.2</b> System Evaluation Criteria</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="PA3.html"><a href="PA3.html#what-to-submit-2"><i class="fa fa-check"></i><b>3.4</b> What to submit</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://ucilnica.fri.uni-lj.si">Moodle classroom</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Web Information Extraction and Retrieval</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="PA3" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Chapter 3</span> Programming assignment 3<a href="PA3.html#PA3" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p><img src="img/book/spider-01.png" /></p>
+<div id="introduction-2" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Introduction<a href="PA3.html#introduction-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In previous assignments, you developed a web crawler and gained insights into extracting and processing content from web pages. For this final assignment, you will shift your focus to Retrieval-Augmented Generation (RAG), an innovative approach that integrates information retrieval with language modeling to effectively answer queries.</p>
+<p>Your task is to implement a RAG system capable of addressing questions in two distinct modes:</p>
+<ol style="list-style-type: decimal">
+<li><strong>With Context</strong> – Generate answers to queries based on relevant documents retrieved from the tables you established in the second assignment.</li>
+<li><strong>Without Context</strong> – Generate answers directly using the large language model, independent of external content.</li>
+</ol>
+<p>This assignment will enhance your understanding of the trade-offs involved in both modes of operation within your RAG system.</p>
+</div>
+<div id="instructions-1" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> Instructions<a href="PA3.html#instructions-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This assignment is an extension of previous work in document processing and indexing, with a focus on incorporating vector-based similarity searches in practical application, i.e., a RAG system. One of your tasks is also to assess the RAG system performance, investigating how the relevance of documents influences the quality of generated responses. They will also reflect on the trade-offs between semantic retrieval and purely generative responses. The final system illustrates the fundamental principles behind cutting-edge question-answering pipelines, balancing memory (retrieval) and reasoning (generation).</p>
+<div id="provided-material" class="section level3 hasAnchor" number="3.2.1">
+<h3><span class="header-section-number">3.2.1</span> Provided Material<a href="PA3.html#provided-material" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><a href="data/pa3/PA3%20API%20starter.zip">The compressed file</a> contains:</p>
+<ul>
+<li><p>A basic Flask API server (app.py)</p></li>
+<li><p>A simple HTML/CSS/JS UI</p></li>
+<li><p>Example request logic in JavaScript</p></li>
+<li><p>Minimal placeholder logic for the backend</p></li>
+</ul>
+<p>You’ll build on this foundation to add your RAG functionality. You can use <a href="https://colab.research.google.com/drive/1K8jwIkxRrhG6E2c5YD0Es3C6pqwLxFUG">this notebook</a> as a reference.</p>
+</div>
+<div id="instructions-2" class="section level3 hasAnchor" number="3.2.2">
+<h3><span class="header-section-number">3.2.2</span> Instructions<a href="PA3.html#instructions-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>First, setup the environment by unzipping the starter code and installing the neccessary dependencies. You may need to install additional libraries depending on your implementation.</p>
+<p>To implement the backend of a RAG system, you begin by setting up a local API using a lightweight framework like Flask. The backend serves as the core controller that receives user queries from the front-end interface and processes them based on the selected response mode. First, you need to load the necessary resources: a list of document chunks (serialized with pickle) and an embedding model (such as sentence-transformers). These components are used to semantically compare incoming queries to stored content and retrieve the most relevant chunks. One function is created to embed the user’s question, perform a nearest-neighbor search in the vector index, and return the top-k relevant document chunks.</p>
+<p>Next, you integrate a large language model (LLM) by defining a function that queries the LLM. Depending on the mode selected by the user, the system either uses the retrieved context to build a prompt (in “With Context” mode) or sends the question directly to the LLM (in “Without Context” mode). In the contextual case, a new prompt is constructed by concatenating the relevant text chunks with the user query, encouraging the LLM to generate an informed answer. A Flask route (e.g., /question) handles POST requests from the frontend, checks the selected mode, and routes the query to the appropriate function.</p>
+<p>Finally, the backend returns the LLM’s response to the frontend as a JSON object, where it is displayed to the user. This modular approach makes the system easy to maintain and extend. For example, you could plug in different embedding models or swap out the LLM provider. The backend cleanly separates the logic for query embedding, retrieval, and generation, allowing for detailed evaluation of how each part contributes to overall system performance.</p>
+</div>
+<div id="evaluation" class="section level3 hasAnchor" number="3.2.3">
+<h3><span class="header-section-number">3.2.3</span> Evaluation<a href="PA3.html#evaluation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Provide qualitative or quantitative evidence of retrieval accuracy and effectiveness for your RAG system. Define six queries that produce good retrieval accuracy and three queries that produce bad retrieval accuracy. In addition, compare answers yielded by the RAG system for the two working modes, i.e., with context and without context, and study the responses.</p>
+</div>
+</div>
+<div id="what-to-include-in-the-report-2" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> What to include in the report<a href="PA3.html#what-to-include-in-the-report-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Your report should clearly document your design decisions, implementation approach, and evaluation. The report should follow the <a href="https://fri.uni-lj.si/sl/napotki-za-pisanje-porocila">standard structure</a>. Please include the following sections:</p>
+<div id="implementation-summary" class="section level3 hasAnchor" number="3.3.1">
+<h3><span class="header-section-number">3.3.1</span> Implementation Summary<a href="PA3.html#implementation-summary" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Describe all key implementation decisions you made based on the instructions and starter code. Include:</p>
+<ol style="list-style-type: upper-alpha">
+<li><p>The embedding model and LLM you used.</p></li>
+<li><p>How you structured and stored your documents.</p></li>
+<li><p>How you integrated retrieval and generation logic.</p></li>
+<li><p>Any additional tools or libraries used.</p></li>
+</ol>
+</div>
+<div id="system-evaluation-criteria" class="section level3 hasAnchor" number="3.3.2">
+<h3><span class="header-section-number">3.3.2</span> System Evaluation Criteria<a href="PA3.html#system-evaluation-criteria" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Explain the criteria you used to assess the following components of your RAG system:</p>
+<ol style="list-style-type: upper-alpha">
+<li><p>Data Processing
+Describe how you evaluated the quality of your data preparation pipeline, including how documents were chunked (e.g., by sentence, paragraph, token limits). Discuss any trade-offs you encountered, such as chunk size vs. retrieval granularity.</p></li>
+<li><p>Data Retrieval.
+Your system from PA2 utilizes direct similarity-based retrieval. Describe how many top-k documents were retrieved per query. How did you judge whether the retrieved chunks were relevant or informative? Explain the impact of retrieval quality on the RAG system.</p></li>
+<li><p>Evaluation
+Provide qualitative or quantitative evidence of retrieval accuracy and effectiveness for your RAG system. Prepare a table that includes queries as well as comparisons of answers yielded by the RAG system for the two working modes, i.e., with context and without context, and your comments. Specifically, discuss the potential benefits and limitations. .</p></li>
+</ol>
+</div>
+</div>
+<div id="what-to-submit-2" class="section level2 hasAnchor" number="3.4">
+<h2><span class="header-section-number">3.4</span> What to submit<a href="PA3.html#what-to-submit-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Push your work into the same repository as you used for the first assignment. Structure of the repository must comply with the following structure:</p>
+<ul>
+<li>a file <em>/PA3/report.pdf</em> - PDF report.</li>
+<li>a file <em>/PA3/README.md</em> - Short description of the project and instructions on how to set-up and use your RAG system.</li>
+<li>a folder <em>/PA3/rag/</em> - Implementation of the RAG system. Also, all the dependencies and instructions to run this part must be clearly described in README.md.</li>
+</ul>
+<!--
+## Grading schema
+
+All the submissions will be manually graded by the assistants. Also plagiarism check will be run across all the submissions. Grading will begin after the last late submission day. The submission time will be selected as the last commit time in the repository. 
+
+The maximum score of 100 will roughly consist of the following:
+
+Points | Item
+------ | ----
+30 | Inverted database check
+40 | Data retrieval and ranking (inverted index) results and implementation
+20 | Data retrieval and ranking (sequential file reading) results and implementation
+10 | Submission repository compliance
+
+
+Selected groups will need to defend their work during the lab hours. If a group does not agree with their achieved score, it will be able to "negotiate"/defend their programming assignment submission.
+-->
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="PA2.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": false,
+    "twitter": false,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": {}
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 1
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "section",
+    "scroll_highlight": true
+  },
+  "toolbar": {
+    "position": "fixed"
+  }
+});
+});
+</script>
+
+</body>
+
+</html>
