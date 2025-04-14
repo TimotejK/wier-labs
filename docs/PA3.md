@@ -23,9 +23,9 @@ This assignment is an extension of previous work in document processing and inde
 
 [The compressed file](data/pa3/PA3 API starter.zip) contains:
 
-* A basic Flask API server (app.py)
+* A basic FastAPI API server (main.py)
 
-* A simple HTML/CSS/JS UI
+* A simple HTML/CSS/JS UI (templates/index.html)
 
 * Example request logic in JavaScript
 
@@ -38,15 +38,16 @@ You’ll build on this foundation to add your RAG functionality. You can use [th
 
 First, setup the environment by unzipping the starter code and installing the neccessary dependencies. You may need to install additional libraries depending on your implementation.
 
-To implement the backend of a RAG system, you begin by setting up a local API using a lightweight framework like Flask. The backend serves as the core controller that receives user queries from the front-end interface and processes them based on the selected response mode. First, you need to load the necessary resources: a list of document chunks (serialized with pickle) and an embedding model (such as sentence-transformers). These components are used to semantically compare incoming queries to stored content and retrieve the most relevant chunks. One function is created to embed the user’s question, perform a nearest-neighbor search in the vector index, and return the top-k relevant document chunks.
+To implement the backend of a RAG system, you begin by setting up a local API using a lightweight framework like FastAPI. The backend serves as the core controller that receives user queries from the front-end interface and processes them based on the selected response mode. 
+As the source of context, you should use the information retreival system you desighed in PA2. When the user submits a query, search the database (from PA2) for the most relevant chunk of text based on vector embeddings. Use this chunk (or multiple chunks) as the context for your language model.
 
-Next, you integrate a large language model (LLM) by defining a function that queries the LLM. Depending on the mode selected by the user, the system either uses the retrieved context to build a prompt (in "With Context" mode) or sends the question directly to the LLM (in "Without Context" mode). In the contextual case, a new prompt is constructed by concatenating the relevant text chunks with the user query, encouraging the LLM to generate an informed answer. A Flask route (e.g., /question) handles POST requests from the frontend, checks the selected mode, and routes the query to the appropriate function.
+Next, you integrate a large language model (LLM) by defining a function that queries the LLM. Depending on the mode selected by the user, the system either uses the retrieved context to build a prompt (in "With Context" mode) or sends the question directly to the LLM (in "Without Context" mode). In the contextual case, a new prompt is constructed by concatenating the relevant text chunks with the user query, encouraging the LLM to generate an informed answer. Your API should implement a route /question, which accepts a POST request containing the mode and the question (see example impelemtation provided above).
 
 Finally, the backend returns the LLM’s response to the frontend as a JSON object, where it is displayed to the user. This modular approach makes the system easy to maintain and extend. For example, you could plug in different embedding models or swap out the LLM provider. The backend cleanly separates the logic for query embedding, retrieval, and generation, allowing for detailed evaluation of how each part contributes to overall system performance.
 
 ### Evaluation
 
-Provide qualitative or quantitative evidence of retrieval accuracy and effectiveness for your RAG system. Define six queries that produce good retrieval accuracy and three queries that produce bad retrieval accuracy. In addition, compare answers yielded by the RAG system for the two working modes, i.e., with context and without context, and study the responses.
+Provide qualitative or quantitative evidence of retrieval accuracy and effectiveness for your RAG system. Define at least six queries that produce good retrieval accuracy and three queries that produce bad retrieval accuracy. In addition, compare answers yielded by the RAG system for the two working modes, i.e., with context and without context, and study the responses.
 
 ## What to include in the report
 
@@ -74,7 +75,7 @@ Describe how you evaluated the quality of your data preparation pipeline, includ
 Your system from PA2 utilizes direct similarity-based retrieval. Describe how many top-k documents were retrieved per query. How did you judge whether the retrieved chunks were relevant or informative? Explain the impact of retrieval quality on the RAG system.
 
 (C) Evaluation
-Provide qualitative or quantitative evidence of retrieval accuracy and effectiveness for your RAG system. Prepare a table that includes queries as well as comparisons of answers yielded by the RAG system for the two working modes, i.e., with context and without context, and your comments. Specifically, discuss the potential benefits and limitations. . 
+Provide qualitative or quantitative evidence of retrieval accuracy and effectiveness for your RAG system. Prepare a table that includes queries as well as comparisons of answers yielded by the RAG system for the two working modes, i.e., with context and without context, and your comments. Specifically, discuss the potential benefits and limitations.
 
 
 ## What to submit
